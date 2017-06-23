@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     93218,       2309]
-NotebookOptionsPosition[     81385,       2039]
-NotebookOutlinePosition[     87792,       2182]
-CellTagsIndexPosition[     87749,       2179]
+NotebookDataLength[    125728,       3068]
+NotebookOptionsPosition[    113321,       2786]
+NotebookOutlinePosition[    119728,       2929]
+CellTagsIndexPosition[    119685,       2926]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,25 +30,59 @@ ccf34f9d8b73"],
 
 Cell[TextData[{
  "This notebook explore the physics behind the paradox of Aristotle\
-\[CloseCurlyQuote]s Wheels\nReferences: \n\t ",
- ButtonBox["http://mathworld.wolfram.com/AristotlesWheelParadox.html",
-  BaseStyle->"Hyperlink",
-  ButtonData:>{
-    URL["http://mathworld.wolfram.com/AristotlesWheelParadox.html"], None}],
- ".\n\t",
- ButtonBox["https://en.wikipedia.org/wiki/Aristotle%27 s_wheel _paradox",
+\[CloseCurlyQuote]s Wheels\n\n",
+ StyleBox["References:\n\tWikipedia: ",
+  FontSize->14,
+  FontSlant->"Plain"],
+ StyleBox[ButtonBox["https://en.wikipedia.org/wiki/Aristotle%27 s_wheel \
+_paradox",
   BaseStyle->"Hyperlink",
   ButtonData->{
     URL["https://en.wikipedia.org/wiki/Aristotle%27s_wheel_paradox"], None},
-  ButtonNote->"https://en.wikipedia.org/wiki/Aristotle%27s_wheel_paradox"]
+  ButtonNote->"https://en.wikipedia.org/wiki/Aristotle%27s_wheel_paradox"],
+  FontSize->14,
+  FontSlant->"Plain"],
+ StyleBox["\n\tWolfram MathWorld: ",
+  FontSize->14,
+  FontSlant->"Plain"],
+ StyleBox[ButtonBox["http://mathworld.wolfram.com/AristotlesWheelParadox.html\
+\n\t",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["http://mathworld.wolfram.com/AristotlesWheelParadox.html"], None}],
+  FontSize->14,
+  FontSlant->"Plain"],
+ StyleBox["Wolfram Demonstration Project: ",
+  FontSize->14,
+  FontSlant->"Plain"],
+ StyleBox[ButtonBox["http://demonstrations.wolfram.com/CycloidCurves/",
+  BaseStyle->"Hyperlink",
+  ButtonData->{" http://demonstrations.wolfram.com/CycloidCurves/", None}],
+  FontSize->14,
+  FontSlant->"Plain"],
+ StyleBox["\n\t\t \n\t\t\t\t\t\t\t",
+  FontSize->14,
+  FontSlant->"Plain"],
+ "\n",
+ StyleBox[ButtonBox["\n",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://en.wikipedia.org/wiki/Aristotle%27s_wheel_paradox"], None},
+  ButtonNote->"https://en.wikipedia.org/wiki/Aristotle%27s_wheel_paradox"], 
+  "Text"]
 }], "Abstract",
  CellChangeTimes->{{3.700774172671139*^9, 3.700774220850109*^9}, {
   3.700778895632181*^9, 3.700778896308676*^9}, {3.7051041615775795`*^9, 
   3.705104170817108*^9}, {3.70695047050093*^9, 3.706950515969354*^9}, {
   3.7069506495275445`*^9, 3.7069506995171123`*^9}, {3.7069509302513485`*^9, 
   3.706950972360668*^9}, {3.7069564376667476`*^9, 3.7069564467880316`*^9}, {
-  3.7069564821321387`*^9, 
-  3.7069564821371365`*^9}},ExpressionUUID->"db638e5e-9848-43df-8dbc-\
+  3.7069564821321387`*^9, 3.7069564821371365`*^9}, {3.707211581004475*^9, 
+  3.7072115902717705`*^9}, {3.707211763783332*^9, 3.707211774499668*^9}, {
+  3.707211808944256*^9, 3.7072118901171827`*^9}, {3.707211996046569*^9, 
+  3.707212035094019*^9}, {3.7072128279489117`*^9, 3.7072128722133245`*^9}, {
+  3.707212903049319*^9, 3.7072129632353773`*^9}, {3.7072129975038404`*^9, 
+  3.707213032338956*^9}, {3.707213073117263*^9, 
+  3.707213111254101*^9}},ExpressionUUID->"db638e5e-9848-43df-8dbc-\
 1bd77f4b8626"],
 
 Cell[CellGroupData[{
@@ -105,8 +139,7 @@ Cell[TextData[{
 centered at the initial rectangular coordinates C{", "Direction"],
  Cell[BoxData[
   FormBox[
-   SubscriptBox["x", "0"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["x", "0"], TraditionalForm]],ExpressionUUID->
   "5047163d-b490-406e-a7a5-5a524c1c97b8"],
  StyleBox[",",
   FontSlant->"Italic"],
@@ -116,12 +149,13 @@ centered at the initial rectangular coordinates C{", "Direction"],
   "7637283d-1b61-41b4-97fa-5c344d878887"],
  "} =",
  StyleBox[" {0,0}", "Direction"],
- ":"
+ ": "
 }], "Text",
  CellChangeTimes->{{3.706999742738001*^9, 3.7069998133158903`*^9}, {
   3.7070453453098445`*^9, 3.707045345735856*^9}, {3.7070469071338186`*^9, 
-  3.707046912294981*^9}, {3.707123595710899*^9, 
-  3.7071236773695097`*^9}},ExpressionUUID->"2877e5e9-8b8a-45ce-87bc-\
+  3.707046912294981*^9}, {3.707123595710899*^9, 3.7071236773695097`*^9}, {
+  3.707209973338031*^9, 
+  3.7072100321729136`*^9}},ExpressionUUID->"2877e5e9-8b8a-45ce-87bc-\
 c101b00dd773"],
 
 Cell[CellGroupData[{
@@ -1223,12 +1257,12 @@ Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`rsmall$$ = 
-    0.7000000000000001, $CellContext`t$$ = 3.7214212127069435`, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+    0.7000000000000001, $CellContext`t$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`rsmall$$], 0, 1, 0.1}, {
-      Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {683., {86., 91.}}, 
+      Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {360., {44., 49.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
     True, $CellContext`rsmall$18037$$ = 0, $CellContext`t$18038$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -1278,7 +1312,7 @@ Cell[BoxData[
       "Specifications" :> {{$CellContext`rsmall$$, 0, 1, 
          0.1}, {$CellContext`t$$, 0, 2 Pi}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{734., {158., 165.}},
+     ImageSizeCache->{411., {104., 111.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1510,65 +1544,36 @@ any instant of time as a parametric expression depending on ",
  "\[Omega]",
  StyleBox[" = 1, ",
   FontSlant->"Italic"],
- "we obtain :\n\n\t",
+ "we obtain :\n\n\t\[Theta] = ",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ "\n\t",
+ StyleBox["v = r",
+  FontSlant->"Italic"],
+ "\n\t",
  Cell[BoxData[
   FormBox[
-   TagBox[GridBox[{
-      {"\[Piecewise]", GridBox[{
-         {
-          RowBox[{
-           RowBox[{
-            SubscriptBox["x", "P"], "[", " ", "t", " ", "]"}], "=", " ", 
-           RowBox[{
-            RowBox[{"r", " ", "\[CenterDot]", " ", "t"}], "  ", "-", " ", 
-            RowBox[{"r", "\[CenterDot]", 
-             RowBox[{"sin", "[", " ", "t", " ", "]"}]}]}]}], "\[Placeholder]"},
-         {
-          RowBox[{
-           RowBox[{
-            SubscriptBox["y", "P"], "[", " ", "t", " ", "]"}], " ", "=", " ", 
-           RowBox[{
-            RowBox[{"-", " ", "r"}], " ", "\[CenterDot]", " ", 
-            RowBox[{"cos", " ", "[", " ", "t", " ", "]"}]}]}], " "}
-        },
-        AllowedDimensions->{2, Automatic},
-        Editable->True,
-        GridBoxAlignment->{
-         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
-          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-        GridBoxItemSize->{
-         "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}},
-           "RowsIndexed" -> {}},
-        GridBoxSpacings->{"Columns" -> {
-            Offset[0.27999999999999997`], {
-             Offset[0.84]}, 
-            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-            Offset[0.2], {
-             Offset[0.4]}, 
-            Offset[0.2]}, "RowsIndexed" -> {}},
-        Selectable->True]}
-     },
-     GridBoxAlignment->{
-      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-       "RowsIndexed" -> {}},
-     GridBoxItemSize->{
-      "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-       "RowsIndexed" -> {}},
-     GridBoxSpacings->{"Columns" -> {
-         Offset[0.27999999999999997`], {
-          Offset[0.35]}, 
-         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-         Offset[0.2], {
-          Offset[0.4]}, 
-         Offset[0.2]}, "RowsIndexed" -> {}}],
-    "Piecewise",
-    DeleteWithContents->True,
-    Editable->False,
-    SelectWithContents->True,
-    Selectable->False], TraditionalForm]],ExpressionUUID->
-  "be211a0e-3003-44b6-ae65-bf6ba9bc483b"],
- "\n\nWith that equations, now, we can code the simulation of the rotational \
-movement of the red circle:"
+   RowBox[{"{", GridBox[{
+      {
+       RowBox[{
+        RowBox[{
+         SubscriptBox["x", "P"], "[", " ", "t", " ", "]"}], "=", " ", 
+        RowBox[{
+         RowBox[{"r", " ", "\[CenterDot]", " ", "t"}], "  ", "-", " ", 
+         RowBox[{"r", "\[CenterDot]", 
+          RowBox[{"sin", "[", " ", "t", " ", "]"}]}]}]}]},
+      {
+       RowBox[{
+        RowBox[{
+         SubscriptBox["y", "P"], "[", " ", "t", " ", "]"}], " ", "=", " ", 
+        RowBox[{
+         RowBox[{"-", " ", "r"}], " ", "\[CenterDot]", " ", 
+         RowBox[{"cos", " ", "[", " ", "t", " ", "]"}]}]}]}
+     }]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "1ad8a813-f371-4d89-be79-5a5615c863d0"],
+ "\[LineSeparator]\nWith that equations, now, we can code the simulation of \
+the rotational movement of the red circle:"
 }], "Text",
  CellChangeTimes->{{3.705105405379721*^9, 3.7051054963769255`*^9}, {
    3.705105533220033*^9, 3.705105546902816*^9}, {3.7051057273781385`*^9, 
@@ -1583,7 +1588,9 @@ movement of the red circle:"
    3.7071249851453614`*^9, 3.707124985152361*^9}, 3.707125038080043*^9, {
    3.7071450373905544`*^9, 3.7071455237126527`*^9}, 3.7071459034081974`*^9, {
    3.707149562242319*^9, 3.7071495622493205`*^9}, {3.7071504133545604`*^9, 
-   3.707150451213771*^9}},ExpressionUUID->"a53919c1-5139-429e-92a9-\
+   3.707150451213771*^9}, {3.70715430912403*^9, 3.7071544917599754`*^9}, {
+   3.7071556651515226`*^9, 
+   3.7071557700318785`*^9}},ExpressionUUID->"a53919c1-5139-429e-92a9-\
 768740adc576"],
 
 Cell[CellGroupData[{
@@ -1634,8 +1641,7 @@ Cell[BoxData[
               RowBox[{"-", 
                RowBox[{"Cos", "[", "t", "]"}]}]}], "}"}]}], "}"}], "]"}], ",",
           "Black", ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       "\t\t\t\t\t\t", 
+       "\[IndentingNewLine]", "\t\t\t\t\t\t", 
        RowBox[{"(*", 
         RowBox[{
         "HERE", " ", "WE", " ", "DRAW", " ", "THE", " ", "SMALL", " ", "RED", 
@@ -1657,48 +1663,68 @@ Cell[BoxData[
              RowBox[{
               RowBox[{"-", "3"}], 
               RowBox[{"Pi", "/", "2"}]}]}], "}"}]}], "]"}], ",", "Red", ",", 
-         "Thick"}], "]"}], ",", "\[IndentingNewLine]", "\t\t\t\t\t\t\t", 
+         "Thick"}], "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       "\t\t\t\t\t\t", 
+       RowBox[{"(*", 
+        RowBox[{
+        "HERE", " ", "WE", " ", "DRAW", " ", "THE", " ", "TWO", " ", "BLACK", 
+         " ", "PARALLEL", " ", "LINES", " ", "BETWEEN", " ", "THE", " ", 
+         "CIRCLES"}], "*)"}], "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{"-", "1"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"2", " ", "Pi"}], ",", 
+            RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", 
+       "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{"-", "rsmall"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"2", " ", "Pi"}], ",", 
+            RowBox[{"-", "rsmall"}]}], "}"}]}], "}"}], "]"}], ",", 
+       "\[IndentingNewLine]", "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+       "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{"(*", 
+        RowBox[{
+        "HERE", " ", "WE", " ", "DRAW", " ", "THE", " ", "WHEEL", " ", "IN", 
+         " ", "ITS", " ", "FINAL", " ", "POSITION", " ", "AFTER", " ", "A", 
+         " ", "COMPLETE", " ", "TURN", " ", "ROTATING", " ", "OVER", " ", 
+         "THE", " ", "BOTTOM", " ", "LINE"}], "*)"}], "\[IndentingNewLine]", 
+       "\t\t\t\t\t\t", 
        RowBox[{"Disk", "[", 
         RowBox[{
          RowBox[{"{", 
           RowBox[{
-           RowBox[{"rsmall", "*", "t"}], ",", "0"}], "}"}], ",", "0.04"}], 
-        "]"}], ",", "\[IndentingNewLine]", "\t\t\t\t\t\t\t", 
-       StyleBox[
-        RowBox[{"Style", "[", 
-         RowBox[{
-          RowBox[{"Circle", "[", 
-           RowBox[{
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"rsmall", "*", "t"}], ",", "0"}], "}"}], ",", 
-            "rsmall"}], "]"}], ",", "Red"}], "]"}], "Code"], 
-       StyleBox[",", "Code"], 
-       StyleBox["\n", "Code"], 
-       StyleBox[
-        RowBox[{
-         StyleBox["\t\t\t\t", "Code"], "\t\t\t\t"}]], 
-       StyleBox[
-        RowBox[{"Style", "[", 
-         RowBox[{
-          RowBox[{"Line", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"rsmall", "*", "t"}], ",", "0"}], "}"}], ",", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{
-                RowBox[{"rsmall", "*", "t"}], " ", "-", " ", 
-                RowBox[{"rsmall", "*", 
-                 RowBox[{"Sin", "[", "t", "]"}]}]}], ",", " ", 
-               RowBox[{
-                RowBox[{"-", "rsmall"}], "*", 
-                RowBox[{"Cos", "[", "t", "]"}]}]}], "}"}]}], "}"}], "]"}], 
-          ",", "Black"}], "]"}], "Code"], 
-       StyleBox[",", "Code"], "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+           RowBox[{"2", "Pi"}], ",", "0"}], "}"}], ",", "0.02"}], "]"}], ",", 
        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{"Circle", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"2", "Pi"}], ",", "0"}], "}"}], ",", "1"}], "]"}], ",", 
+       "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{"Circle", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"2", "Pi"}], ",", "0"}], "}"}], ",", "rsmall"}], "]"}], 
+       ",", "\[IndentingNewLine]", "\t\t\t\t\t\t", "\[IndentingNewLine]", 
+       "\t\t\t\t\t\t", 
+       RowBox[{"(*", 
+        RowBox[{
+        "HERE", " ", "WE", " ", "DRAW", " ", "IN", " ", "BLACK", " ", "THE", 
+         " ", "CIRCLE", " ", "ARCS", " ", "COVERED", " ", "DURING", " ", 
+         "THE", " ", "ROTATION", " ", "OF", " ", "THE", " ", "WHEEL"}], 
+        "*)"}], "\[IndentingNewLine]", "\t\t\t\t\t\t", 
        RowBox[{"Style", "[", 
         RowBox[{
          RowBox[{"Circle", "[", 
@@ -1728,48 +1754,13 @@ Cell[BoxData[
               RowBox[{"3", 
                RowBox[{"Pi", "/", "2"}]}], "-", "t"}]}], "}"}]}], "]"}], ",", 
          "Black", ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", 
-       "\t\t\t\t\t\t", 
-       RowBox[{"Disk", "[", 
+       "\t\t\t\t\t\t", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{"(*", 
         RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"2", "Pi"}], ",", "0"}], "}"}], ",", "0.02"}], "]"}], ",", 
-       "\[IndentingNewLine]", "\t\t\t\t\t\t", 
-       RowBox[{"Circle", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"2", "Pi"}], ",", "0"}], "}"}], ",", "1"}], "]"}], ",", 
-       "\[IndentingNewLine]", "\t\t\t\t\t\t", 
-       RowBox[{"Circle", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"2", "Pi"}], ",", "0"}], "}"}], ",", "rsmall"}], "]"}], 
-       ",", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
-       RowBox[{"Line", "[", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{"0", ",", 
-            RowBox[{"-", "1"}]}], "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"2", " ", "Pi"}], ",", 
-            RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", 
-       "\[IndentingNewLine]", "\t\t\t\t\t\t", 
-       RowBox[{"Line", "[", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{"0", ",", 
-            RowBox[{"-", "rsmall"}]}], "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"2", " ", "Pi"}], ",", 
-            RowBox[{"-", "rsmall"}]}], "}"}]}], "}"}], "]"}], ",", 
-       "\[IndentingNewLine]", "\t\t\t\t\t\t", "\[IndentingNewLine]", "\t\t", 
-       "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        "HERE", " ", "WE", " ", "DRAW", " ", "IN", " ", "BLUE", " ", "AND", 
+         " ", "RED", " ", "THE", " ", "EQUIVALENT", " ", "WALKING", " ", 
+         "DISTANCE", " ", "OF", " ", "THE", " ", "WHEEL", " ", "OVER", " ", 
+         "THE", " ", "LINES"}], "*)"}], "\[IndentingNewLine]", "\t\t\t\t\t\t", 
        RowBox[{"Style", "[", 
         RowBox[{
          RowBox[{"Line", "[", 
@@ -1793,9 +1784,52 @@ Cell[BoxData[
             RowBox[{"{", 
              RowBox[{"t", ",", 
               RowBox[{"-", "rsmall"}]}], "}"}]}], "}"}], "]"}], ",", "Red", 
-         ",", "Thick"}], "]"}], ","}], "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", "\t\t\t\t\t", "}"}], ",", "\[IndentingNewLine]", 
-     "\t\t\t\t", 
+         ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{"(*", 
+        RowBox[{
+        "HERE", " ", "WE", " ", "DRAW", " ", "AN", " ", "INDEPENDENT", " ", 
+         "SMALL", " ", "RED", " ", "CIRCLE", " ", "OF", " ", "THE", " ", 
+         "WHEEL", " ", "ROTATING", " ", "WITH", " ", "THE", " ", "ANGULAR", 
+         " ", "VELOCITY", " ", "OF", " ", "THE", " ", "BLUE", " ", "CIRCLE"}],
+         "*)"}], "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{"Disk", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"rsmall", "*", "t"}], ",", "0"}], "}"}], ",", "0.04"}], 
+        "]"}], ",", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       StyleBox[
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"Circle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"rsmall", "*", "t"}], ",", "0"}], "}"}], ",", 
+            "rsmall"}], "]"}], ",", "Red"}], "]"}], "Code"], 
+       StyleBox[",", "Code"], "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       StyleBox[
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"Line", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"rsmall", "*", "t"}], ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"rsmall", "*", "t"}], " ", "-", " ", 
+                RowBox[{"rsmall", "*", 
+                 RowBox[{"Sin", "[", "t", "]"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"-", "rsmall"}], "*", 
+                RowBox[{"Cos", "[", "t", "]"}]}]}], "}"}]}], "}"}], "]"}], 
+          ",", "Black"}], "]"}], "Code"], 
+       StyleBox[",", "Code"]}], "\[IndentingNewLine]", "\t\t\t\t\t", "}"}], 
+     ",", "\[IndentingNewLine]", "\t\t\t\t", 
      RowBox[{"PlotRange", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{
@@ -1808,7 +1842,7 @@ Cell[BoxData[
          RowBox[{
           RowBox[{"-", "1.1"}], ",", "1.1"}], "}"}]}], "}"}]}]}], 
     "\[IndentingNewLine]", "\t\t\t\t", "]"}], ",", "\[IndentingNewLine]", 
-   "\t\t\t", 
+   "\t\t\t", "\[IndentingNewLine]", "\t\t\t", 
    RowBox[{"{", 
     RowBox[{"rsmall", ",", "0", ",", "1", ",", "0.1"}], "}"}], ",", 
    RowBox[{"{", 
@@ -1829,27 +1863,34 @@ Cell[BoxData[
    3.7071493699141645`*^9, 3.7071493711792107`*^9}, {3.7071503289938636`*^9, 
    3.7071503833995953`*^9}, {3.707150508117592*^9, 3.7071505722176385`*^9}, {
    3.7071507460501976`*^9, 3.707150953414837*^9}, {3.707150997830257*^9, 
-   3.707150998591281*^9}, {3.707151037274518*^9, 3.7071510456567907`*^9}},
- CellLabel->"In[11]:=",ExpressionUUID->"d2574755-8741-41a5-b7c6-ddddc40eb531"],
+   3.707150998591281*^9}, {3.707151037274518*^9, 3.7071510456567907`*^9}, {
+   3.707154938516264*^9, 3.7071550373744364`*^9}, {3.707155072921565*^9, 
+   3.7071553532565413`*^9}, {3.7071553947068605`*^9, 
+   3.7071554515266857`*^9}, {3.707155494065045*^9, 3.7071556175*^9}, {
+   3.707155806042025*^9, 3.7071558571346645`*^9}, {3.707155897461949*^9, 
+   3.707155911980417*^9}, {3.707155971816337*^9, 3.707156014067689*^9}, {
+   3.7071562228987885`*^9, 3.707156315427189*^9}, {3.707235436259136*^9, 
+   3.7072354614929433`*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"d2574755-8741-41a5-b7c6-ddddc40eb531"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`rsmall$$ = 
-    0.6000000000000001, $CellContext`t$$ = 1.9932893900308277`, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+    0.30000000000000004`, $CellContext`t$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`rsmall$$], 0, 1, 0.1}, {
-      Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {726., {91., 97.}}, 
+      Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {360., {44., 49.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`rsmall$17371$$ = 0, $CellContext`t$17372$$ = 0}, 
+    True, $CellContext`rsmall$83191$$ = 0, $CellContext`t$83192$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`rsmall$$ = 0, $CellContext`t$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`rsmall$$, $CellContext`rsmall$17371$$, 0], 
-        Hold[$CellContext`t$$, $CellContext`t$17372$$, 0]}, 
+        Hold[$CellContext`rsmall$$, $CellContext`rsmall$83191$$, 0], 
+        Hold[$CellContext`t$$, $CellContext`t$83192$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1862,8 +1903,31 @@ Cell[BoxData[
            3 (Pi/2) - $CellContext`t$$, (-3) (Pi/2)}], Blue, Thick], 
          Style[
           
+          Line[{{$CellContext`t$$, 0}, {$CellContext`t$$ - 
+             Sin[$CellContext`t$$], -Cos[$CellContext`t$$]}}], Black, Thick], 
+         Style[
+          
           Circle[{$CellContext`t$$, 0}, $CellContext`rsmall$$, {
            3 (Pi/2) - $CellContext`t$$, (-3) (Pi/2)}], Red, Thick], 
+         Line[{{0, -1}, {2 Pi, -1}}], 
+         Line[{{0, -$CellContext`rsmall$$}, {2 Pi, -$CellContext`rsmall$$}}], 
+         Disk[{2 Pi, 0}, 0.02], 
+         Circle[{2 Pi, 0}, 1], 
+         Circle[{2 Pi, 0}, $CellContext`rsmall$$], 
+         Style[
+          
+          Circle[{$CellContext`t$$, 0}, 1, {
+           3 (Pi/2), 3 (Pi/2) - $CellContext`t$$}], Black, Thick], 
+         Style[
+          
+          Circle[{$CellContext`t$$, 0}, $CellContext`rsmall$$, {
+           3 (Pi/2), 3 (Pi/2) - $CellContext`t$$}], Black, Thick], 
+         Style[
+          Line[{{0, -1}, {$CellContext`t$$, -1}}], Blue, Thick], 
+         Style[
+          
+          Line[{{0, -$CellContext`rsmall$$}, {$CellContext`t$$, \
+-$CellContext`rsmall$$}}], Red, Thick], 
          Disk[{$CellContext`rsmall$$ $CellContext`t$$, 0}, 0.04], 
          Style[
           
@@ -1874,34 +1938,12 @@ Cell[BoxData[
           Line[{{$CellContext`rsmall$$ $CellContext`t$$, 
              0}, {$CellContext`rsmall$$ $CellContext`t$$ - \
 $CellContext`rsmall$$ Sin[$CellContext`t$$], (-$CellContext`rsmall$$) 
-             Cos[$CellContext`t$$]}}], Black], 
-         Style[
-          Line[{{$CellContext`t$$, 0}, {$CellContext`t$$ - 
-             Sin[$CellContext`t$$], -Cos[$CellContext`t$$]}}], Black, Thick], 
-         Style[
-          
-          Circle[{$CellContext`t$$, 0}, 1, {
-           3 (Pi/2), 3 (Pi/2) - $CellContext`t$$}], Black, Thick], 
-         Style[
-          
-          Circle[{$CellContext`t$$, 0}, $CellContext`rsmall$$, {
-           3 (Pi/2), 3 (Pi/2) - $CellContext`t$$}], Black, Thick], 
-         Disk[{2 Pi, 0}, 0.02], 
-         Circle[{2 Pi, 0}, 1], 
-         Circle[{2 Pi, 0}, $CellContext`rsmall$$], 
-         Line[{{0, -1}, {2 Pi, -1}}], 
-         Line[{{0, -$CellContext`rsmall$$}, {2 Pi, -$CellContext`rsmall$$}}], 
-         Style[
-          Line[{{0, -1}, {$CellContext`t$$, -1}}], Blue, Thick], 
-         Style[
-          
-          Line[{{0, -$CellContext`rsmall$$}, {$CellContext`t$$, \
--$CellContext`rsmall$$}}], Red, Thick], Null}, 
+             Cos[$CellContext`t$$]}}], Black], Null}, 
         PlotRange -> {{-1.1, 1.1 + 2 Pi}, {-1.1, 1.1}}], 
       "Specifications" :> {{$CellContext`rsmall$$, 0, 1, 
          0.1}, {$CellContext`t$$, 0, 2 Pi}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{777., {163., 170.}},
+     ImageSizeCache->{411., {104., 111.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1912,12 +1954,717 @@ $CellContext`rsmall$$ Sin[$CellContext`t$$], (-$CellContext`rsmall$$)
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.7071460111896505`*^9, 3.7071461552162514`*^9, 
-  3.7071462077869406`*^9, 3.7071470219519854`*^9, 3.707147122505203*^9, 
-  3.7071486128017015`*^9, 3.7071492541274567`*^9, 3.707149308210189*^9, 
-  3.707149375676349*^9, 3.7071505765367785`*^9},
- CellLabel->"Out[11]=",ExpressionUUID->"22bfc485-be40-4534-a1af-45893d75b8c9"]
-}, Open  ]]
+ CellChangeTimes->{
+  3.7071460111896505`*^9, 3.7071461552162514`*^9, 3.7071462077869406`*^9, 
+   3.7071470219519854`*^9, 3.707147122505203*^9, 3.7071486128017015`*^9, 
+   3.7071492541274567`*^9, 3.707149308210189*^9, 3.707149375676349*^9, 
+   3.7071505765367785`*^9, 3.707156033623307*^9, {3.707235448790537*^9, 
+   3.707235465378066*^9}},
+ CellLabel->"Out[58]=",ExpressionUUID->"6623b273-ac34-4bd2-9cb1-0282f9453825"]
+}, Open  ]],
+
+Cell["\<\
+In conclusion we can deduce that the inner circle of the wheel is not \
+describing a pure rotation over the top line, because is it was rotating the \
+red walking distance would be shorter than the blue one (as we can see \
+observing the movement of the the outside small red circle). But if the inner \
+red circle is not rotating, how kind of movement is doing?
+
+To answer that last question we are going to plot the trajectory of the \
+points of contact with the lines of the different circles:\
+\>", "Text",
+ CellChangeTimes->{{3.7071564132123203`*^9, 3.7071566758547325`*^9}, {
+  3.707172484118986*^9, 
+  3.707172677916221*^9}},ExpressionUUID->"a63e5734-4c29-4765-b954-\
+f3189c6eec41"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", "\t\t", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", "\t\t\t", 
+     RowBox[{"(*", 
+      RowBox[{
+      "HERE", " ", "WE", " ", "PLOT", " ", "THE", " ", "PARAMETRIC", " ", 
+       "TRAJECTORIES", " ", "THAT", " ", "TRACES", " ", "FROM", " ", "THEIR", 
+       " ", "INITIAL", " ", "POSTIONS", " ", "EACH", " ", "OF", " ", "THE", 
+       " ", "CONTACTS", " ", "POINTS"}], "*)"}], "\[IndentingNewLine]", 
+     "\t\t\t", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "TRAJECTORY", " ", "OF", " ", "THE", " ", "BLUE", " ", "CIRCLE", " ", 
+         "POINT", " ", 
+         StyleBox[
+          RowBox[{"f", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x", "[", "u", "]"}], ",", 
+             RowBox[{"y", "[", "u", "]"}]}], "}"}], "]"}],
+          FontSize->16,
+          FontWeight->"Bold"]}], 
+        StyleBox["=",
+         FontSize->16,
+         FontWeight->"Bold"], 
+        StyleBox[
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"u", "-", 
+            RowBox[{"Sin", "[", "u", "]"}]}], ",", 
+           RowBox[{"-", 
+            RowBox[{"Cos", "[", "u", "]"}]}]}], "}"}],
+         FontSize->16,
+         FontWeight->"Bold"]}], 
+       StyleBox["]",
+        FontSize->16,
+        FontWeight->"Bold"]}], "*)"}], "\[IndentingNewLine]", "\t\t\t", 
+     RowBox[{
+      RowBox[{"ParametricPlot", "[", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"u", "-", 
+           RowBox[{"Sin", "[", "u", "]"}]}], ",", 
+          RowBox[{"-", 
+           RowBox[{"Cos", "[", "u", "]"}]}]}], "}"}], ",", 
+        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        RowBox[{"{", 
+         RowBox[{"u", ",", 
+          RowBox[{"10", "^", 
+           RowBox[{"-", "9"}]}], ",", "t"}], "}"}], ",", 
+        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        RowBox[{"AxesOrigin", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+        "\t\t\t\t\t\t", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.1"}], ",", 
+             RowBox[{"1.1", "+", 
+              RowBox[{"2", "Pi"}]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.1"}], ",", "1.1"}], "}"}]}], "}"}]}], ",", 
+        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        RowBox[{"PlotStyle", "\[Rule]", "Blue"}], ",", "\[IndentingNewLine]", 
+        "\t\t\t\t\t\t", 
+        RowBox[{"Ticks", "\[Rule]", "None"}]}], "\[IndentingNewLine]", 
+       "\t\t\t\t\t\t", "]"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+         "TRAJECTORY", " ", "OF", " ", "THE", " ", "EXTERNAL", " ", "RED", 
+          " ", "CIRCLE", " ", "POINT", " ", 
+          StyleBox[
+           RowBox[{"f", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"x", "[", "u", "]"}], ",", 
+              RowBox[{"y", "[", "u", "]"}]}], "}"}], "]"}],
+           FontSize->16,
+           FontWeight->"Bold"]}], 
+         StyleBox["=",
+          FontSize->16,
+          FontWeight->"Bold"], 
+         StyleBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"rsmall", "*", "u"}], "-", 
+             RowBox[{"rsmall", "*", 
+              RowBox[{"Sin", "[", "u", "]"}]}]}], ",", 
+            RowBox[{
+             RowBox[{"-", "rsmall"}], "*", 
+             RowBox[{"Cos", "[", "u", "]"}]}]}], "}"}],
+          FontSize->16,
+          FontWeight->"Bold"]}], 
+        StyleBox["]",
+         FontSize->16,
+         FontWeight->"Bold"]}], "*)"}], "\[IndentingNewLine]", "\t\t\t", 
+      RowBox[{"ParametricPlot", "[", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"rsmall", "*", "u"}], "-", 
+           RowBox[{"rsmall", "*", 
+            RowBox[{"Sin", "[", "u", "]"}]}]}], ",", 
+          RowBox[{
+           RowBox[{"-", "rsmall"}], "*", 
+           RowBox[{"Cos", "[", "u", "]"}]}]}], "}"}], ",", 
+        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        RowBox[{"{", 
+         RowBox[{"u", ",", 
+          RowBox[{"10", "^", 
+           RowBox[{"-", "9"}]}], ",", "t"}], "}"}], ",", 
+        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        RowBox[{"AxesOrigin", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+        "\t\t\t\t\t\t", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.1"}], ",", 
+             RowBox[{"1.1", "+", 
+              RowBox[{"2", "Pi"}]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.1"}], ",", "1.1"}], "}"}]}], "}"}]}], ",", 
+        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        RowBox[{"PlotStyle", "\[Rule]", "Red"}], ",", 
+        RowBox[{"Ticks", "\[Rule]", "None"}]}], "\[IndentingNewLine]", 
+       "\t\t\t\t\t\t", "]"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+         "TRAJECTORY", " ", "OF", " ", "THE", " ", "INNER", " ", "RED", " ", 
+          "CIRCLE", " ", "POINT", " ", 
+          StyleBox[
+           RowBox[{"f", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"x", "[", "u", "]"}], ",", 
+              RowBox[{"y", "[", "u", "]"}]}], "}"}], "]"}],
+           FontSize->16,
+           FontWeight->"Bold"]}], 
+         StyleBox["=",
+          FontSize->16,
+          FontWeight->"Bold"], 
+         StyleBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"u", "-", 
+             RowBox[{"rsmall", "*", 
+              RowBox[{"Sin", "[", "u", "]"}]}]}], ",", 
+            RowBox[{
+             RowBox[{"-", "rsmall"}], "*", 
+             RowBox[{"Cos", "[", "u", "]"}]}]}], "}"}],
+          FontSize->16,
+          FontWeight->"Bold"]}], 
+        StyleBox["]",
+         FontSize->16,
+         FontWeight->"Bold"]}], "*)"}], "\[IndentingNewLine]", "\t\t\t", 
+      RowBox[{"ParametricPlot", "[", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"u", "-", 
+           RowBox[{"rsmall", "*", 
+            RowBox[{"Sin", "[", "u", "]"}]}]}], ",", 
+          RowBox[{
+           RowBox[{"-", "rsmall"}], "*", 
+           RowBox[{"Cos", "[", "u", "]"}]}]}], "}"}], ",", 
+        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        RowBox[{"{", 
+         RowBox[{"u", ",", 
+          RowBox[{"10", "^", 
+           RowBox[{"-", "9"}]}], ",", "t"}], "}"}], ",", 
+        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        RowBox[{"AxesOrigin", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+        "\t\t\t\t\t\t", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.1"}], ",", 
+             RowBox[{"1.1", "+", 
+              RowBox[{"2", "Pi"}]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.1"}], ",", "1.1"}], "}"}]}], "}"}]}], ",", 
+        "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+        RowBox[{"PlotStyle", "\[Rule]", "Green"}], ",", 
+        RowBox[{"Ticks", "\[Rule]", "None"}]}], "\[IndentingNewLine]", 
+       "\t\t\t\t\t\t", "]"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+      RowBox[{"Graphics", "[", "\[IndentingNewLine]", "\t\t\t\t\t", 
+       RowBox[{
+        RowBox[{"{", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+         RowBox[{"(*", 
+          RowBox[{
+          "HERE", " ", "WE", " ", "DRAW", " ", "THE", " ", "BLUE", " ", 
+           "CIRCLE", " ", "OF", " ", "THE", " ", "WHEEL", " ", "AND", " ", 
+           "ITS", " ", "RADIUS"}], "*)"}], "\[IndentingNewLine]", 
+         "\t\t\t\t\t\t", 
+         RowBox[{
+          RowBox[{"Disk", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"t", ",", "0"}], "}"}], ",", "0.04"}], "]"}], ",", 
+          "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"t", ",", "0"}], "}"}], ",", "1", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"3", 
+                  RowBox[{"Pi", "/", "2"}]}], "-", "t"}], ",", 
+                RowBox[{
+                 RowBox[{"-", "3"}], 
+                 RowBox[{"Pi", "/", "2"}]}]}], "}"}]}], "]"}], ",", "Blue", 
+            ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"t", ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"t", "-", 
+                  RowBox[{"Sin", "[", "t", "]"}]}], ",", 
+                 RowBox[{"-", 
+                  RowBox[{"Cos", "[", "t", "]"}]}]}], "}"}]}], "}"}], "]"}], 
+            ",", "Black", ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"(*", 
+           RowBox[{
+           "HERE", " ", "WE", " ", "DRAW", " ", "THE", " ", "SMALL", " ", 
+            "RED", " ", "CIRCLE", " ", "OF", " ", "THE", " ", "WHEEL", " ", 
+            "MOVING", " ", "WITH", " ", "THE", " ", "ROTATION", " ", "OF", 
+            " ", "THE", " ", "BLUE", " ", "CIRCLE"}], "*)"}], 
+          "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"t", ",", "0"}], "}"}], ",", "rsmall", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"3", 
+                  RowBox[{"Pi", "/", "2"}]}], "-", "t"}], ",", 
+                RowBox[{
+                 RowBox[{"-", "3"}], 
+                 RowBox[{"Pi", "/", "2"}]}]}], "}"}]}], "]"}], ",", "Red", 
+            ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"(*", 
+           RowBox[{
+           "HERE", " ", "WE", " ", "DRAW", " ", "THE", " ", "TWO", " ", 
+            "BLACK", " ", "PARALLEL", " ", "LINES", " ", "BETWEEN", " ", 
+            "THE", " ", "CIRCLES"}], "*)"}], "\[IndentingNewLine]", 
+          "\t\t\t\t\t\t", 
+          RowBox[{"Line", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", 
+               RowBox[{"-", "1"}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"2", " ", "Pi"}], ",", 
+               RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", 
+          "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Line", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", 
+               RowBox[{"-", "rsmall"}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"2", " ", "Pi"}], ",", 
+               RowBox[{"-", "rsmall"}]}], "}"}]}], "}"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+          "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"(*", 
+           RowBox[{
+           "HERE", " ", "WE", " ", "DRAW", " ", "THE", " ", "WHEEL", " ", 
+            "IN", " ", "ITS", " ", "FINAL", " ", "POSITION", " ", "AFTER", 
+            " ", "A", " ", "COMPLETE", " ", "TURN", " ", "ROTATING", " ", 
+            "OVER", " ", "THE", " ", "BOTTOM", " ", "LINE"}], "*)"}], 
+          "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Disk", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"2", "Pi"}], ",", "0"}], "}"}], ",", "0.02"}], "]"}], 
+          ",", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Circle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"2", "Pi"}], ",", "0"}], "}"}], ",", "1"}], "]"}], ",", 
+          "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Circle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"2", "Pi"}], ",", "0"}], "}"}], ",", "rsmall"}], "]"}], 
+          ",", "\[IndentingNewLine]", "\t\t\t\t\t\t", "\[IndentingNewLine]", 
+          "\t\t\t\t\t\t", 
+          RowBox[{"(*", 
+           RowBox[{
+           "HERE", " ", "WE", " ", "DRAW", " ", "IN", " ", "BLACK", " ", 
+            "THE", " ", "CIRCLE", " ", "ARCS", " ", "COVERED", " ", "DURING", 
+            " ", "THE", " ", "ROTATION", " ", "OF", " ", "THE", " ", 
+            "WHEEL"}], "*)"}], "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"t", ",", "0"}], "}"}], ",", "1", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"3", 
+                 RowBox[{"Pi", "/", "2"}]}], ",", 
+                RowBox[{
+                 RowBox[{"3", 
+                  RowBox[{"Pi", "/", "2"}]}], "-", "t"}]}], "}"}]}], "]"}], 
+            ",", "Black", ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", 
+          "\t\t\t\t\t\t", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"t", ",", "0"}], "}"}], ",", "rsmall", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"3", 
+                 RowBox[{"Pi", "/", "2"}]}], ",", 
+                RowBox[{
+                 RowBox[{"3", 
+                  RowBox[{"Pi", "/", "2"}]}], "-", "t"}]}], "}"}]}], "]"}], 
+            ",", "Black", ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", 
+          "\t\t\t\t\t\t", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"(*", 
+           RowBox[{
+           "HERE", " ", "WE", " ", "DRAW", " ", "IN", " ", "BLUE", " ", "AND",
+             " ", "RED", " ", "THE", " ", "EQUIVALENT", " ", "WALKING", " ", 
+            "DISTANCE", " ", "OF", " ", "THE", " ", "WHEEL", " ", "OVER", " ",
+             "THE", " ", "LINES"}], "*)"}], "\[IndentingNewLine]", 
+          "\t\t\t\t\t\t", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"-", "1"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"t", ",", 
+                 RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", "Blue", 
+            ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"-", "rsmall"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"t", ",", 
+                 RowBox[{"-", "rsmall"}]}], "}"}]}], "}"}], "]"}], ",", "Red",
+             ",", "Thick"}], "]"}], ",", "\[IndentingNewLine]", 
+          "\t\t\t\t\t\t", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"(*", 
+           RowBox[{
+           "HERE", " ", "WE", " ", "DRAW", " ", "AN", " ", "INDEPENDENT", " ",
+             "SMALL", " ", "RED", " ", "CIRCLE", " ", "OF", " ", "THE", " ", 
+            "WHEEL", " ", "ROTATING", " ", "WITH", " ", "THE", " ", "ANGULAR",
+             " ", "VELOCITY", " ", "OF", " ", "THE", " ", "BLUE", " ", 
+            "CIRCLE"}], "*)"}], "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          RowBox[{"Disk", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"rsmall", "*", "t"}], ",", "0"}], "}"}], ",", "0.04"}], 
+           "]"}], ",", "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          StyleBox[
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"Circle", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"rsmall", "*", "t"}], ",", "0"}], "}"}], ",", 
+               "rsmall"}], "]"}], ",", "Red"}], "]"}], "Code"], 
+          StyleBox[",", "Code"], "\[IndentingNewLine]", "\t\t\t\t\t\t", 
+          StyleBox[
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"rsmall", "*", "t"}], ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"rsmall", "*", "t"}], " ", "-", " ", 
+                   RowBox[{"rsmall", "*", 
+                    RowBox[{"Sin", "[", "t", "]"}]}]}], ",", " ", 
+                  RowBox[{
+                   RowBox[{"-", "rsmall"}], "*", 
+                   RowBox[{"Cos", "[", "t", "]"}]}]}], "}"}]}], "}"}], "]"}], 
+             ",", "Black"}], "]"}], "Code"], 
+          StyleBox[",", "Code"]}], 
+         StyleBox["\n", "Code"], 
+         StyleBox["\t\t\t\t\t\t", "Code"], "}"}], ",", "\[IndentingNewLine]", 
+        "\t\t\t\t\t", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.1"}], ",", 
+             RowBox[{"1.1", "+", 
+              RowBox[{"2", "Pi"}]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.1"}], ",", "1.1"}], "}"}]}], "}"}]}]}], 
+       "\[IndentingNewLine]", "\t\t\t\t", "]"}]}], "\[IndentingNewLine]", 
+     "\t\t", "}"}], "]"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rsmall", ",", "2", ",", "\"\<radius\>\""}], "}"}], ",", "0", 
+     ",", "1", ",", "0.1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t", ",", "2", ",", "\"\<time\>\""}], "}"}], ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "\[IndentingNewLine]", "\t\t", 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.7071727061288414`*^9, {3.7071727381225815`*^9, 3.7071728263549585`*^9}, {
+   3.707173077698378*^9, 3.707173082964056*^9}, 3.707173132525902*^9, {
+   3.7071746775212884`*^9, 3.7071747020396776`*^9}, {3.707174776084835*^9, 
+   3.7071747842887344`*^9}, {3.7071748291420617`*^9, 
+   3.7071748555031757`*^9}, {3.7071750217079663`*^9, 
+   3.7071750223488097`*^9}, {3.7071750662538137`*^9, 3.707175082598709*^9}, {
+   3.707210903751802*^9, 3.7072109411580105`*^9}, {3.7072110051630497`*^9, 
+   3.707211022612606*^9}, {3.707211068317069*^9, 3.707211070025124*^9}, 
+   3.707211108817365*^9, {3.707214556282012*^9, 3.7072146151389017`*^9}, {
+   3.707214648138959*^9, 3.707214668768618*^9}, {3.7072147630126367`*^9, 
+   3.7072147892914777`*^9}, {3.707214950867642*^9, 3.707214964610086*^9}, {
+   3.707215031971236*^9, 3.707215086840001*^9}, 3.7072191445319605`*^9, {
+   3.7072191787880597`*^9, 3.7072191823281717`*^9}, {3.7072312541442113`*^9, 
+   3.7072312898743553`*^9}, {3.707231450857505*^9, 3.707231500386091*^9}, {
+   3.707231567748247*^9, 3.70723162627912*^9}, {3.7072317003954906`*^9, 
+   3.7072317008685055`*^9}, {3.707231751006111*^9, 3.7072317699357147`*^9}, {
+   3.707231932360961*^9, 3.7072319342950244`*^9}, {3.7072319785884433`*^9, 
+   3.7072320480992255`*^9}, {3.7072320849264145`*^9, 
+   3.7072320857384367`*^9}, {3.707232364935364*^9, 3.707232657127122*^9}, {
+   3.7072327162160172`*^9, 3.707232759011385*^9}, {3.707232795311554*^9, 
+   3.7072328661518106`*^9}, {3.7072329942949104`*^9, 
+   3.7072330150985775`*^9}, {3.7072331057484818`*^9, 
+   3.7072332510781326`*^9}, {3.707233470432149*^9, 3.7072334743302736`*^9}, {
+   3.7072335095493994`*^9, 3.707233612330693*^9}, {3.7072336861990533`*^9, 
+   3.7072336906251965`*^9}, {3.7072337299874535`*^9, 
+   3.7072337922084455`*^9}, {3.707233890871683*^9, 3.707233978455488*^9}, {
+   3.7072342751709805`*^9, 3.7072343277696643`*^9}, {3.7072355045073185`*^9, 
+   3.7072355209098444`*^9}, {3.707235745776042*^9, 3.7072358005737934`*^9}, {
+   3.7072358349798994`*^9, 3.7072359110213275`*^9}, {3.7072359703302264`*^9, 
+   3.707236084472811*^9}, {3.7072361408666162`*^9, 3.7072361500779133`*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"982bb1ef-bbd3-417f-9f1f-6d46f09c5b3e"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`rsmall$$ = 0.5, $CellContext`t$$ = 0., 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rsmall$$], 2, "radius"}, 0, 1, 0.1}, {{
+       Hold[$CellContext`t$$], 2, "time"}, 0, 2 Pi}}, Typeset`size$$ = {
+    744., {94., 100.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`rsmall$86932$$ = 
+    0, $CellContext`t$86933$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`rsmall$$ = 2, $CellContext`t$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`rsmall$$, $CellContext`rsmall$86932$$, 0], 
+        Hold[$CellContext`t$$, $CellContext`t$86933$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[{
+         ParametricPlot[{$CellContext`u - Sin[$CellContext`u], -
+           Cos[$CellContext`u]}, {$CellContext`u, 10^(-9), $CellContext`t$$}, 
+          AxesOrigin -> {0, 0}, 
+          PlotRange -> {{-1.1, 1.1 + 2 Pi}, {-1.1, 1.1}}, PlotStyle -> Blue, 
+          Ticks -> None], 
+         ParametricPlot[{$CellContext`rsmall$$ $CellContext`u - \
+$CellContext`rsmall$$ Sin[$CellContext`u], (-$CellContext`rsmall$$) 
+           Cos[$CellContext`u]}, {$CellContext`u, 10^(-9), $CellContext`t$$}, 
+          AxesOrigin -> {0, 0}, 
+          PlotRange -> {{-1.1, 1.1 + 2 Pi}, {-1.1, 1.1}}, PlotStyle -> Red, 
+          Ticks -> None], 
+         ParametricPlot[{$CellContext`u - $CellContext`rsmall$$ 
+           Sin[$CellContext`u], (-$CellContext`rsmall$$) 
+           Cos[$CellContext`u]}, {$CellContext`u, 10^(-9), $CellContext`t$$}, 
+          AxesOrigin -> {0, 0}, 
+          PlotRange -> {{-1.1, 1.1 + 2 Pi}, {-1.1, 1.1}}, PlotStyle -> Green, 
+          Ticks -> None], 
+         Graphics[{
+           Disk[{$CellContext`t$$, 0}, 0.04], 
+           Style[
+            
+            Circle[{$CellContext`t$$, 0}, 1, {
+             3 (Pi/2) - $CellContext`t$$, (-3) (Pi/2)}], Blue, Thick], 
+           Style[
+            
+            Line[{{$CellContext`t$$, 0}, {$CellContext`t$$ - 
+               Sin[$CellContext`t$$], -Cos[$CellContext`t$$]}}], Black, 
+            Thick], 
+           Style[
+            
+            Circle[{$CellContext`t$$, 0}, $CellContext`rsmall$$, {
+             3 (Pi/2) - $CellContext`t$$, (-3) (Pi/2)}], Red, Thick], 
+           Line[{{0, -1}, {2 Pi, -1}}], 
+           
+           Line[{{0, -$CellContext`rsmall$$}, {
+             2 Pi, -$CellContext`rsmall$$}}], 
+           Disk[{2 Pi, 0}, 0.02], 
+           Circle[{2 Pi, 0}, 1], 
+           Circle[{2 Pi, 0}, $CellContext`rsmall$$], 
+           Style[
+            
+            Circle[{$CellContext`t$$, 0}, 1, {
+             3 (Pi/2), 3 (Pi/2) - $CellContext`t$$}], Black, Thick], 
+           Style[
+            
+            Circle[{$CellContext`t$$, 0}, $CellContext`rsmall$$, {
+             3 (Pi/2), 3 (Pi/2) - $CellContext`t$$}], Black, Thick], 
+           Style[
+            Line[{{0, -1}, {$CellContext`t$$, -1}}], Blue, Thick], 
+           Style[
+            
+            Line[{{0, -$CellContext`rsmall$$}, {$CellContext`t$$, \
+-$CellContext`rsmall$$}}], Red, Thick], 
+           Disk[{$CellContext`rsmall$$ $CellContext`t$$, 0}, 0.04], 
+           Style[
+            
+            Circle[{$CellContext`rsmall$$ $CellContext`t$$, 
+              0}, $CellContext`rsmall$$], Red], 
+           Style[
+            
+            Line[{{$CellContext`rsmall$$ $CellContext`t$$, 
+               0}, {$CellContext`rsmall$$ $CellContext`t$$ - \
+$CellContext`rsmall$$ Sin[$CellContext`t$$], (-$CellContext`rsmall$$) 
+               Cos[$CellContext`t$$]}}], Black], Null}, 
+          PlotRange -> {{-1.1, 1.1 + 2 Pi}, {-1.1, 1.1}}]}], 
+      "Specifications" :> {{{$CellContext`rsmall$$, 2, "radius"}, 0, 1, 
+         0.1}, {{$CellContext`t$$, 2, "time"}, 0, 2 Pi}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{795., {154., 161.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7071731440364294`*^9, 3.707174707102681*^9, 3.7071748765724325`*^9, 
+   3.7071750306608744`*^9, 3.7071750858489366`*^9, 3.707211192166032*^9, 
+   3.707214682349047*^9, 3.7072147957986803`*^9, 3.7072149703652725`*^9, 
+   3.707215091838154*^9, 3.7072312999126787`*^9, 3.7072315073363123`*^9, 
+   3.7072315908599863`*^9, 3.707231631377281*^9, 3.707231708901765*^9, 
+   3.7072317767629356`*^9, 3.70723189760785*^9, 3.7072319390801773`*^9, 
+   3.7072320886705256`*^9, 3.7072326659564085`*^9, {3.7072328000406976`*^9, 
+   3.707232806057888*^9}, 3.707232840546994*^9, 3.7072328707469654`*^9, 
+   3.7072330209897685`*^9, 3.707233627543175*^9, 3.7072337008485193`*^9, 
+   3.707234334258868*^9, {3.707235516967717*^9, 3.707235523197916*^9}, 
+   3.707235776567024*^9, 3.7072359258578067`*^9, 3.7072359842686696`*^9, 
+   3.70723605752295*^9, {3.7072360918560467`*^9, 3.7072361153178024`*^9}, 
+   3.7072361552480755`*^9},
+ CellLabel->"Out[70]=",ExpressionUUID->"ae7dda9c-272e-4d6c-b0b3-0fb7d72abd81"]
+}, Open  ]],
+
+Cell["\<\
+After visualizing that, we can see clearly that the blue and red trajectories \
+are cycloid, but the green curve is not a such kind of curve so it\
+\[CloseCurlyQuote]s no correspond to a pure rotating movement.
+In conclusion if we force the wheel to rotate purely over the bottom line, \
+the movement of the inner circle is not a pure rotating movement, it\
+\[CloseCurlyQuote]s must be a mixing of sliding and rotating movement along \
+the top line.
+
+Now we use the functions of WL to calculate the length of each curve:\
+\>", "Text",
+ CellChangeTimes->{{3.707234395314833*^9, 3.707234755082336*^9}, 
+   3.707234787691382*^9},ExpressionUUID->"604526a9-f2cd-4190-8385-\
+04bb23f9e5c9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"blue_distance", "=", 
+     RowBox[{"ArcLength", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"u", "-", 
+          RowBox[{"Sin", "[", "u", "]"}]}], ",", 
+         RowBox[{"-", 
+          RowBox[{"Cos", "[", "u", "]"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"u", ",", "0", ",", 
+         RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"red_distance", "=", 
+     RowBox[{"ArcLength", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"rsmall", "*", "u"}], "-", 
+         RowBox[{"rsmall", "*", 
+          RowBox[{"Sin", "[", "u", "]"}]}]}], ",", 
+        RowBox[{
+         RowBox[{"-", "rsmall"}], "*", 
+         RowBox[{"Cos", "[", "u", "]"}]}]}], "}"}], "]"}]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"green_distance", "=", 
+    RowBox[{"ArcLength", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"u", "-", 
+        RowBox[{"rsmall", "*", 
+         RowBox[{"Sin", "[", "u", "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"-", "rsmall"}], "*", 
+        RowBox[{"Cos", "[", "u", "]"}]}]}], "}"}], "]"}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.7072347956756434`*^9, 3.707234874484161*^9}, {
+  3.7072350001331835`*^9, 3.7072350997303696`*^9}, {3.7072361837119894`*^9, 
+  3.7072362022045884`*^9}},
+ CellLabel->"In[54]:=",ExpressionUUID->"02de1d85-02d6-4770-8a1d-b0401b43342d"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2184,130 +2931,142 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 436, 6, 95, "Title", "ExpressionUUID" -> \
 "10366741-f0d4-4aa9-850f-ccf34f9d8b73"],
-Cell[1019, 30, 1094, 21, 99, "Abstract", "ExpressionUUID" -> \
+Cell[1019, 30, 2336, 55, 207, "Abstract", "ExpressionUUID" -> \
 "db638e5e-9848-43df-8dbc-1bd77f4b8626"],
 Cell[CellGroupData[{
-Cell[2138, 55, 422, 6, 62, "Section", "ExpressionUUID" -> \
+Cell[3380, 89, 422, 6, 62, "Section", "ExpressionUUID" -> \
 "a781b90d-5c07-447a-9fdc-e3d31e432d11"],
-Cell[2563, 63, 1645, 27, 144, "Text", "ExpressionUUID" -> \
+Cell[3805, 97, 1645, 27, 144, "Text", "ExpressionUUID" -> \
 "14933e51-e30d-4489-9c72-96b1775c0d71"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4245, 95, 258, 5, 62, "Section", "ExpressionUUID" -> \
+Cell[5487, 129, 258, 5, 62, "Section", "ExpressionUUID" -> \
 "1eb34737-64d9-4fa6-a5e4-faa8462de309"],
-Cell[4506, 102, 826, 22, 30, "Text", "ExpressionUUID" -> \
+Cell[5748, 136, 845, 22, 30, "Text", "ExpressionUUID" -> \
 "2877e5e9-8b8a-45ce-87bc-c101b00dd773"],
 Cell[CellGroupData[{
-Cell[5357, 128, 313, 7, 30, "Input", "ExpressionUUID" -> \
+Cell[6618, 162, 313, 7, 30, "Input", "ExpressionUUID" -> \
 "43c9d586-cf4d-4cfd-9fed-1e80514088a7"],
-Cell[5673, 137, 180, 3, 374, "Output", "ExpressionUUID" -> \
+Cell[6934, 171, 180, 3, 374, "Output", "ExpressionUUID" -> \
 "04105689-606d-4f83-8b4b-dcceed5c7669"]
 }, Open  ]],
-Cell[5868, 143, 539, 9, 30, "Direction", "ExpressionUUID" -> \
+Cell[7129, 177, 539, 9, 30, "Direction", "ExpressionUUID" -> \
 "aa427b92-fea1-44df-b822-93491661ce2b"],
 Cell[CellGroupData[{
-Cell[6432, 156, 570, 16, 30, "Input", "ExpressionUUID" -> \
+Cell[7693, 190, 570, 16, 30, "Input", "ExpressionUUID" -> \
 "b18b76ea-44c1-4050-b508-51c1154af413"],
-Cell[7005, 174, 255, 4, 374, "Output", "ExpressionUUID" -> \
+Cell[8266, 208, 255, 4, 374, "Output", "ExpressionUUID" -> \
 "8dc75fc4-a757-4c46-8a2a-e0aa065bfe12"]
 }, Open  ]],
-Cell[7275, 181, 501, 8, 30, "Text", "ExpressionUUID" -> \
+Cell[8536, 215, 501, 8, 30, "Text", "ExpressionUUID" -> \
 "4a893297-e34c-4d58-8dd3-c1f04d139e3b"],
 Cell[CellGroupData[{
-Cell[7801, 193, 867, 25, 30, "Input", "ExpressionUUID" -> \
+Cell[9062, 227, 867, 25, 30, "Input", "ExpressionUUID" -> \
 "3da99068-527a-4720-97d1-944996379f03"],
-Cell[8671, 220, 1837, 37, 470, "Output", "ExpressionUUID" -> \
+Cell[9932, 254, 1837, 37, 470, "Output", "ExpressionUUID" -> \
 "61254544-fccc-4671-b8b4-ee2c69d31669"]
 }, Open  ]],
-Cell[10523, 260, 819, 17, 30, "Text", "ExpressionUUID" -> \
+Cell[11784, 294, 819, 17, 30, "Text", "ExpressionUUID" -> \
 "b77a216b-af2d-4b1c-9d25-2bffa5c1c347"],
 Cell[CellGroupData[{
-Cell[11367, 281, 1606, 46, 50, "Input", "ExpressionUUID" -> \
+Cell[12628, 315, 1606, 46, 50, "Input", "ExpressionUUID" -> \
 "be263924-fb87-467f-865b-1882f8e162f3"],
-Cell[12976, 329, 1924, 39, 220, "Output", "ExpressionUUID" -> \
+Cell[14237, 363, 1924, 39, 220, "Output", "ExpressionUUID" -> \
 "f6562bb5-721e-429a-9dc5-d2675e44e482"]
 }, Open  ]],
-Cell[14915, 371, 478, 7, 30, "Text", "ExpressionUUID" -> \
+Cell[16176, 405, 478, 7, 30, "Text", "ExpressionUUID" -> \
 "3ecb2a7f-ac5f-4de1-a743-a24539e280ae"],
 Cell[CellGroupData[{
-Cell[15418, 382, 2358, 68, 50, "Input", "ExpressionUUID" -> \
+Cell[16679, 416, 2358, 68, 50, "Input", "ExpressionUUID" -> \
 "e666595b-b836-4138-8154-3587fc37e58c"],
-Cell[17779, 452, 2170, 45, 208, "Output", "ExpressionUUID" -> \
+Cell[19040, 486, 2170, 45, 208, "Output", "ExpressionUUID" -> \
 "666f8c15-6344-4881-a251-38a372c0f9bf"]
 }, Open  ]],
-Cell[19964, 500, 584, 12, 30, "Text", "ExpressionUUID" -> \
+Cell[21225, 534, 584, 12, 30, "Text", "ExpressionUUID" -> \
 "28002dd8-3425-468c-8b8b-852c6cd3297a"],
 Cell[CellGroupData[{
-Cell[20573, 516, 3581, 94, 297, "Input", "ExpressionUUID" -> \
+Cell[21834, 550, 3581, 94, 297, "Input", "ExpressionUUID" -> \
 "5d8ee256-cc96-48c1-b23b-420a480442ca"],
-Cell[24157, 612, 2697, 53, 232, "Output", "ExpressionUUID" -> \
+Cell[25418, 646, 2697, 53, 232, "Output", "ExpressionUUID" -> \
 "892e3c7b-c6ab-41cc-8d31-b77707939aaf"]
 }, Open  ]],
-Cell[26869, 668, 237, 6, 30, "Text", "ExpressionUUID" -> \
+Cell[28130, 702, 237, 6, 30, "Text", "ExpressionUUID" -> \
 "0444cbc1-0eb7-40b0-b2af-782b710657bb"],
 Cell[CellGroupData[{
-Cell[27131, 678, 3754, 101, 316, "Input", "ExpressionUUID" -> \
+Cell[28392, 712, 3754, 101, 316, "Input", "ExpressionUUID" -> \
 "e077d4a1-c8f4-46a0-8a1b-0cbeaf22363e"],
-Cell[30888, 781, 2567, 52, 232, "Output", "ExpressionUUID" -> \
+Cell[32149, 815, 2567, 52, 232, "Output", "ExpressionUUID" -> \
 "18cb300f-223b-4078-9e8c-6b1c5f48bdd7"]
 }, Open  ]],
-Cell[33470, 836, 912, 21, 30, "Text", "ExpressionUUID" -> \
+Cell[34731, 870, 912, 21, 30, "Text", "ExpressionUUID" -> \
 "acf23110-1f27-4a5f-a9d1-34619555ba65"],
 Cell[CellGroupData[{
-Cell[34407, 861, 3966, 107, 316, "Input", "ExpressionUUID" -> \
+Cell[35668, 895, 3966, 107, 316, "Input", "ExpressionUUID" -> \
 "d77aad80-642a-4c4c-8372-2bebe2bb59e1"],
-Cell[38376, 970, 2653, 53, 232, "Output", "ExpressionUUID" -> \
+Cell[39637, 1004, 2653, 53, 232, "Output", "ExpressionUUID" -> \
 "48f231f6-7670-4ddd-a180-9c207e73d1ca"]
 }, Open  ]],
-Cell[41044, 1026, 599, 11, 49, "Text", "ExpressionUUID" -> \
+Cell[42305, 1060, 599, 11, 49, "Text", "ExpressionUUID" -> \
 "669ac365-78ef-4f8a-a01e-816bbd571097"],
 Cell[CellGroupData[{
-Cell[41668, 1041, 6579, 178, 411, "Input", "ExpressionUUID" -> \
+Cell[42929, 1075, 6579, 178, 411, "Input", "ExpressionUUID" -> \
 "c6d51560-3f53-4574-b756-3daa4e938eb9"],
-Cell[48250, 1221, 3369, 73, 340, "Output", "ExpressionUUID" -> \
+Cell[49511, 1255, 3352, 73, 232, "Output", "ExpressionUUID" -> \
 "92a50848-7336-43a9-b484-906dbb0e1714"]
 }, Open  ]],
-Cell[51634, 1297, 1140, 23, 68, "Text", "ExpressionUUID" -> \
+Cell[52878, 1331, 1140, 23, 68, "Text", "ExpressionUUID" -> \
 "8018fd02-b5c0-4a08-9a23-6619574734c2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52811, 1325, 455, 11, 62, "Section", "ExpressionUUID" -> \
+Cell[54055, 1359, 455, 11, 62, "Section", "ExpressionUUID" -> \
 "be862171-45d0-475c-aee5-a132ee43a824"],
-Cell[53269, 1338, 10144, 248, 469, "Text", "ExpressionUUID" -> \
+Cell[54513, 1372, 8974, 221, 507, "Text", "ExpressionUUID" -> \
 "a53919c1-5139-429e-92a9-768740adc576"],
 Cell[CellGroupData[{
-Cell[63438, 1590, 9525, 242, 620, "Input", "ExpressionUUID" -> \
+Cell[63512, 1597, 11660, 276, 715, "Input", "ExpressionUUID" -> \
 "d2574755-8741-41a5-b7c6-ddddc40eb531"],
-Cell[72966, 1834, 3922, 84, 350, "Output", "ExpressionUUID" -> \
-"22bfc485-be40-4534-a1af-45893d75b8c9"]
-}, Open  ]]
+Cell[75175, 1875, 3996, 87, 232, "Output", "ExpressionUUID" -> \
+"6623b273-ac34-4bd2-9cb1-0282f9453825"]
+}, Open  ]],
+Cell[79186, 1965, 699, 13, 87, "Text", "ExpressionUUID" -> \
+"a63e5734-4c29-4765-b954-f3189c6eec41"],
+Cell[CellGroupData[{
+Cell[79910, 1982, 20933, 503, 1256, "Input", "ExpressionUUID" -> \
+"982bb1ef-bbd3-417f-9f1f-6d46f09c5b3e"],
+Cell[100846, 2487, 5745, 116, 332, "Output", "ExpressionUUID" -> \
+"ae7dda9c-272e-4d6c-b0b3-0fb7d72abd81"]
+}, Open  ]],
+Cell[106606, 2606, 693, 13, 106, "Text", "ExpressionUUID" -> \
+"604526a9-f2cd-4190-8385-04bb23f9e5c9"],
+Cell[107302, 2621, 1534, 45, 69, "Input", "ExpressionUUID" -> \
+"02de1d85-02d6-4770-8a1d-b0401b43342d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[76937, 1924, 384, 9, 62, "Section", "ExpressionUUID" -> \
+Cell[108873, 2671, 384, 9, 62, "Section", "ExpressionUUID" -> \
 "59c84ecb-24c9-4d26-8b38-6aafec165a78"],
-Cell[77324, 1935, 403, 8, 30, "Text", "ExpressionUUID" -> \
+Cell[109260, 2682, 403, 8, 30, "Text", "ExpressionUUID" -> \
 "30e5bd43-3ed1-46b6-b39e-e37fd32d77c7"],
-Cell[77730, 1945, 394, 6, 30, "Text", "ExpressionUUID" -> \
+Cell[109666, 2692, 394, 6, 30, "Text", "ExpressionUUID" -> \
 "eb4a520f-b921-49ad-876c-c24faaff0094"],
-Cell[78127, 1953, 533, 10, 125, "Text", "ExpressionUUID" -> \
+Cell[110063, 2700, 533, 10, 125, "Text", "ExpressionUUID" -> \
 "8b3f99af-cfa8-47d9-ba96-7b2b82c8473f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[78697, 1968, 234, 4, 58, "FurtherExplorationSection", "ExpressionUUID" \
+Cell[110633, 2715, 234, 4, 58, "FurtherExplorationSection", "ExpressionUUID" \
 -> "5935468f-4faf-42ec-9ce5-cfaecb303b1f"],
-Cell[78934, 1974, 730, 15, 121, "FurtherExploration", "ExpressionUUID" -> \
+Cell[110870, 2721, 730, 15, 121, "FurtherExploration", "ExpressionUUID" -> \
 "5874a11c-9188-4ec2-9275-cd1f7b329760"],
-Cell[79667, 1991, 639, 14, 121, "FurtherExploration", "ExpressionUUID" -> \
+Cell[111603, 2738, 639, 14, 121, "FurtherExploration", "ExpressionUUID" -> \
 "bec1f1da-45a7-4637-ba7e-50c34c2a0462"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[80343, 2010, 179, 3, 58, "AuthorshipSection", "ExpressionUUID" -> \
+Cell[112279, 2757, 179, 3, 58, "AuthorshipSection", "ExpressionUUID" -> \
 "42680d10-3d1a-461c-afab-eec165779504"],
-Cell[80525, 2015, 398, 8, 81, "Authorship", "ExpressionUUID" -> \
+Cell[112461, 2762, 398, 8, 81, "Authorship", "ExpressionUUID" -> \
 "5102885a-34eb-44ab-80db-aa3710dbd08a"],
-Cell[80926, 2025, 211, 4, 24, "Authorship", "ExpressionUUID" -> \
+Cell[112862, 2772, 211, 4, 24, "Authorship", "ExpressionUUID" -> \
 "a955aad8-c1c5-41e7-ad9b-f592f4a82734"],
-Cell[81140, 2031, 217, 4, 24, "Authorship", "ExpressionUUID" -> \
+Cell[113076, 2778, 217, 4, 24, "Authorship", "ExpressionUUID" -> \
 "31ae3bf8-c288-4b0b-bca6-5f0155809418"]
 }, Open  ]]
 }, Open  ]]
