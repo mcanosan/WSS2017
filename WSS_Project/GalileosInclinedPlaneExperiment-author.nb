@@ -1,0 +1,1119 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     44347,       1110]
+NotebookOptionsPosition[     40622,        994]
+NotebookOutlinePosition[     42222,       1045]
+CellTagsIndexPosition[     41894,       1033]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Galileo's Inclined Plane Experiment", "DemoTitle",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.5106702766349783`*^9, 3.510670278371978*^9}, {
+   3.510670340536978*^9, 3.5106703613009777`*^9}}],
+
+Cell["", "InitializationSection"],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateSection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Gray", ",", 
+       RowBox[{"Polygon", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "10"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"49.9", ",", " ", "2.5"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"49.9", ",", " ", "0"}], "}"}]}], "}"}], "]"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Polygon", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"1", "/", "2"}], 
+                SuperscriptBox["t0", "2"]}], ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"1", "/", "2"}], 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{"t0", "+", "1"}], ")"}], "2"]}], "-", ".1"}], ",", 
+               "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"1", "/", "2"}], 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{"t0", "+", "1"}], ")"}], "2"]}], "-", ".1"}], ",", 
+               RowBox[{"10", "-", 
+                RowBox[{
+                 RowBox[{"1", "/", "2"}], " ", ".15", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{"t0", "+", "1"}], ")"}], "2"]}]}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"1", "/", "2"}], 
+                SuperscriptBox["t0", "2"]}], ",", 
+               RowBox[{"10", "-", 
+                RowBox[{
+                 RowBox[{"1", "/", "2"}], " ", ".15", 
+                 SuperscriptBox["t0", "2"]}]}]}], "}"}]}], "}"}], ",", 
+           RowBox[{"VertexColors", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ColorData", "[", "\"\<Pastel\>\"", "]"}], "[", 
+               RowBox[{
+                SuperscriptBox["t0", "2"], "/", "50"}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"ColorData", "[", "\"\<Pastel\>\"", "]"}], "[", 
+               RowBox[{
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"t0", "+", "1"}], ")"}], "2"], "/", "50"}], "]"}], 
+              ",", 
+              RowBox[{
+               RowBox[{"ColorData", "[", "\"\<Pastel\>\"", "]"}], "[", 
+               RowBox[{
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"t0", "+", "1"}], ")"}], "2"], "/", "50"}], "]"}], 
+              ",", 
+              RowBox[{
+               RowBox[{"ColorData", "[", "\"\<Pastel\>\"", "]"}], "[", 
+               RowBox[{
+                SuperscriptBox["t0", "2"], "/", "50"}], "]"}]}], "}"}]}]}], 
+          "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"t0", ",", "0", ",", 
+           RowBox[{"t", "-", ".01"}]}], "}"}]}], "]"}], ",", "Black", ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Opacity", "[", 
+            RowBox[{"tf", "/", "10"}], "]"}], ",", 
+           RowBox[{"Disk", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"1", "/", "2"}], 
+                SuperscriptBox["tf", "2"]}], ",", 
+               RowBox[{"10", "-", 
+                RowBox[{
+                 RowBox[{"1", "/", "2"}], " ", ".15", 
+                 SuperscriptBox["tf", "2"]}], "+", ".3"}]}], "}"}], ",", 
+             ".4"}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"tf", ",", "0", ",", "t"}], "}"}]}], "]"}], ",", 
+       RowBox[{"Disk", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"1", "/", "2"}], 
+            SuperscriptBox["t", "2"]}], ",", 
+           RowBox[{"10", "-", 
+            RowBox[{
+             RowBox[{"1", "/", "2"}], " ", ".15", 
+             SuperscriptBox["t", "2"]}], "+", ".3"}]}], "}"}], ",", ".4"}], 
+        "]"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{
+           SuperscriptBox["tf", "2"], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"1", "/", "2"}], 
+              SuperscriptBox["tf", "2"]}], ",", 
+             RowBox[{"-", 
+              RowBox[{"IntegerPart", "[", "tf", "]"}]}]}], "}"}]}], "]"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"tf", ",", "1", ",", "t"}], "}"}]}], "]"}], ",", 
+       RowBox[{"Text", "[", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"t", "<", "10"}], ",", 
+           RowBox[{"NumberForm", "[", 
+            RowBox[{
+             SuperscriptBox["t", "2"], ",", 
+             RowBox[{"{", 
+              RowBox[{"3", ",", "1"}], "}"}]}], "]"}], ",", "\"\<\>\""}], 
+          "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"1", "/", "2"}], 
+            SuperscriptBox["t", "2"]}], ",", 
+           RowBox[{"-", 
+            RowBox[{"IntegerPart", "[", 
+             RowBox[{"t", "+", "1"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Line", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", 
+               RowBox[{
+                RowBox[{"-", "h"}], "-", "1.5"}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"t", "<", 
+                  RowBox[{"h", "+", "1"}]}], ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"1", "/", "2"}], 
+                   SuperscriptBox[
+                    RowBox[{"(", "t", ")"}], "2"]}], "-", ".1"}], ",", 
+                 RowBox[{
+                  RowBox[{"1", "/", "2"}], 
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"h", "+", "1"}], ")"}], "2"]}]}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"-", "h"}], "-", "1.5"}]}], "}"}]}], "}"}], ",", 
+           RowBox[{"VertexColors", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"ColorData", "[", "\"\<Pastel\>\"", "]"}], "[", 
+               RowBox[{
+                SuperscriptBox["h", "2"], "/", "50"}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"ColorData", "[", "\"\<Pastel\>\"", "]"}], "[", 
+               RowBox[{
+                SuperscriptBox[
+                 RowBox[{"(", "h", ")"}], "2"], "/", "50"}], "]"}]}], 
+             "}"}]}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"h", ",", "0", ",", "9"}], "}"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Line", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"1", "/", "2"}], 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{"t0", "+", "1"}], ")"}], "2"]}], ",", "0"}], "}"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"1", "/", "2"}], 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{"t0", "+", "1"}], ")"}], "2"]}], ",", 
+              RowBox[{"10", "-", 
+               RowBox[{
+                RowBox[{"1", "/", "2"}], " ", ".15", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"t0", "+", "1"}], ")"}], "2"]}]}]}], "}"}]}], "}"}],
+           "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"t0", ",", "0", ",", "9"}], "}"}]}], "]"}]}], "}"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "550"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "50"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"Background", "\[Rule]", 
+      RowBox[{"GrayLevel", "[", ".9", "]"}]}], ",", 
+     RowBox[{"PlotRangePadding", "\[Rule]", "3"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t", ",", "6.5"}], "}"}], ",", "0.", ",", "10.", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.5106703980759783`*^9, 3.5106704636349783`*^9}, {
+   3.5106707597999783`*^9, 3.5106707908449783`*^9}, {3.510670965058978*^9, 
+   3.5106712129329777`*^9}, {3.510671339846978*^9, 3.5106714615649776`*^9}, {
+   3.510671541655978*^9, 3.510671550078978*^9}, {3.510671747488978*^9, 
+   3.510671826379978*^9}, {3.5106723483589783`*^9, 3.5106723725499783`*^9}, {
+   3.510672432431978*^9, 3.5106724391829777`*^9}, {3.5106724870829782`*^9, 
+   3.510672527651978*^9}, {3.510930930744224*^9, 3.510930945428699*^9}, {
+   3.510931925962089*^9, 3.510931994257234*^9}, {3.510932029492277*^9, 
+   3.510932036017908*^9}, {3.510932166102909*^9, 3.510932167592008*^9}, {
+   3.510932216627594*^9, 3.510932219630006*^9}, {3.510932261004364*^9, 
+   3.510932286107436*^9}, {3.510932340497386*^9, 3.510932414922648*^9}, {
+   3.510933083456071*^9, 3.510933098792001*^9}, {3.510933221292487*^9, 
+   3.510933236234115*^9}, {3.510933422630729*^9, 3.51093343947681*^9}, {
+   3.510933563744986*^9, 3.510933577484946*^9}, {3.51093370601774*^9, 
+   3.510933722728493*^9}, {3.510934242342005*^9, 3.510934351591518*^9}, {
+   3.51093449007367*^9, 3.5109345901945*^9}, {3.51093462893235*^9, 
+   3.510934718348986*^9}, {3.510934791403164*^9, 3.510934831660184*^9}, {
+   3.510935107403913*^9, 3.510935171259606*^9}, 3.510935204737164*^9, {
+   3.510935249894646*^9, 3.510935312881685*^9}, {3.510935357959586*^9, 
+   3.510935360610149*^9}, {3.510935420636443*^9, 3.51093544524587*^9}, {
+   3.510935486370723*^9, 3.510935514669506*^9}, {3.510935646298472*^9, 
+   3.510935654552972*^9}, {3.513779735993084*^9, 3.51377975387383*^9}, {
+   3.513779793722313*^9, 3.513779823384823*^9}, {3.5137799900661173`*^9, 
+   3.513779995577098*^9}, {3.513780051316514*^9, 3.51378005447754*^9}, {
+   3.513780296103449*^9, 3.513780365269353*^9}, {3.5138677392468147`*^9, 
+   3.513867790783003*^9}, 3.513868001150547*^9, 3.513868292537372*^9, {
+   3.5138686777645817`*^9, 3.513868677843986*^9}, {3.513868735876268*^9, 
+   3.513868736044162*^9}, {3.513868804384469*^9, 3.513868868950131*^9}, {
+   3.513869647378606*^9, 3.513869668290498*^9}, 3.513869747507024*^9, {
+   3.513869804552168*^9, 3.513869820751107*^9}, {3.513869874511417*^9, 
+   3.513869875046172*^9}, {3.513870121329442*^9, 3.513870123881868*^9}, {
+   3.513870238285899*^9, 3.513870243101925*^9}, {3.513870713805406*^9, 
+   3.513870716192092*^9}, {3.5138709626078568`*^9, 3.513871044614512*^9}, {
+   3.513871155786314*^9, 3.513871174521793*^9}, {3.513871223863648*^9, 
+   3.51387136947919*^9}, {3.513871399533368*^9, 3.513871405482244*^9}, {
+   3.513871929615197*^9, 3.5138719395002947`*^9}, {3.5138719871009417`*^9, 
+   3.513872006597332*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 10., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`t$$], 6.5}, 0., 10.}}, Typeset`size$$ = {
+    825., {186., 197.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`t$35733$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 6.5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$35733$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[{Gray, 
+         Polygon[{{0, 0}, {0, 10}, {49.9, 2.5}, {49.9, 0}}], 
+         Table[
+          
+          Polygon[{{(1/2) $CellContext`t0^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}, {(1/
+              2) $CellContext`t0^2, 10 - ((1/2) 0.15) $CellContext`t0^2}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`t0^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][$CellContext`t0^2/50]}], {$CellContext`t0, 
+           0, $CellContext`t$$ - 0.01}], Black, 
+         Table[{
+           Opacity[$CellContext`tf/10], 
+           
+           Disk[{(1/2) $CellContext`tf^2, 10 - ((1/2) 0.15) $CellContext`tf^2 + 
+             0.3}, 0.4]}, {$CellContext`tf, 0, $CellContext`t$$}], 
+         Disk[{(1/2) $CellContext`t$$^2, 10 - ((1/2) 0.15) $CellContext`t$$^2 + 
+           0.3}, 0.4], 
+         Table[
+          Text[$CellContext`tf^2, {(1/2) $CellContext`tf^2, -
+            IntegerPart[$CellContext`tf]}], {$CellContext`tf, 
+           1, $CellContext`t$$}], 
+         Text[
+          If[$CellContext`t$$ < 10, 
+           NumberForm[$CellContext`t$$^2, {3, 1}], 
+           ""], {(1/2) $CellContext`t$$^2, -
+           IntegerPart[$CellContext`t$$ + 1]}], 
+         Table[
+          Line[{{0, -$CellContext`h - 1.5}, {
+             
+             If[$CellContext`t$$ < $CellContext`h + 
+               1, (1/2) $CellContext`t$$^2 - 
+              0.1, (1/2) ($CellContext`h + 1)^2], -$CellContext`h - 1.5}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`h^2/50], 
+             ColorData["Pastel"][$CellContext`h^2/50]}], {$CellContext`h, 0, 
+           9}], 
+         Table[
+          
+          Line[{{(1/2) ($CellContext`t0 + 1)^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}}], {$CellContext`t0, 
+           0, 9}]}, ImageSize -> 550, PlotRange -> {{0, 50}, {-10, 10}}, 
+        Background -> GrayLevel[0.9], PlotRangePadding -> 3], 
+      "Specifications" :> {{{$CellContext`t$$, 6.5}, 0., 10., Appearance -> 
+         "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{889., {251., 259.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->181674563]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateCaptionSection"],
+
+Cell[TextData[{
+ "In 1603, Galileo performed a classic experiment in mechanics: he measured \
+the distances covered by a ball rolling on an inclined plane, which slows \
+down the ball, compared to its free fall. The distance traveled grows by the \
+increasing ratios 1, 3, 5, 7, \[Ellipsis] units for any angle, leading to the \
+key observation that the total distance ",
+ Cell[BoxData[
+  FormBox["d", TraditionalForm]], "InlineMath"],
+ " covered is proportional to the time ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]], "InlineMath"],
+ " squared ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"d", "\[Tilde]", 
+     SuperscriptBox["t", "2"]}]}], TraditionalForm]], "InlineMath"],
+ "), with the progression 1, 4, 9, 16, \[Ellipsis]."
+}], "ManipulateCaption",
+ CellChangeTimes->{{3.5138694247892838`*^9, 3.513869496441945*^9}, {
+   3.5138700100922127`*^9, 3.513870095103361*^9}, {3.513871857383132*^9, 
+   3.5138718626259937`*^9}, {3.513872083463834*^9, 3.513872091121798*^9}, {
+   3.513872155255596*^9, 3.5138722305341587`*^9}, {3.5138722999203167`*^9, 
+   3.5138723179979563`*^9}, 3.513872419054193*^9, {3.513872531214904*^9, 
+   3.5138725319003553`*^9}, {3.513872580731703*^9, 3.513872594873214*^9}, {
+   3.513872625147471*^9, 3.513872675249261*^9}, {3.5138727156242037`*^9, 
+   3.5138727220004463`*^9}, {3.5138727914214687`*^9, 3.513872816910626*^9}, {
+   3.51387303520161*^9, 3.5138730656548986`*^9}, {3.5138731071541557`*^9, 
+   3.5138731493483067`*^9}, {3.5138735416704197`*^9, 3.513873543084279*^9}, {
+   3.513873792750834*^9, 3.513873820399864*^9}, {3.51387422248771*^9, 
+   3.5138742238800497`*^9}, {3.5140596753016*^9, 3.514059874621745*^9}, {
+   3.514061809770677*^9, 3.5140618581850224`*^9}, {3.514061892256996*^9, 
+   3.5140618938022537`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ThumbnailSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 6.5, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`t$$], 6.5}, 0., 10.}}, Typeset`size$$ = {
+    825., {186., 197.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`t$35781$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 6.5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$35781$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[{Gray, 
+         Polygon[{{0, 0}, {0, 10}, {49.9, 2.5}, {49.9, 0}}], 
+         Table[
+          
+          Polygon[{{(1/2) $CellContext`t0^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}, {(1/
+              2) $CellContext`t0^2, 10 - ((1/2) 0.15) $CellContext`t0^2}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`t0^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][$CellContext`t0^2/50]}], {$CellContext`t0, 
+           0, $CellContext`t$$ - 0.01}], Black, 
+         Table[{
+           Opacity[$CellContext`tf/10], 
+           
+           Disk[{(1/2) $CellContext`tf^2, 10 - ((1/2) 0.15) $CellContext`tf^2 + 
+             0.3}, 0.4]}, {$CellContext`tf, 0, $CellContext`t$$}], 
+         Disk[{(1/2) $CellContext`t$$^2, 10 - ((1/2) 0.15) $CellContext`t$$^2 + 
+           0.3}, 0.4], 
+         Table[
+          Text[$CellContext`tf^2, {(1/2) $CellContext`tf^2, -
+            IntegerPart[$CellContext`tf]}], {$CellContext`tf, 
+           1, $CellContext`t$$}], 
+         Text[
+          If[$CellContext`t$$ < 10, 
+           NumberForm[$CellContext`t$$^2, {3, 1}], 
+           ""], {(1/2) $CellContext`t$$^2, -
+           IntegerPart[$CellContext`t$$ + 1]}], 
+         Table[
+          Line[{{0, -$CellContext`h - 1.5}, {
+             
+             If[$CellContext`t$$ < $CellContext`h + 
+               1, (1/2) $CellContext`t$$^2 - 
+              0.1, (1/2) ($CellContext`h + 1)^2], -$CellContext`h - 1.5}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`h^2/50], 
+             ColorData["Pastel"][$CellContext`h^2/50]}], {$CellContext`h, 0, 
+           9}], 
+         Table[
+          
+          Line[{{(1/2) ($CellContext`t0 + 1)^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}}], {$CellContext`t0, 
+           0, 9}]}, ImageSize -> 550, PlotRange -> {{0, 50}, {-10, 10}}, 
+        Background -> GrayLevel[0.9], PlotRangePadding -> 3], 
+      "Specifications" :> {{{$CellContext`t$$, 6.5}, 0., 10., Appearance -> 
+         "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{889., {251., 259.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->28267821]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SnapshotsSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 2.56, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`t$$], 2.56}, 0., 10.}}, Typeset`size$$ = {
+    825., {186., 197.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`t$35829$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 2.56}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$35829$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[{Gray, 
+         Polygon[{{0, 0}, {0, 10}, {49.9, 2.5}, {49.9, 0}}], 
+         Table[
+          
+          Polygon[{{(1/2) $CellContext`t0^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}, {(1/
+              2) $CellContext`t0^2, 10 - ((1/2) 0.15) $CellContext`t0^2}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`t0^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][$CellContext`t0^2/50]}], {$CellContext`t0, 
+           0, $CellContext`t$$ - 0.01}], Black, 
+         Table[{
+           Opacity[$CellContext`tf/10], 
+           
+           Disk[{(1/2) $CellContext`tf^2, 10 - ((1/2) 0.15) $CellContext`tf^2 + 
+             0.3}, 0.4]}, {$CellContext`tf, 0, $CellContext`t$$}], 
+         Disk[{(1/2) $CellContext`t$$^2, 10 - ((1/2) 0.15) $CellContext`t$$^2 + 
+           0.3}, 0.4], 
+         Table[
+          Text[$CellContext`tf^2, {(1/2) $CellContext`tf^2, -
+            IntegerPart[$CellContext`tf]}], {$CellContext`tf, 
+           1, $CellContext`t$$}], 
+         Text[
+          If[$CellContext`t$$ < 10, 
+           NumberForm[$CellContext`t$$^2, {3, 1}], 
+           ""], {(1/2) $CellContext`t$$^2, -
+           IntegerPart[$CellContext`t$$ + 1]}], 
+         Table[
+          Line[{{0, -$CellContext`h - 1.5}, {
+             
+             If[$CellContext`t$$ < $CellContext`h + 
+               1, (1/2) $CellContext`t$$^2 - 
+              0.1, (1/2) ($CellContext`h + 1)^2], -$CellContext`h - 1.5}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`h^2/50], 
+             ColorData["Pastel"][$CellContext`h^2/50]}], {$CellContext`h, 0, 
+           9}], 
+         Table[
+          
+          Line[{{(1/2) ($CellContext`t0 + 1)^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}}], {$CellContext`t0, 
+           0, 9}]}, ImageSize -> 550, PlotRange -> {{0, 50}, {-10, 10}}, 
+        Background -> GrayLevel[0.9], PlotRangePadding -> 3], 
+      "Specifications" :> {{{$CellContext`t$$, 2.56}, 0., 10., Appearance -> 
+         "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{889., {251., 259.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->138457949],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 4.7700000000000005`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`t$$], 4.7700000000000005`}, 0., 10.}}, 
+    Typeset`size$$ = {825., {186., 197.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`t$35877$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 4.7700000000000005`},
+       "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$35877$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[{Gray, 
+         Polygon[{{0, 0}, {0, 10}, {49.9, 2.5}, {49.9, 0}}], 
+         Table[
+          
+          Polygon[{{(1/2) $CellContext`t0^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}, {(1/
+              2) $CellContext`t0^2, 10 - ((1/2) 0.15) $CellContext`t0^2}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`t0^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][$CellContext`t0^2/50]}], {$CellContext`t0, 
+           0, $CellContext`t$$ - 0.01}], Black, 
+         Table[{
+           Opacity[$CellContext`tf/10], 
+           
+           Disk[{(1/2) $CellContext`tf^2, 10 - ((1/2) 0.15) $CellContext`tf^2 + 
+             0.3}, 0.4]}, {$CellContext`tf, 0, $CellContext`t$$}], 
+         Disk[{(1/2) $CellContext`t$$^2, 10 - ((1/2) 0.15) $CellContext`t$$^2 + 
+           0.3}, 0.4], 
+         Table[
+          
+          Text[$CellContext`tf^2, {(1/2) $CellContext`tf^2, -
+            IntegerPart[$CellContext`tf]}], {$CellContext`tf, 
+           1, $CellContext`t$$}], 
+         Text[
+          If[$CellContext`t$$ < 10, 
+           NumberForm[$CellContext`t$$^2, {3, 1}], 
+           ""], {(1/2) $CellContext`t$$^2, -
+           IntegerPart[$CellContext`t$$ + 1]}], 
+         Table[
+          Line[{{0, -$CellContext`h - 1.5}, {
+             
+             If[$CellContext`t$$ < $CellContext`h + 
+               1, (1/2) $CellContext`t$$^2 - 
+              0.1, (1/2) ($CellContext`h + 1)^2], -$CellContext`h - 1.5}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`h^2/50], 
+             ColorData["Pastel"][$CellContext`h^2/50]}], {$CellContext`h, 0, 
+           9}], 
+         Table[
+          
+          Line[{{(1/2) ($CellContext`t0 + 1)^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}}], {$CellContext`t0, 
+           0, 9}]}, ImageSize -> 550, PlotRange -> {{0, 50}, {-10, 10}}, 
+        Background -> GrayLevel[0.9], PlotRangePadding -> 3], 
+      "Specifications" :> {{{$CellContext`t$$, 4.7700000000000005`}, 0., 10., 
+         Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{889., {251., 259.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->6357266],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 8.89, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`t$$], 8.89}, 0., 10.}}, Typeset`size$$ = {
+    825., {186., 197.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`t$35925$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 8.89}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$35925$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[{Gray, 
+         Polygon[{{0, 0}, {0, 10}, {49.9, 2.5}, {49.9, 0}}], 
+         Table[
+          
+          Polygon[{{(1/2) $CellContext`t0^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2 - 0.1, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}, {(1/
+              2) $CellContext`t0^2, 10 - ((1/2) 0.15) $CellContext`t0^2}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`t0^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][($CellContext`t0 + 1)^2/50], 
+             ColorData["Pastel"][$CellContext`t0^2/50]}], {$CellContext`t0, 
+           0, $CellContext`t$$ - 0.01}], Black, 
+         Table[{
+           Opacity[$CellContext`tf/10], 
+           
+           Disk[{(1/2) $CellContext`tf^2, 10 - ((1/2) 0.15) $CellContext`tf^2 + 
+             0.3}, 0.4]}, {$CellContext`tf, 0, $CellContext`t$$}], 
+         Disk[{(1/2) $CellContext`t$$^2, 10 - ((1/2) 0.15) $CellContext`t$$^2 + 
+           0.3}, 0.4], 
+         Table[
+          Text[$CellContext`tf^2, {(1/2) $CellContext`tf^2, -
+            IntegerPart[$CellContext`tf]}], {$CellContext`tf, 
+           1, $CellContext`t$$}], 
+         Text[
+          If[$CellContext`t$$ < 10, 
+           NumberForm[$CellContext`t$$^2, {3, 1}], 
+           ""], {(1/2) $CellContext`t$$^2, -
+           IntegerPart[$CellContext`t$$ + 1]}], 
+         Table[
+          Line[{{0, -$CellContext`h - 1.5}, {
+             
+             If[$CellContext`t$$ < $CellContext`h + 
+               1, (1/2) $CellContext`t$$^2 - 
+              0.1, (1/2) ($CellContext`h + 1)^2], -$CellContext`h - 1.5}}, 
+           VertexColors -> {
+             ColorData["Pastel"][$CellContext`h^2/50], 
+             ColorData["Pastel"][$CellContext`h^2/50]}], {$CellContext`h, 0, 
+           9}], 
+         Table[
+          
+          Line[{{(1/2) ($CellContext`t0 + 1)^2, 
+             0}, {(1/2) ($CellContext`t0 + 1)^2, 
+             10 - ((1/2) 0.15) ($CellContext`t0 + 1)^2}}], {$CellContext`t0, 
+           0, 9}]}, ImageSize -> 550, PlotRange -> {{0, 50}, {-10, 10}}, 
+        Background -> GrayLevel[0.9], PlotRangePadding -> 3], 
+      "Specifications" :> {{{$CellContext`t$$, 8.89}, 0., 10., Appearance -> 
+         "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{889., {251., 259.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->75031096]
+}, Open  ]],
+
+Cell["", "DetailsSection"],
+
+Cell[CellGroupData[{
+
+Cell["", "ControlSuggestionsSection"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Resize Images"]}],
+  "\"Click inside an image to reveal its orange resize frame.\\nDrag any of \
+the orange resize handles to resize the image.\"",
+  TooltipDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.513945688493887*^9},
+ FontFamily->"Verdana",
+ CellTags->"ResizeImages"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Rotate and Zoom in 3D"]}],
+  RowBox[{
+   "\"Drag a 3D graphic to rotate it. Starting the drag near the center \
+tumbles\\nthe graphic; starting near a corner turns it parallel to the plane \
+of the screen.\\nHold down \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" (or \"", 
+    FrameBox[
+    "Cmd", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" on Mac) and drag up and down to zoom.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"RotateAndZoomIn3D"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Drag Locators"]}],
+  RowBox[{"\"Drag any locator (\"", 
+    GraphicsBox[
+     LocatorBox[
+      Scaled[{0.5, 0.5}]], ImageSize -> 20], 
+    "\", etc.) to move it around.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"DragLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Create and Delete Locators"]}],
+  RowBox[{"\"Insert a new locator in the graphic by holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key\\nand clicking where you want it to be. Delete a locator by \
+clicking it\\nwhile holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" key.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"CreateAndDeleteLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Slider Zoom"]}],
+  RowBox[{"\"Hold down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key while moving a slider to make fine adjustments in the slider \
+value.\\nHold \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" and/or \"", 
+    FrameBox[
+    "Shift", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" at the same time as \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" to make ever finer adjustments.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.514060400665086*^9},
+ FontFamily->"Verdana",
+ CellTags->"SliderZoom"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Gamepad Controls"]}],
+  "\"Control this Demonstration with a gamepad or other\\nhuman interface \
+device connected to your computer.\"",
+  TooltipDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.3895522232313623`*^9, 
+  3.514060399821226*^9},
+ FontFamily->"Verdana",
+ CellTags->"GamepadControls"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Automatic Animation"]}],
+  RowBox[{"\"Animate a slider in this Demonstration by clicking the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJzzTSzJSM1NLMlMTlRwL0osyMhMLlZwyy8CCjEzMjAwcIKwAgOI/R/IhBKc\n\
+/4EAyGAG0f+nTZsGwgysIJIRKsWKLAXGIHFmEpUgLADxWUAkI24jZs+eTaEt\n\
+IG+wQKRmzJgBlYf5lhEA30OqWA=="], "Graphics", ImageSize -> {9, 9}, ImageMargins -> 
+      0, CellBaseline -> Baseline], BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"button\\nnext to the slider, and then clicking the play button that \
+appears.\\nAnimate all controls by selecting \"", 
+    StyleBox["Autorun", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0, CellBaseline -> Baseline], 
+     BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.5106703818339777`*^9},
+ FontFamily->"Verdana",
+ CellTags->"AutomaticAnimation"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Bookmark Animation"]}],
+  RowBox[{
+   "\"See a prepared animation of this Demonstration by selecting\\n\"", 
+    StyleBox["Animate Bookmarks", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0, CellBaseline -> Baseline], 
+     BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SearchTermsSection"],
+
+Cell["Galileo", "SearchTerms",
+ CellChangeTimes->{{3.513870303197372*^9, 3.5138703044509573`*^9}},
+ CellID->1772591223],
+
+Cell["inclined plane", "SearchTerms",
+ CellChangeTimes->{{3.513870306276497*^9, 3.5138703098504877`*^9}},
+ CellID->2047533777]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "RelatedLinksSection"],
+
+Cell[TextData[ButtonBox["Galileo Galilei",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://scienceworld.wolfram.com/biography/Galileo.html"], None},
+ ButtonNote->
+  "http://scienceworld.wolfram.com/biography/Galileo.html"]], "RelatedLinks",
+ CellChangeTimes->{{3.513873316416655*^9, 3.513873316417243*^9}},
+ CellID->421770470],
+
+Cell[TextData[ButtonBox["Inclined Plane",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://scienceworld.wolfram.com/physics/InclinedPlane.html"], None},
+ ButtonNote->
+  "http://scienceworld.wolfram.com/physics/InclinedPlane.html"]], \
+"RelatedLinks",
+ CellChangeTimes->{{3.5138734046623287`*^9, 3.513873417653863*^9}},
+ CellID->2000254190]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "AuthorSection"],
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["Enrique Zeleny",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Enrique+Zeleny"]\
+, None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Enrique+Zeleny"]
+}], "Author",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.510670384218978*^9, 3.510670386448978*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{984, 744},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
+2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Demonstration.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ResizeImages"->{
+  Cell[33327, 785, 353, 9, 42, "ControlSuggestions",
+   CellTags->"ResizeImages"]},
+ "RotateAndZoomIn3D"->{
+  Cell[33683, 796, 678, 16, 42, "ControlSuggestions",
+   CellTags->"RotateAndZoomIn3D"]},
+ "DragLocators"->{
+  Cell[34364, 814, 340, 11, 42, "ControlSuggestions",
+   CellTags->"DragLocators"]},
+ "CreateAndDeleteLocators"->{
+  Cell[34707, 827, 637, 15, 42, "ControlSuggestions",
+   CellTags->"CreateAndDeleteLocators"]},
+ "SliderZoom"->{
+  Cell[35347, 844, 885, 22, 42, "ControlSuggestions",
+   CellTags->"SliderZoom"]},
+ "GamepadControls"->{
+  Cell[36235, 868, 393, 10, 42, "ControlSuggestions",
+   CellTags->"GamepadControls"]},
+ "AutomaticAnimation"->{
+  Cell[36631, 880, 1528, 32, 42, "ControlSuggestions",
+   CellTags->"AutomaticAnimation"]},
+ "BookmarkAnimation"->{
+  Cell[38162, 914, 908, 21, 42, "ControlSuggestions",
+   CellTags->"BookmarkAnimation"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ResizeImages", 41002, 1006},
+ {"RotateAndZoomIn3D", 41110, 1009},
+ {"DragLocators", 41219, 1012},
+ {"CreateAndDeleteLocators", 41334, 1015},
+ {"SliderZoom", 41447, 1018},
+ {"GamepadControls", 41552, 1021},
+ {"AutomaticAnimation", 41665, 1024},
+ {"BookmarkAnimation", 41781, 1027}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 200, 3, 111, "DemoTitle"],
+Cell[782, 27, 33, 0, 399, "InitializationSection"],
+Cell[CellGroupData[{
+Cell[840, 31, 29, 0, 267, "ManipulateSection"],
+Cell[CellGroupData[{
+Cell[894, 35, 11595, 284, 315, "Input"],
+Cell[12492, 321, 3729, 79, 527, "Output",
+ CellID->181674563]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16267, 406, 36, 0, 249, "ManipulateCaptionSection"],
+Cell[16306, 408, 1773, 32, 130, "ManipulateCaption"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18116, 445, 28, 0, 252, "ThumbnailSection"],
+Cell[18147, 447, 3728, 79, 527, "Output",
+ CellID->28267821]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21912, 531, 28, 0, 207, "SnapshotsSection"],
+Cell[21943, 533, 3733, 79, 527, "Output",
+ CellID->138457949],
+Cell[25679, 614, 3807, 81, 527, "Output",
+ CellID->6357266],
+Cell[29489, 697, 3732, 79, 527, "Output",
+ CellID->75031096]
+}, Open  ]],
+Cell[33236, 779, 26, 0, 498, "DetailsSection"],
+Cell[CellGroupData[{
+Cell[33287, 783, 37, 0, 147, "ControlSuggestionsSection"],
+Cell[33327, 785, 353, 9, 42, "ControlSuggestions",
+ CellTags->"ResizeImages"],
+Cell[33683, 796, 678, 16, 42, "ControlSuggestions",
+ CellTags->"RotateAndZoomIn3D"],
+Cell[34364, 814, 340, 11, 42, "ControlSuggestions",
+ CellTags->"DragLocators"],
+Cell[34707, 827, 637, 15, 42, "ControlSuggestions",
+ CellTags->"CreateAndDeleteLocators"],
+Cell[35347, 844, 885, 22, 42, "ControlSuggestions",
+ CellTags->"SliderZoom"],
+Cell[36235, 868, 393, 10, 42, "ControlSuggestions",
+ CellTags->"GamepadControls"],
+Cell[36631, 880, 1528, 32, 42, "ControlSuggestions",
+ CellTags->"AutomaticAnimation"],
+Cell[38162, 914, 908, 21, 42, "ControlSuggestions",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39107, 940, 30, 0, 228, "SearchTermsSection"],
+Cell[39140, 942, 119, 2, 33, "SearchTerms",
+ CellID->1772591223],
+Cell[39262, 946, 126, 2, 33, "SearchTerms",
+ CellID->2047533777]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39425, 953, 31, 0, 207, "RelatedLinksSection"],
+Cell[39459, 955, 333, 7, 33, "RelatedLinks",
+ CellID->421770470],
+Cell[39795, 964, 345, 8, 33, "RelatedLinks",
+ CellID->2000254190]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40177, 977, 25, 0, 204, "AuthorSection"],
+Cell[40205, 979, 389, 11, 33, "Author"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
