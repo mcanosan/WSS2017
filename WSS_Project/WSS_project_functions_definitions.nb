@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1528572,      25256]
-NotebookOptionsPosition[   1521852,      25106]
-NotebookOutlinePosition[   1528260,      25249]
-CellTagsIndexPosition[   1528217,      25246]
+NotebookDataLength[   1545574,      25591]
+NotebookOptionsPosition[   1538824,      25440]
+NotebookOutlinePosition[   1545264,      25584]
+CellTagsIndexPosition[   1545221,      25581]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -32,134 +32,135 @@ Cell[BoxData[
      "plane", " ", "of", " ", "variable", " ", "inclination", " ", "with", 
      " ", "a", " ", "ball"}], "*)"}], "\n", 
    RowBox[{
-    RowBox[{"inclinedPlane", "[", 
-     RowBox[{
-     "angle_", ",", " ", "lengthPlane_", ",", " ", "t_", ",", " ", "g_"}], 
-     "]"}], ":=", " ", "\n", "\n", 
-    RowBox[{"Module", "[", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{
-       "\[Theta]", ",", "heightPlane", ",", "dFall", ",", "yFall", ",", 
-        "xFall", ",", "\[Phi]", ",", "ballRadius", ",", "ballCenter"}], "}"}],
-       ",", "\n", "  ", 
+    RowBox[{
+     RowBox[{"inclinedPlane", "[", 
       RowBox[{
-       RowBox[{"\[Theta]", " ", "=", " ", 
-        RowBox[{"angle", " ", "*", " ", 
-         RowBox[{"\[Pi]", "/", "180"}]}]}], ";", 
-       RowBox[{"(*", 
+      "angle_", ",", " ", "lengthPlane_", ",", " ", "t_", ",", " ", "g_", ",",
+        "b1_", ",", "b2_"}], "]"}], ":=", " ", "\n", "\n", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
         RowBox[{
-        "inclination", " ", "angle", " ", "of", " ", "the", " ", "plane", " ",
-          "in", " ", "radians"}], "*)"}], "\n", "\t", 
-       RowBox[{"heightPlane", " ", "=", " ", 
-        RowBox[{"lengthPlane", " ", "*", " ", 
-         RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], ";", " ", 
-       RowBox[{"(*", 
-        RowBox[{"height", " ", "of", " ", "the", " ", "plane"}], "*)"}], "\n",
-        "    ", 
-       RowBox[{"dFall", " ", "=", " ", 
-        RowBox[{
-         RowBox[{"1", "/", "2"}], "*", "g", "*", 
-         RowBox[{"Sin", "[", "\[Theta]", "]"}], "*", 
-         RowBox[{"t", "^", "2"}]}]}], ";", 
-       RowBox[{"(*", 
-        RowBox[{
-        "distance", " ", "falling", " ", "on", " ", "the", " ", "plane"}], 
-        "*)"}], "\[IndentingNewLine]", "\t", 
-       RowBox[{"yFall", " ", "=", " ", 
-        RowBox[{
-         RowBox[{"-", "dFall"}], "*", 
-         RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], ";", 
-       RowBox[{"(*", 
-        RowBox[{"vertical", " ", "distance", " ", "of", " ", "falling"}], 
-        "*)"}], "\[IndentingNewLine]", "\t", 
-       RowBox[{"xFall", " ", "=", " ", 
-        RowBox[{"dFall", "*", 
-         RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], ";", 
-       RowBox[{"(*", 
-        RowBox[{"horitzontal", " ", "distance", " ", "of", " ", "falling"}], 
-        "*)"}], "\[IndentingNewLine]", "\t", 
-       RowBox[{"ballRadius", "=", "5"}], ";", "\n", "\t", 
-       RowBox[{"\[Phi]", " ", "=", " ", 
-        RowBox[{"dFall", "/", "ballRadius"}]}], ";", 
-       RowBox[{"(*", 
-        RowBox[{
-        "angle", " ", "rotating", " ", "by", " ", "the", " ", "ball", " ", 
-         "rolling", " ", "down", " ", "the", " ", "plane"}], "*)"}], 
-       "\[IndentingNewLine]", "\t", 
-       RowBox[{"ballCenter", " ", "=", 
-        RowBox[{"{", 
+        "\[Theta]", ",", "heightPlane", ",", "dFall", ",", "yFall", ",", 
+         "xFall", ",", "\[Phi]", ",", "ballRadius", ",", "ballCenter", ",", 
+         "linebells"}], "}"}], ",", "\n", "  ", 
+       RowBox[{
+        RowBox[{"\[Theta]", " ", "=", " ", 
+         RowBox[{"angle", " ", "*", " ", 
+          RowBox[{"\[Pi]", "/", "180"}]}]}], ";", 
+        RowBox[{"(*", 
          RowBox[{
+         "inclination", " ", "angle", " ", "of", " ", "the", " ", "plane", 
+          " ", "in", " ", "radians"}], "*)"}], "\n", "\t", 
+        RowBox[{"heightPlane", " ", "=", " ", 
+         RowBox[{"lengthPlane", " ", "*", " ", 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], ";", " ", 
+        RowBox[{"(*", 
+         RowBox[{"height", " ", "of", " ", "the", " ", "plane"}], "*)"}], 
+        "\n", "    ", 
+        RowBox[{"dFall", " ", "=", " ", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", "g", "*", 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}], "*", 
+          RowBox[{"t", "^", "2"}]}]}], ";", 
+        RowBox[{"(*", 
+         RowBox[{
+         "distance", " ", "falling", " ", "on", " ", "the", " ", "plane"}], 
+         "*)"}], "\[IndentingNewLine]", "\t", 
+        RowBox[{"yFall", " ", "=", " ", 
+         RowBox[{
+          RowBox[{"-", "dFall"}], "*", 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], ";", 
+        RowBox[{"(*", 
+         RowBox[{"vertical", " ", "distance", " ", "of", " ", "falling"}], 
+         "*)"}], "\[IndentingNewLine]", "\t", 
+        RowBox[{"xFall", " ", "=", " ", 
+         RowBox[{"dFall", "*", 
+          RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], ";", 
+        RowBox[{"(*", 
+         RowBox[{"horitzontal", " ", "distance", " ", "of", " ", "falling"}], 
+         "*)"}], "\[IndentingNewLine]", "\t", 
+        RowBox[{"ballRadius", "=", "5"}], ";", "\n", "\t", 
+        RowBox[{"\[Phi]", " ", "=", " ", 
+         RowBox[{"dFall", "/", "ballRadius"}]}], ";", 
+        RowBox[{"(*", 
+         RowBox[{
+         "angle", " ", "rotating", " ", "by", " ", "the", " ", "ball", " ", 
+          "rolling", " ", "down", " ", "the", " ", "plane"}], "*)"}], 
+        "\[IndentingNewLine]", "\t", 
+        RowBox[{"ballCenter", " ", "=", 
+         RowBox[{"{", 
           RowBox[{
-           RowBox[{"ballRadius", "*", 
-            RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "+", "xFall"}], ",", " ", 
-          RowBox[{"heightPlane", "+", 
-           RowBox[{"ballRadius", "*", 
-            RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "+", "yFall"}]}], 
-         "}"}]}], ";", "\n", "   ", 
-       RowBox[{"Graphics", "[", "\[IndentingNewLine]", "\t\t", 
-        RowBox[{
-         RowBox[{"{", "\[IndentingNewLine]", "\t\t", 
-          RowBox[{"(*", 
-           RowBox[{"draws", " ", "the", " ", "plane"}], "*)"}], 
-          "\[IndentingNewLine]", "\t\t", 
-          RowBox[{
-           RowBox[{"Style", "[", 
-            RowBox[{
-             RowBox[{"Line", "[", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", 
-                 RowBox[{"0", ",", 
-                  RowBox[{"lengthPlane", "*", 
-                   RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"lengthPlane", "*", 
-                   RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", "0"}], 
-                 "}"}]}], "}"}], "]"}], ",", "Blue", ",", "Thick"}], "]"}], 
-           ",", "\[IndentingNewLine]", "\n", "\t\t", 
+           RowBox[{
+            RowBox[{"ballRadius", "*", 
+             RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "+", "xFall"}], ",", 
+           " ", 
+           RowBox[{"heightPlane", "+", 
+            RowBox[{"ballRadius", "*", 
+             RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "+", "yFall"}]}], 
+          "}"}]}], ";", "\n", "   ", 
+        RowBox[{"Graphics", "[", "\[IndentingNewLine]", "\t\t", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", "\t\t", 
            RowBox[{"(*", 
-            RowBox[{"draws", " ", "the", " ", "ball"}], "*)"}], 
+            RowBox[{"draws", " ", "the", " ", "plane"}], "*)"}], 
            "\[IndentingNewLine]", "\t\t", 
-           RowBox[{"Style", "[", 
-            RowBox[{
-             RowBox[{"Circle", "[", 
-              RowBox[{"ballCenter", ",", "ballRadius"}], "]"}], ",", "Red", 
-             ",", "Thick"}], "]"}], " ", ",", "\[IndentingNewLine]", 
-           "\[IndentingNewLine]", "\t\t", 
-           RowBox[{"(*", 
-            RowBox[{
-            "draws", " ", "the", " ", "final", " ", "stop", " ", "mark", " ", 
-             "on", " ", "the", " ", "plane"}], " ", "*)"}], "\t\t", 
-           "\[IndentingNewLine]", "\t\t", 
-           RowBox[{"Style", "[", 
-            RowBox[{
-             RowBox[{"Line", "[", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"lengthPlane", "*", 
-                   RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", "0"}], "}"}],
-                 ",", 
-                RowBox[{"{", 
-                 RowBox[{
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Line", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", 
+                   RowBox[{"lengthPlane", "*", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
+                 RowBox[{"{", 
                   RowBox[{
                    RowBox[{"lengthPlane", "*", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", "0"}], 
+                  "}"}]}], "}"}], "]"}], ",", "Blue", ",", "Thick"}], "]"}], 
+            ",", "\[IndentingNewLine]", "\n", "\t\t", 
+            RowBox[{"(*", 
+             RowBox[{"draws", " ", "the", " ", "ball"}], "*)"}], 
+            "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Circle", "[", 
+               RowBox[{"ballCenter", ",", "ballRadius"}], "]"}], ",", "Red", 
+              ",", "Thick"}], "]"}], " ", ",", "\[IndentingNewLine]", 
+            "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"(*", 
+             RowBox[{
+             "draws", " ", "the", " ", "final", " ", "stop", " ", "mark", " ",
+               "on", " ", "the", " ", "plane"}], " ", "*)"}], "\t\t", 
+            "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Line", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"lengthPlane", "*", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", "0"}], 
+                  "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"lengthPlane", "*", 
                     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "+", 
-                   RowBox[{"2", "*", "ballRadius", "*", 
+                    RowBox[{"2", "*", "ballRadius", "*", 
                     RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], ",", 
-                  RowBox[{"2", "*", "ballRadius", "*", 
-                   RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], "}"}]}], "}"}], 
-              "]"}], ",", "Blue", ",", "Thick"}], "]"}], ",", 
-           "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t", 
-           RowBox[{"(*", 
-            RowBox[{
-            "draws", " ", "the", " ", "line", " ", "for", " ", "the", " ", 
-             "bells"}], " ", "*)"}], "\n", "\t\t", 
-           RowBox[{"Style", "[", 
-            RowBox[{
+                   RowBox[{"2", "*", "ballRadius", "*", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], "}"}]}], "}"}],
+                "]"}], ",", "Blue", ",", "Thick"}], "]"}], ",", 
+            "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"(*", 
+             RowBox[{
+             "draws", " ", "the", " ", "line", " ", "for", " ", "the", " ", 
+              "bells"}], " ", "*)"}], "\n", "\t\t", 
+            RowBox[{"linebells", " ", "=", " ", 
              RowBox[{"Line", "[", 
               RowBox[{"{", 
                RowBox[{
@@ -181,60 +182,161 @@ Cell[BoxData[
                     RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], ",", 
                   RowBox[{"2", "*", "ballRadius", "*", 
                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], "}"}]}], "}"}], 
-              "]"}], ",", "Black"}], "]"}], ",", "\[IndentingNewLine]", "\t", 
-           "\[IndentingNewLine]", "\t\t", 
-           RowBox[{"(*", 
-            RowBox[{
-            "draws", " ", "the", " ", "radius", " ", "of", " ", "the", " ", 
-             "ball"}], "*)"}], "\[IndentingNewLine]", "\t\t", 
-           RowBox[{"Style", "[", 
-            RowBox[{
-             RowBox[{"Line", "[", 
-              RowBox[{"{", 
-               RowBox[{"ballCenter", ",", 
-                RowBox[{"ballCenter", "+", 
-                 RowBox[{"ballRadius", "*", 
-                  RowBox[{"{", 
-                   RowBox[{
+              "]"}]}], ",", "\[IndentingNewLine]", "\t", "\n", "\t\t", 
+            RowBox[{"(*", 
+             RowBox[{"draws", " ", "the", " ", "bells"}], " ", "*)"}], "\n", 
+            "\t\t", 
+            RowBox[{"Point", "[", 
+             RowBox[{"pointLine", "[", 
+              RowBox[{
+               RowBox[{"linebells", "[", 
+                RowBox[{"[", 
+                 RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", "linebells"}], 
+              "]"}], "]"}], ",", "\n", "\t\t", 
+            RowBox[{"Point", "[", 
+             RowBox[{"pointLine", "[", 
+              RowBox[{"b1", ",", "linebells"}], "]"}], "]"}], ",", "\n", 
+            "\t\t", 
+            RowBox[{"Point", "[", 
+             RowBox[{"pointLine", "[", 
+              RowBox[{"b2", ",", "linebells"}], "]"}], "]"}], ",", "\n", 
+            "\t\t", 
+            RowBox[{"Point", "[", 
+             RowBox[{"pointLine", "[", 
+              RowBox[{
+               RowBox[{"linebells", "[", 
+                RowBox[{"[", 
+                 RowBox[{"1", ",", "2"}], "]"}], "]"}], ",", "linebells"}], 
+              "]"}], "]"}], ",", "\n", "\t\t", "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"(*", 
+             RowBox[{
+             "draws", " ", "the", " ", "radius", " ", "of", " ", "the", " ", 
+              "ball"}], "*)"}], "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Line", "[", 
+               RowBox[{"{", 
+                RowBox[{"ballCenter", ",", 
+                 RowBox[{"ballCenter", "+", 
+                  RowBox[{"ballRadius", "*", 
+                   RowBox[{"{", 
+                    RowBox[{
                     RowBox[{"-", 
                     RowBox[{"Sin", "[", 
                     RowBox[{"\[Theta]", "+", "\[Phi]"}], "]"}]}], ",", 
                     RowBox[{"-", 
                     RowBox[{"Cos", "[", 
                     RowBox[{"\[Theta]", "+", "\[Phi]"}], "]"}]}]}], 
-                   "}"}]}]}]}], "}"}], "]"}], ",", "Red"}], "]"}], ",", 
-           "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t", 
+                    "}"}]}]}]}], "}"}], "]"}], ",", "Red"}], "]"}], ",", 
+            "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"(*", 
+             RowBox[{
+             "draws", " ", "the", " ", "inclination", " ", "arc", " ", "of", 
+              " ", "the", " ", "plane"}], "*)"}], "\t", "\[IndentingNewLine]",
+             "\t\t", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Circle", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"lengthPlane", "*", 
+                   RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", "0"}], "}"}],
+                 ",", "20", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"\[Pi]", "-", "\[Theta]"}], ",", "\[Pi]"}], "}"}]}],
+                "]"}], ",", "Black"}], "]"}]}], "\n", "\t\t", "\n", "\t\t", 
            RowBox[{"(*", 
-            RowBox[{
-            "draws", " ", "the", " ", "inclination", " ", "arc", " ", "of", 
-             " ", "the", " ", "plane"}], "*)"}], "\t", "\[IndentingNewLine]", 
-           "\t\t", 
+            RowBox[{"draws", " ", "the", " ", "labels"}], "*)"}], "\n", 
+           "\t\t", "\n", "\t\t\t\t\t\t", "\[IndentingNewLine]", "\t\t", "}"}],
+           ",", "\n", "\t", 
+          RowBox[{"(*", 
+           RowBox[{"plot", " ", "the", " ", "labels"}], "*)"}], "\n", "\t", 
+          RowBox[{"PlotLabel", "\[Rule]", 
            RowBox[{"Style", "[", 
             RowBox[{
-             RowBox[{"Circle", "[", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"lengthPlane", "*", 
-                  RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", "0"}], "}"}], 
-               ",", "20", ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"\[Pi]", "-", "\[Theta]"}], ",", "\[Pi]"}], "}"}]}], 
-              "]"}], ",", "Black"}], "]"}], ","}], "\[IndentingNewLine]", 
-          "\t\t", "}"}], ",", "\[IndentingNewLine]", "\t", 
-         RowBox[{"PlotRange", "\[Rule]", 
-          RowBox[{"{", 
-           RowBox[{
+             RowBox[{"Row", "[", "\n", "\t\t\t\t\t\t", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<\[Theta] = \>\"", ",", "angle", ",", "\n", 
+                "\t\t\t\t\t\t", "\"\<  acceleration = \>\"", ",", 
+                RowBox[{"Text", "@", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<g\>\"", ",", "Italic"}], "]"}]}], ",", 
+                RowBox[{"Text", "@", "\"\< sin(\[Theta]) = \>\""}], ",", 
+                RowBox[{"Round", "[", 
+                 RowBox[{
+                  RowBox[{"g", "*", " ", 
+                   RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", ".001"}], 
+                 "]"}], ",", "\"\< m/\>\"", ",", 
+                RowBox[{"Superscript", "[", 
+                 RowBox[{"\"\<s\>\"", ",", "2"}], "]"}]}], "}"}], "\n", 
+              "\t\t\t\t\t\t", "]"}], ",", "\n", "\t\t\t\t\t\t", "Black", ",", 
+             "\"\<Label\>\"", ",", "10"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", "\t", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "100"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "100"}], "}"}]}], "}"}]}], ",", 
+          "\[IndentingNewLine]", "\t", 
+          RowBox[{"ImageSize", "\[Rule]", "300"}], ",", "\[IndentingNewLine]",
+           "\t", 
+          RowBox[{"Frame", "\[Rule]", "True"}]}], "\[IndentingNewLine]", "\t",
+          "]"}]}]}], "\n", "]"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", "*)"}], "\n", 
+   RowBox[{"ClearAll", "[", 
+    RowBox[{"b1", ",", "b2"}], "]"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"pointLine", "[", 
+      RowBox[{"bell_", ",", "lines_"}], "]"}], ":=", "\n", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "pointLine", ",", "startPoint", ",", "finalPoint", ",", "direction"}],
+         "}"}], ",", "\n", "\t", 
+       RowBox[{
+        RowBox[{"startPoint", " ", "=", " ", 
+         RowBox[{"lines", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\n", "\t", 
+        RowBox[{"finalPoint", " ", "=", " ", 
+         RowBox[{"lines", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";", "\n", "\t", 
+        RowBox[{"direction", " ", "=", " ", 
+         RowBox[{"finalPoint", " ", "-", " ", "startPoint"}]}], ";", "\n", 
+        "\t", 
+        RowBox[{"pointLine", " ", "=", " ", 
+         RowBox[{"startPoint", " ", "+", " ", 
+          RowBox[{"bell", "*", "direction"}]}]}]}]}], "\n", "\t", "]"}]}], 
+    ";"}], "\n", "\n", 
+   RowBox[{"ClearAll", "[", "planets", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"menuPlanet", "[", "planets_", "]"}], ":=", "\n", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "menuSolar", "}"}], ",", "\n", "\t", 
+      RowBox[{"menuSolar", " ", "=", " ", 
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"QuantityMagnitude", "[", 
+            RowBox[{"UnitConvert", "[", 
+             RowBox[{
+              RowBox[{"#", "[", "\"\<Gravity\>\"", "]"}], ",", "\"\<SI\>\""}],
+              "]"}], "]"}], "\[Rule]", " ", 
+           RowBox[{"Row", "[", 
             RowBox[{"{", 
-             RowBox[{"0", ",", "100"}], "}"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"0", ",", "100"}], "}"}]}], "}"}]}], ",", 
-         "\[IndentingNewLine]", "\t", 
-         RowBox[{"ImageSize", "\[Rule]", "300"}], ",", "\[IndentingNewLine]", 
-         "\t", 
-         RowBox[{"Frame", "\[Rule]", "True"}]}], "\[IndentingNewLine]", "\t", 
-        "]"}]}]}], "\n", "]"}]}]}]}]], "Code",
+             RowBox[{"#", ",", 
+              RowBox[{"#", "[", "\"\<Image\>\"", "]"}]}], "}"}], "]"}]}], 
+          "&"}], ",", "planets"}], "]"}]}]}], "\n", "]"}]}]}]}]], "Code",
  CellChangeTimes->{{3.707681508028954*^9, 3.7076815392067738`*^9}, {
    3.707681596522213*^9, 3.707681644122814*^9}, {3.707681768115314*^9, 
    3.707681769475376*^9}, {3.707681818656389*^9, 3.707681971115302*^9}, {
@@ -259,36 +361,25 @@ Cell[BoxData[
    3.7079099778548245`*^9}, {3.7079105279079475`*^9, 3.707910548766605*^9}, {
    3.7079105792505503`*^9, 3.7079106270690484`*^9}, {3.7079112330145626`*^9, 
    3.707911508980215*^9}, {3.707911558329759*^9, 3.7079115935908637`*^9}, {
-   3.707911781745775*^9, 3.7079118147918015`*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"11a262fe-996f-4c00-b3d6-9f23bf3ec8ef"],
+   3.707911781745775*^9, 3.7079118147918015`*^9}, {3.7079223028113317`*^9, 
+   3.70792230337935*^9}, {3.707922410128975*^9, 3.707922469331975*^9}, {
+   3.7079226160549593`*^9, 3.7079227396521454`*^9}, 3.7079227816045656`*^9, {
+   3.707922812174604*^9, 3.7079228129226274`*^9}, {3.707922859062194*^9, 
+   3.7079228914062924`*^9}, {3.707923043776461*^9, 3.70792308110773*^9}, 
+   3.707923233892912*^9, {3.7079243953976746`*^9, 3.707924396070695*^9}, {
+   3.707924426570738*^9, 3.7079244492774997`*^9}, {3.7079245247570615`*^9, 
+   3.7079245467098045`*^9}, {3.7079245981015453`*^9, 3.70792460650083*^9}, {
+   3.7079253063690424`*^9, 3.7079253269054537`*^9}, {3.707925547795969*^9, 
+   3.7079255482579875`*^9}, {3.7079285045879865`*^9, 3.707928516534397*^9}, {
+   3.707928603283331*^9, 3.707928717164195*^9}, {3.7079290093671103`*^9, 
+   3.707929015781332*^9}, {3.707929160459236*^9, 3.7079291667434454`*^9}, {
+   3.7079294502130604`*^9, 3.7079295006877837`*^9}, {3.7079300382748604`*^9, 
+   3.7079300864164925`*^9}, {3.7079311529442005`*^9, 3.707931173569902*^9}, {
+   3.707931284474663*^9, 3.7079313345633593`*^9}},
+ CellLabel->
+  "In[165]:=",ExpressionUUID->"11a262fe-996f-4c00-b3d6-9f23bf3ec8ef"],
 
-Cell[BoxData[{
- RowBox[{"ClearAll", "[", "planets", "]"}], "\n", 
- RowBox[{
-  RowBox[{"menuPlanet", "[", "planets_", "]"}], ":=", "\n", 
-  RowBox[{"Module", "[", 
-   RowBox[{
-    RowBox[{"{", "menuSolar", "}"}], ",", "\n", "\t", 
-    RowBox[{"menuSolar", " ", "=", " ", 
-     RowBox[{"Map", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{
-         RowBox[{"QuantityMagnitude", "[", 
-          RowBox[{"UnitConvert", "[", 
-           RowBox[{
-            RowBox[{"#", "[", "\"\<Gravity\>\"", "]"}], ",", "\"\<SI\>\""}], 
-           "]"}], "]"}], "\[Rule]", " ", 
-         RowBox[{"Row", "[", 
-          RowBox[{"{", 
-           RowBox[{"#", ",", 
-            RowBox[{"#", "[", "\"\<Image\>\"", "]"}]}], "}"}], "]"}]}], "&"}],
-        ",", "planets"}], "]"}]}]}], "\n", "]"}]}]}], "Code",
- CellChangeTimes->{
-  3.707911832465357*^9, {3.707912147007222*^9, 3.7079122529335423`*^9}, {
-   3.7079127724890947`*^9, 3.7079127938847675`*^9}, {3.707913231175479*^9, 
-   3.7079132421598225`*^9}, 3.707913373766953*^9},
- CellLabel->"In[33]:=",ExpressionUUID->"ada7ada9-9a6f-41cd-b152-eb7f1bbeb373"],
+Cell[BoxData[""], "Input",ExpressionUUID->"144b0c3f-9962-4b4e-acb3-9d50c2a53fda"],
 
 Cell[CellGroupData[{
 
@@ -296,20 +387,39 @@ Cell[BoxData[
  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{"inclinedPlane", "[", 
-    RowBox[{"angle", ",", "100", ",", "t", ",", "g"}], "]"}], ",", 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"angle", ",", "100", ",", "t", ",", "g", ",", "b1", ",", "b2"}], 
+    "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
    RowBox[{"(*", 
     RowBox[{"configuration", " ", "of", " ", "controls"}], "*)"}], 
-   "\[IndentingNewLine]", "\t", 
-   RowBox[{"{", 
-    RowBox[{"angle", ",", "0", ",", "90", ",", 
-     RowBox[{"ControlType", "\[Rule]", "Animator"}], ",", 
-     RowBox[{"AnimationRepetitions", "\[Rule]", "1"}], ",", 
-     RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "}"}], " ", ",", 
+   "\[IndentingNewLine]", "\t\t", 
    RowBox[{"(*", 
     RowBox[{
     "the", " ", "angle", " ", "is", " ", "measured", " ", "in", " ", 
-     "degrees"}], "*)"}], "\[IndentingNewLine]", "\t", 
+     "degrees"}], "*)"}], "\[IndentingNewLine]", "\t\t", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"angle", ",", "0", ",", "\"\<slope \[Theta]\>\""}], "}"}], ",", 
+     "0", ",", "90", ",", 
+     RowBox[{"ControlType", "\[Rule]", "Slider"}]}], "}"}], " ", ",", 
+   "\[IndentingNewLine]", "\t\t", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b1", ",", "0", ",", "\"\<bell 1\>\""}], "}"}], ",", "0", ",", 
+     "1", ",", 
+     RowBox[{"ControlType", "\[Rule]", "Slider"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "\t\t", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b2", ",", "0", ",", "\"\<bell 2\>\""}], "}"}], ",", "0", ",", 
+     "b1", ",", 
+     RowBox[{"ControlType", "\[Rule]", "Slider"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "\t\t", 
+   RowBox[{"(*", 
+    RowBox[{"the", " ", "time", " ", "is", " ", "in", " ", "seconds"}], 
+    "*)"}], "\[IndentingNewLine]", "\t\t", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
@@ -318,7 +428,11 @@ Cell[BoxData[
      RowBox[{"AnimationRate", "\[Rule]", "1"}], ",", 
      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
      RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "}"}], ",", 
-   "\[IndentingNewLine]", "\t", 
+   "\[IndentingNewLine]", "\t\t", "\[IndentingNewLine]", "\t\t", 
+   RowBox[{"(*", 
+    RowBox[{
+    "gravitational", " ", "constant", " ", "of", " ", "Solar", " ", "system", 
+     " ", "planets"}], "*)"}], "\[IndentingNewLine]", "\t\t", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
@@ -326,6 +440,7 @@ Cell[BoxData[
      RowBox[{"menuPlanet", "[", 
       RowBox[{"PlanetData", "[", "]"}], "]"}]}], "}"}], ",", 
    RowBox[{"ControlType", "\[Rule]", "PopupMenu"}], ",", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t", 
    "\[IndentingNewLine]", "\t", 
    RowBox[{"SaveDefinitions", "\[Rule]", "True"}], ",", "\[IndentingNewLine]",
     "\t", 
@@ -339,18 +454,37 @@ Cell[BoxData[
    3.707912429999628*^9, 3.7079124634856777`*^9}, {3.7079125029596415`*^9, 
    3.7079125204101934`*^9}, {3.7079126441550694`*^9, 3.7079127038199415`*^9}, 
    3.707912750500412*^9, {3.707912860049842*^9, 3.7079128657230263`*^9}, {
-   3.7079130363133698`*^9, 3.707913078064677*^9}},
- CellLabel->"In[35]:=",ExpressionUUID->"d677318f-30a8-4f94-8a28-43d889f256ba"],
+   3.7079130363133698`*^9, 3.707913078064677*^9}, {3.707922242170278*^9, 
+   3.707922277021452*^9}, {3.7079223550601063`*^9, 3.7079223919403563`*^9}, {
+   3.7079241085519485`*^9, 3.707924117669252*^9}, {3.7079242203117337`*^9, 
+   3.7079242381063437`*^9}, {3.707924289176076*^9, 3.7079243100627847`*^9}, {
+   3.707924410013173*^9, 3.7079244179864388`*^9}, {3.707924706292225*^9, 
+   3.7079248281263523`*^9}, {3.707924860505455*^9, 3.707924861355484*^9}, {
+   3.7079249050479593`*^9, 3.707924954871653*^9}, {3.7079249888098063`*^9, 
+   3.707924999931181*^9}, {3.7079250306092224`*^9, 3.707925129878705*^9}, {
+   3.707925285730347*^9, 3.7079252891824636`*^9}, {3.7079253323433156`*^9, 
+   3.7079253600522537`*^9}, {3.707925423109742*^9, 3.707925433023082*^9}, {
+   3.7079254952761965`*^9, 3.7079255402827206`*^9}, {3.7079255898823943`*^9, 
+   3.707925612726177*^9}, {3.707925669907115*^9, 3.7079256911828322`*^9}, {
+   3.707927415261589*^9, 3.707927596780241*^9}, {3.707928421692174*^9, 
+   3.707928428672414*^9}, {3.7079284646986446`*^9, 3.7079284734499416`*^9}, {
+   3.7079314016336455`*^9, 3.7079314020196586`*^9}},
+ CellLabel->
+  "In[172]:=",ExpressionUUID->"d677318f-30a8-4f94-8a28-43d889f256ba"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`angle$$ = 26.94, $CellContext`g$$ = 
-    3.7000000000000000001`3., $CellContext`t$$ = 0., Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`angle$$], 0, 90}, {{
+   DynamicModuleBox[{$CellContext`angle$$ = 
+    40.800000000000004`, $CellContext`b1$$ = 0.705, $CellContext`b2$$ = 
+    0.272835, $CellContext`g$$ = 9.8`3., $CellContext`t$$ = 0, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`angle$$], 0, "slope \[Theta]"}, 0, 90}, {{
+       Hold[$CellContext`b1$$], 0, "bell 1"}, 0, 1}, {{
+       Hold[$CellContext`b2$$], 0, "bell 2"}, 0, 
+      Dynamic[$CellContext`b1$$]}, {{
        Hold[$CellContext`t$$], 0, "release ball"}, 0, 10, 0.01}, {{
        Hold[$CellContext`g$$], 9.8`3., "Planet:"}, {
       3.7000000000000000001`3. -> Row[{
@@ -12671,26 +12805,33 @@ RS960Yte9OLfCf8N0jIc1w==
              "URL" -> 
              "http://www.wolframcdn.com/waimage/hset019/47f/\
 47f286170fef0d70e5c042937b38ef09_v001s.jpg"]]}]}}}, Typeset`size$$ = {
-    300., {143., 150.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`angle$19429$$ = 
-    0, $CellContext`t$19430$$ = 0, $CellContext`g$19431$$ = False}, 
+    375., {190., 197.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`angle$72376$$ = 
+    0, $CellContext`b1$72377$$ = 0, $CellContext`b2$72378$$ = 
+    0, $CellContext`t$72379$$ = 0, $CellContext`g$72380$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
-      "Variables" :> {$CellContext`angle$$ = 0, $CellContext`g$$ = 
-        9.8`3., $CellContext`t$$ = 0}, "ControllerVariables" :> {
-        Hold[$CellContext`angle$$, $CellContext`angle$19429$$, 0], 
-        Hold[$CellContext`t$$, $CellContext`t$19430$$, 0], 
-        Hold[$CellContext`g$$, $CellContext`g$19431$$, False]}, 
+      "Variables" :> {$CellContext`angle$$ = 0, $CellContext`b1$$ = 
+        0, $CellContext`b2$$ = 0, $CellContext`g$$ = 9.8`3., $CellContext`t$$ = 
+        0}, "ControllerVariables" :> {
+        Hold[$CellContext`angle$$, $CellContext`angle$72376$$, 0], 
+        Hold[$CellContext`b1$$, $CellContext`b1$72377$$, 0], 
+        Hold[$CellContext`b2$$, $CellContext`b2$72378$$, 0], 
+        Hold[$CellContext`t$$, $CellContext`t$72379$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$72380$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, 
       "Body" :> $CellContext`inclinedPlane[$CellContext`angle$$, 
-        100, $CellContext`t$$, $CellContext`g$$], 
-      "Specifications" :> {{$CellContext`angle$$, 0, 90, ControlType -> 
-         Animator, AnimationRepetitions -> 1, AnimationRunning -> 
-         False}, {{$CellContext`t$$, 0, "release ball"}, 0, 10, 0.01, 
+        100, $CellContext`t$$, $CellContext`g$$, $CellContext`b1$$, \
+$CellContext`b2$$], 
+      "Specifications" :> {{{$CellContext`angle$$, 0, "slope \[Theta]"}, 0, 
+         90, ControlType -> Slider}, {{$CellContext`b1$$, 0, "bell 1"}, 0, 1, 
+         ControlType -> Slider}, {{$CellContext`b2$$, 0, "bell 2"}, 0, 
+         Dynamic[$CellContext`b1$$], ControlType -> 
+         Slider}, {{$CellContext`t$$, 0, "release ball"}, 0, 10, 0.01, 
          ControlType -> Trigger, AnimationRate -> 1, Appearance -> "Labeled", 
          ControlPlacement -> Left}, {{$CellContext`g$$, 9.8`3., "Planet:"}, {
          3.7000000000000000001`3. -> Row[{
@@ -13317,7 +13458,6 @@ FKUoRSlKUYpSlKIUJet/AFxRDiQ=
               Association[
                "Source" -> 
                 "http://photojournal.jpl.nasa.gov/catalog/PIA13840", "URL" -> 
-                
                 "http://www.wolframcdn.com/waimage/hset019/799/\
 7995f794544981d3a25c136ca1d75170_v001s.jpg"]]}], 8.87`3. -> Row[{
              Entity["Planet", "Venus"], 
@@ -25014,7 +25154,7 @@ RS960Yte9OLfCf8N0jIc1w==
 47f286170fef0d70e5c042937b38ef09_v001s.jpg"]]}]}}}, 
       "Options" :> {ControlType -> PopupMenu, ControlPlacement -> Left}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{745., {175., 182.}},
+     ImageSizeCache->{766., {228., 235.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -25078,14 +25218,193 @@ $CellContext`ballRadius {-Sin[$CellContext`\[Theta] + $CellContext`\[Phi]], -
               Style[
                
                Circle[{$CellContext`lengthPlane Cos[$CellContext`\[Theta]], 
-                 0}, 20, {Pi - $CellContext`\[Theta], Pi}], Black], Null}, 
+                 0}, 20, {Pi - $CellContext`\[Theta], Pi}], Black], PlotLabel -> 
+              Style[
+                
+                Row[{"slope = \[Theta] = ", $CellContext`angle, ";", 
+                  "  acceleration = ", 
+                  Text[
+                   Style["g", Italic]], 
+                  Text[" sin(\[Theta]) = "], 
+                  Round[$CellContext`g Sin[$CellContext`\[Theta]], 0.001], 
+                  " m/", 
+                  Superscript["s", 2]}], Black, "Label", 12]}, 
+             PlotRange -> {{0, 100}, {0, 100}}, ImageSize -> 300, Frame -> 
+             True]], $CellContext`inclinedPlane[
+           Pattern[$CellContext`angle, 
+            Blank[]], 
+           Pattern[$CellContext`lengthPlane, 
+            Blank[]], 
+           Pattern[$CellContext`t, 
+            Blank[]], 
+           Pattern[$CellContext`g, 
+            Blank[]], 
+           Pattern[$CellContext`b, 
+            Blank[]]] := 
+         Module[{$CellContext`\[Theta], $CellContext`heightPlane, \
+$CellContext`dFall, $CellContext`yFall, $CellContext`xFall, $CellContext`\
+\[Phi], $CellContext`ballRadius, $CellContext`ballCenter}, $CellContext`\
+\[Theta] = $CellContext`angle (Pi/
+              180); $CellContext`heightPlane = $CellContext`lengthPlane 
+             Sin[$CellContext`\[Theta]]; $CellContext`dFall = (1/
+              2) $CellContext`g 
+             Sin[$CellContext`\[Theta]] $CellContext`t^2; $CellContext`yFall = \
+(-$CellContext`dFall) 
+             Sin[$CellContext`\[Theta]]; $CellContext`xFall = \
+$CellContext`dFall Cos[$CellContext`\[Theta]]; $CellContext`ballRadius = 
+            5; $CellContext`\[Phi] = \
+$CellContext`dFall/$CellContext`ballRadius; $CellContext`ballCenter = \
+{$CellContext`ballRadius 
+               Sin[$CellContext`\[Theta]] + $CellContext`xFall, \
+$CellContext`heightPlane + $CellContext`ballRadius 
+               Cos[$CellContext`\[Theta]] + $CellContext`yFall}; Graphics[{
+              Style[
+               
+               Line[{{0, $CellContext`lengthPlane 
+                  Sin[$CellContext`\[Theta]]}, {$CellContext`lengthPlane 
+                  Cos[$CellContext`\[Theta]], 0}}], Blue, Thick], 
+              Style[
+               Circle[$CellContext`ballCenter, $CellContext`ballRadius], Red, 
+               Thick], 
+              Style[
+               
+               Line[{{$CellContext`lengthPlane Cos[$CellContext`\[Theta]], 
+                  0}, {$CellContext`lengthPlane Cos[$CellContext`\[Theta]] + 
+                  2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
+                  2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
+               Blue, Thick], 
+              Style[
+               
+               Line[{{2 $CellContext`ballRadius 
+                  Sin[$CellContext`\[Theta]], $CellContext`lengthPlane 
+                   Sin[$CellContext`\[Theta]] + 
+                  2 $CellContext`ballRadius 
+                   Cos[$CellContext`\[Theta]]}, {$CellContext`lengthPlane 
+                   Cos[$CellContext`\[Theta]] + 
+                  2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
+                  2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
+               Black], 
+              Style[
+               
+               Line[{$CellContext`ballCenter, $CellContext`ballCenter + \
+$CellContext`ballRadius {-Sin[$CellContext`\[Theta] + $CellContext`\[Phi]], -
+                    Cos[$CellContext`\[Theta] + $CellContext`\[Phi]]}}], Red], 
+              Style[
+               
+               Circle[{$CellContext`lengthPlane Cos[$CellContext`\[Theta]], 
+                 0}, 20, {Pi - $CellContext`\[Theta], Pi}], Black], PlotLabel -> 
+              Style[
+                
+                Row[{"slope = \[Theta] = ", $CellContext`angle, ";", 
+                  "  acceleration = ", 
+                  Text[
+                   Style["g", Italic]], 
+                  Text[" sin(\[Theta]) = "], 
+                  Round[$CellContext`g Sin[$CellContext`\[Theta]], 0.001], 
+                  " m/", 
+                  Superscript["s", 2]}], Black, "Label", 12]}, 
+             PlotRange -> {{0, 100}, {0, 100}}, ImageSize -> 300, Frame -> 
+             True]], $CellContext`inclinedPlane[
+           Pattern[$CellContext`angle, 
+            Blank[]], 
+           Pattern[$CellContext`lengthPlane, 
+            Blank[]], 
+           Pattern[$CellContext`t, 
+            Blank[]], 
+           Pattern[$CellContext`g, 
+            Blank[]], 
+           Pattern[$CellContext`b1, 
+            Blank[]], 
+           Pattern[$CellContext`b2, 
+            Blank[]]] := 
+         Module[{$CellContext`\[Theta], $CellContext`heightPlane, \
+$CellContext`dFall, $CellContext`yFall, $CellContext`xFall, $CellContext`\
+\[Phi], $CellContext`ballRadius, $CellContext`ballCenter, \
+$CellContext`linebells}, $CellContext`\[Theta] = $CellContext`angle (Pi/
+              180); $CellContext`heightPlane = $CellContext`lengthPlane 
+             Sin[$CellContext`\[Theta]]; $CellContext`dFall = (1/
+              2) $CellContext`g 
+             Sin[$CellContext`\[Theta]] $CellContext`t^2; $CellContext`yFall = \
+(-$CellContext`dFall) 
+             Sin[$CellContext`\[Theta]]; $CellContext`xFall = \
+$CellContext`dFall Cos[$CellContext`\[Theta]]; $CellContext`ballRadius = 
+            5; $CellContext`\[Phi] = \
+$CellContext`dFall/$CellContext`ballRadius; $CellContext`ballCenter = \
+{$CellContext`ballRadius 
+               Sin[$CellContext`\[Theta]] + $CellContext`xFall, \
+$CellContext`heightPlane + $CellContext`ballRadius 
+               Cos[$CellContext`\[Theta]] + $CellContext`yFall}; Graphics[{
+              Style[
+               
+               Line[{{0, $CellContext`lengthPlane 
+                  Sin[$CellContext`\[Theta]]}, {$CellContext`lengthPlane 
+                  Cos[$CellContext`\[Theta]], 0}}], Blue, Thick], 
+              Style[
+               Circle[$CellContext`ballCenter, $CellContext`ballRadius], Red, 
+               Thick], 
+              Style[
+               
+               Line[{{$CellContext`lengthPlane Cos[$CellContext`\[Theta]], 
+                  0}, {$CellContext`lengthPlane Cos[$CellContext`\[Theta]] + 
+                  2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
+                  2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
+               Blue, Thick], $CellContext`linebells = 
+              Line[{{2 $CellContext`ballRadius 
+                  Sin[$CellContext`\[Theta]], $CellContext`lengthPlane 
+                   Sin[$CellContext`\[Theta]] + 
+                  2 $CellContext`ballRadius 
+                   Cos[$CellContext`\[Theta]]}, {$CellContext`lengthPlane 
+                   Cos[$CellContext`\[Theta]] + 
+                  2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
+                  2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
+              Point[
+               $CellContext`pointLine[
+                Part[$CellContext`linebells, 1, 1], $CellContext`linebells]], 
+              Point[
+               $CellContext`pointLine[$CellContext`b1, \
+$CellContext`linebells]], 
+              Point[
+               $CellContext`pointLine[$CellContext`b2, \
+$CellContext`linebells]], 
+              Point[
+               $CellContext`pointLine[
+                Part[$CellContext`linebells, 1, 2], $CellContext`linebells]], 
+              Style[
+               
+               Line[{$CellContext`ballCenter, $CellContext`ballCenter + \
+$CellContext`ballRadius {-Sin[$CellContext`\[Theta] + $CellContext`\[Phi]], -
+                    Cos[$CellContext`\[Theta] + $CellContext`\[Phi]]}}], Red], 
+              Style[
+               
+               Circle[{$CellContext`lengthPlane Cos[$CellContext`\[Theta]], 
+                 0}, 20, {Pi - $CellContext`\[Theta], Pi}], Black]}, 
+             PlotLabel -> Style[
+               Row[{"\[Theta] = ", $CellContext`angle, "  acceleration = ", 
+                 Text[
+                  Style["g", Italic]], 
+                 Text[" sin(\[Theta]) = "], 
+                 Round[$CellContext`g Sin[$CellContext`\[Theta]], 0.001], 
+                 " m/", 
+                 Superscript["s", 2]}], Black, "Label", 10], 
              PlotRange -> {{0, 100}, {0, 100}}, ImageSize -> 300, Frame -> 
              True]], $CellContext`heightPlane = 
          100 Sin[Pi/18], $CellContext`dFall = 0., $CellContext`yFall = 
          0., $CellContext`xFall = 0., $CellContext`\[Phi] = 
          0., $CellContext`ballRadius = 
-         5, $CellContext`ballCenter = {0.8682408883346516, 
-          22.28885653175407}}; 
+         5, $CellContext`ballCenter = {0.8682408883346516, 22.28885653175407},
+          Attributes[Superscript] = {
+          NHoldRest, ReadProtected}, $CellContext`pointLine[
+           Pattern[$CellContext`bell, 
+            Blank[]], 
+           Pattern[$CellContext`lines, 
+            Blank[]]] := 
+         Module[{$CellContext`pointLine, $CellContext`startPoint, \
+$CellContext`finalPoint, $CellContext`direction}, $CellContext`startPoint = 
+            Part[$CellContext`lines, 1, 1]; $CellContext`finalPoint = 
+            Part[$CellContext`lines, 1, 
+              2]; $CellContext`direction = $CellContext`finalPoint - \
+$CellContext`startPoint; $CellContext`pointLine = $CellContext`startPoint + \
+$CellContext`bell $CellContext`direction]}; 
        Uncompress[
         "1:eJyFkLsOwjAMRQPitfIJfAvqgmhVEcGMixwRqXEqxxny9ySVWJPl6gzH9pUvk3+\
 YjVJqjXDIoZOb/KzPKwZB97565zwN4NCcirXLcbdBzPY/\
@@ -25098,14 +25417,29 @@ GRvdycsBFIuEPL7BVkQ=="]}; Typeset`initDone$$ = True),
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.707912526510379*^9, 3.7079126657647443`*^9, 
-  3.7079127095481186`*^9, 3.7079128073951874`*^9, 3.7079128422682815`*^9, 
-  3.707912872777238*^9, 3.707913392702543*^9},
- CellLabel->"Out[35]=",ExpressionUUID->"e5237e79-20e7-442b-9cc3-76205e2fc3e4"]
+ CellChangeTimes->{
+  3.707912526510379*^9, 3.7079126657647443`*^9, 3.7079127095481186`*^9, 
+   3.7079128073951874`*^9, 3.7079128422682815`*^9, 3.707912872777238*^9, 
+   3.707913392702543*^9, {3.707922256029739*^9, 3.707922311228613*^9}, {
+   3.7079223994786043`*^9, 3.7079224251444736`*^9}, 3.7079228391665206`*^9, 
+   3.707922904757743*^9, 3.707923068691304*^9, 3.707923099304344*^9, 
+   3.70792319121146*^9, 3.7079232515685067`*^9, 3.707923527017851*^9, 
+   3.7079241226054187`*^9, {3.7079242088053417`*^9, 3.7079242461666107`*^9}, {
+   3.7079243045255876`*^9, 3.707924319253088*^9}, 3.7079244753053803`*^9, 
+   3.7079245702266006`*^9, 3.7079248758349667`*^9, 3.7079249582347617`*^9, 
+   3.7079250049493494`*^9, {3.707925052806898*^9, 3.707925138113982*^9}, {
+   3.7079253417316256`*^9, 3.7079253649374123`*^9}, 3.7079254409543433`*^9, 
+   3.7079255601723857`*^9, 3.7079256501054354`*^9, 3.7079257012431726`*^9, {
+   3.7079275588734546`*^9, 3.7079275802886734`*^9}, 3.707928489846489*^9, 
+   3.70792856817414*^9, 3.707928865770237*^9, 3.7079290348189697`*^9, 
+   3.707929118054792*^9, 3.7079295320998383`*^9, 3.707931363512344*^9, 
+   3.7079314109749556`*^9},
+ CellLabel->
+  "Out[172]=",ExpressionUUID->"ba584aa5-f0be-4906-b919-06f7ddc2dcf9"]
 }, Open  ]]
 },
-WindowSize->{1350, 685},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 DockedCells->Cell[
   BoxData[
    TagBox[
@@ -25183,6 +25517,7 @@ $CellContext`lnkre = LinkRead[$ParentLink]);
       "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]], 
   "DockedCell"],
 CellLabelAutoDelete->False,
+Magnification:>1.25 Inherited,
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
 StyleDefinitions->Notebook[{
    Cell[
@@ -25248,15 +25583,15 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 11273, 242, 769, "Code", "ExpressionUUID" -> \
-"0189adf6-5a2e-434d-8bed-ba2fca6668b8"],
-Cell[11834, 264, 1092, 26, 123, "Code", "ExpressionUUID" -> \
-"4f08a4ec-088e-4b38-b3c4-a4c51d213c68"],
+Cell[558, 20, 16886, 359, 1698, "Code", "ExpressionUUID" -> \
+"94e2776a-fb8b-4484-96b0-d6fc4202b314"],
+Cell[17447, 381, 81, 0, 38, "Input", "ExpressionUUID" -> \
+"75b1d2f2-960c-463b-abd5-929665809dba"],
 Cell[CellGroupData[{
-Cell[12951, 294, 2393, 48, 202, "Input", "ExpressionUUID" -> \
-"ad5a52d4-f4cb-462f-a93d-a0e900bcf25e"],
-Cell[15347, 344, 1506489, 24759, 374, "Output", "ExpressionUUID" -> \
-"e5237e79-20e7-442b-9cc3-76205e2fc3e4"]
+Cell[17553, 385, 4385, 87, 447, "Input", "ExpressionUUID" -> \
+"a4f80d42-2d7f-4cc9-8324-a7f68deca562"],
+Cell[21941, 474, 1516867, 24963, 484, "Output", "ExpressionUUID" -> \
+"8d0b3dae-2e83-42f4-a70a-9d2e35ffe6f0"]
 }, Open  ]]
 }
 ]
