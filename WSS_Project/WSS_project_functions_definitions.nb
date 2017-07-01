@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1545574,      25591]
-NotebookOptionsPosition[   1538824,      25440]
-NotebookOutlinePosition[   1545264,      25584]
-CellTagsIndexPosition[   1545221,      25581]
+NotebookDataLength[   1546790,      25608]
+NotebookOptionsPosition[   1540040,      25457]
+NotebookOutlinePosition[   1546480,      25601]
+CellTagsIndexPosition[   1546437,      25598]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -43,7 +43,7 @@ Cell[BoxData[
         RowBox[{
         "\[Theta]", ",", "heightPlane", ",", "dFall", ",", "yFall", ",", 
          "xFall", ",", "\[Phi]", ",", "ballRadius", ",", "ballCenter", ",", 
-         "linebells"}], "}"}], ",", "\n", "  ", 
+         "lineBells"}], "}"}], ",", "\n", "  ", 
        RowBox[{
         RowBox[{"\[Theta]", " ", "=", " ", 
          RowBox[{"angle", " ", "*", " ", 
@@ -160,7 +160,7 @@ Cell[BoxData[
              RowBox[{
              "draws", " ", "the", " ", "line", " ", "for", " ", "the", " ", 
               "bells"}], " ", "*)"}], "\n", "\t\t", 
-            RowBox[{"linebells", " ", "=", " ", 
+            RowBox[{"lineBells", " ", "=", " ", 
              RowBox[{"Line", "[", 
               RowBox[{"{", 
                RowBox[{
@@ -186,28 +186,23 @@ Cell[BoxData[
             RowBox[{"(*", 
              RowBox[{"draws", " ", "the", " ", "bells"}], " ", "*)"}], "\n", 
             "\t\t", 
+            RowBox[{"PointSize", "[", "Large", "]"}], ",", "\n", "\t\t", 
             RowBox[{"Point", "[", 
              RowBox[{"pointLine", "[", 
-              RowBox[{
-               RowBox[{"linebells", "[", 
-                RowBox[{"[", 
-                 RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", "linebells"}], 
-              "]"}], "]"}], ",", "\n", "\t\t", 
-            RowBox[{"Point", "[", 
-             RowBox[{"pointLine", "[", 
-              RowBox[{"b1", ",", "linebells"}], "]"}], "]"}], ",", "\n", 
+              RowBox[{"0", ",", "lineBells"}], "]"}], "]"}], ",", "\n", 
             "\t\t", 
             RowBox[{"Point", "[", 
              RowBox[{"pointLine", "[", 
-              RowBox[{"b2", ",", "linebells"}], "]"}], "]"}], ",", "\n", 
+              RowBox[{"b1", ",", "lineBells"}], "]"}], "]"}], ",", "\n", 
             "\t\t", 
             RowBox[{"Point", "[", 
              RowBox[{"pointLine", "[", 
-              RowBox[{
-               RowBox[{"linebells", "[", 
-                RowBox[{"[", 
-                 RowBox[{"1", ",", "2"}], "]"}], "]"}], ",", "linebells"}], 
-              "]"}], "]"}], ",", "\n", "\t\t", "\[IndentingNewLine]", "\t\t", 
+              RowBox[{"b2", ",", "lineBells"}], "]"}], "]"}], ",", "\n", 
+            "\t\t", 
+            RowBox[{"Point", "[", 
+             RowBox[{"pointLine", "[", 
+              RowBox[{"1", ",", "lineBells"}], "]"}], "]"}], ",", "\n", 
+            "\t\t", "\[IndentingNewLine]", "\t\t", 
             RowBox[{"(*", 
              RowBox[{
              "draws", " ", "the", " ", "radius", " ", "of", " ", "the", " ", 
@@ -248,9 +243,9 @@ Cell[BoxData[
                   RowBox[{"\[Pi]", "-", "\[Theta]"}], ",", "\[Pi]"}], "}"}]}],
                 "]"}], ",", "Black"}], "]"}]}], "\n", "\t\t", "\n", "\t\t", 
            RowBox[{"(*", 
-            RowBox[{"draws", " ", "the", " ", "labels"}], "*)"}], "\n", 
-           "\t\t", "\n", "\t\t\t\t\t\t", "\[IndentingNewLine]", "\t\t", "}"}],
-           ",", "\n", "\t", 
+            RowBox[{"draws", " ", "the", " ", "labels"}], "*)"}], 
+           "\[IndentingNewLine]", "\t\t", "\n", "\t\t\t\t\t\t", "\n", "\t\t", 
+           "}"}], ",", "\n", "\t", 
           RowBox[{"(*", 
            RowBox[{"plot", " ", "the", " ", "labels"}], "*)"}], "\n", "\t", 
           RowBox[{"PlotLabel", "\[Rule]", 
@@ -375,9 +370,15 @@ Cell[BoxData[
    3.707929015781332*^9}, {3.707929160459236*^9, 3.7079291667434454`*^9}, {
    3.7079294502130604`*^9, 3.7079295006877837`*^9}, {3.7079300382748604`*^9, 
    3.7079300864164925`*^9}, {3.7079311529442005`*^9, 3.707931173569902*^9}, {
-   3.707931284474663*^9, 3.7079313345633593`*^9}},
+   3.707931284474663*^9, 3.7079313345633593`*^9}, {3.707931580465233*^9, 
+   3.707931599741884*^9}, {3.707931657496854*^9, 3.7079316786915646`*^9}, {
+   3.7079317180748987`*^9, 3.707931758180258*^9}, {3.70793180984101*^9, 
+   3.7079318375809546`*^9}, {3.7079321662451897`*^9, 
+   3.7079322064315505`*^9}, {3.707932309719856*^9, 3.707932339741823*^9}, {
+   3.7079324066130934`*^9, 3.70793241099224*^9}, {3.7079324447993836`*^9, 
+   3.7079324480374975`*^9}},
  CellLabel->
-  "In[165]:=",ExpressionUUID->"11a262fe-996f-4c00-b3d6-9f23bf3ec8ef"],
+  "In[233]:=",ExpressionUUID->"11a262fe-996f-4c00-b3d6-9f23bf3ec8ef"],
 
 Cell[BoxData[""], "Input",ExpressionUUID->"144b0c3f-9962-4b4e-acb3-9d50c2a53fda"],
 
@@ -470,17 +471,17 @@ Cell[BoxData[
    3.707928428672414*^9}, {3.7079284646986446`*^9, 3.7079284734499416`*^9}, {
    3.7079314016336455`*^9, 3.7079314020196586`*^9}},
  CellLabel->
-  "In[172]:=",ExpressionUUID->"d677318f-30a8-4f94-8a28-43d889f256ba"],
+  "In[232]:=",ExpressionUUID->"d677318f-30a8-4f94-8a28-43d889f256ba"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`angle$$ = 
-    40.800000000000004`, $CellContext`b1$$ = 0.705, $CellContext`b2$$ = 
-    0.272835, $CellContext`g$$ = 9.8`3., $CellContext`t$$ = 0, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+   DynamicModuleBox[{$CellContext`angle$$ = 26.1, $CellContext`b1$$ = 
+    0.445, $CellContext`b2$$ = 0.117925, $CellContext`g$$ = 
+    9.8`3., $CellContext`t$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`angle$$], 0, "slope \[Theta]"}, 0, 90}, {{
        Hold[$CellContext`b1$$], 0, "bell 1"}, 0, 1}, {{
        Hold[$CellContext`b2$$], 0, "bell 2"}, 0, 
@@ -12806,19 +12807,19 @@ RS960Yte9OLfCf8N0jIc1w==
              "http://www.wolframcdn.com/waimage/hset019/47f/\
 47f286170fef0d70e5c042937b38ef09_v001s.jpg"]]}]}}}, Typeset`size$$ = {
     375., {190., 197.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`angle$72376$$ = 
-    0, $CellContext`b1$72377$$ = 0, $CellContext`b2$72378$$ = 
-    0, $CellContext`t$72379$$ = 0, $CellContext`g$72380$$ = False}, 
+    Typeset`skipInitDone$$ = False, $CellContext`angle$87877$$ = 
+    0, $CellContext`b1$87878$$ = 0, $CellContext`b2$87879$$ = 
+    0, $CellContext`t$87880$$ = 0, $CellContext`g$87881$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`angle$$ = 0, $CellContext`b1$$ = 
         0, $CellContext`b2$$ = 0, $CellContext`g$$ = 9.8`3., $CellContext`t$$ = 
         0}, "ControllerVariables" :> {
-        Hold[$CellContext`angle$$, $CellContext`angle$72376$$, 0], 
-        Hold[$CellContext`b1$$, $CellContext`b1$72377$$, 0], 
-        Hold[$CellContext`b2$$, $CellContext`b2$72378$$, 0], 
-        Hold[$CellContext`t$$, $CellContext`t$72379$$, 0], 
-        Hold[$CellContext`g$$, $CellContext`g$72380$$, False]}, 
+        Hold[$CellContext`angle$$, $CellContext`angle$87877$$, 0], 
+        Hold[$CellContext`b1$$, $CellContext`b1$87878$$, 0], 
+        Hold[$CellContext`b2$$, $CellContext`b2$87879$$, 0], 
+        Hold[$CellContext`t$$, $CellContext`t$87880$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$87881$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -25172,10 +25173,10 @@ $CellContext`dFall, $CellContext`yFall, $CellContext`xFall, $CellContext`\
 \[Phi], $CellContext`ballRadius, $CellContext`ballCenter}, $CellContext`\
 \[Theta] = $CellContext`angle (Pi/
               180); $CellContext`heightPlane = $CellContext`lengthPlane 
-             Sin[$CellContext`\[Theta]]; $CellContext`dFall = (1/
-              2) $CellContext`g 
-             Sin[$CellContext`\[Theta]] $CellContext`t^2; $CellContext`yFall = \
-(-$CellContext`dFall) 
+             Sin[$CellContext`\[Theta]]; $CellContext`dFall = (((1/
+                2) $CellContext`g) 
+              Sin[$CellContext`\[Theta]]) $CellContext`t^2; \
+$CellContext`yFall = (-$CellContext`dFall) 
              Sin[$CellContext`\[Theta]]; $CellContext`xFall = \
 $CellContext`dFall Cos[$CellContext`\[Theta]]; $CellContext`ballRadius = 
             5; $CellContext`\[Phi] = \
@@ -25195,21 +25196,19 @@ $CellContext`heightPlane + $CellContext`ballRadius
               Style[
                
                Line[{{$CellContext`lengthPlane Cos[$CellContext`\[Theta]], 
-                  0}, {$CellContext`lengthPlane Cos[$CellContext`\[Theta]] + 
-                  2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
-                  2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
-               Blue, Thick], 
+                  0}, {$CellContext`lengthPlane 
+                   Cos[$CellContext`\[Theta]] + (2 $CellContext`ballRadius) 
+                   Sin[$CellContext`\[Theta]], (2 $CellContext`ballRadius) 
+                  Cos[$CellContext`\[Theta]]}}], Blue, Thick], 
               Style[
                
-               Line[{{2 $CellContext`ballRadius 
+               Line[{{(2 $CellContext`ballRadius) 
                   Sin[$CellContext`\[Theta]], $CellContext`lengthPlane 
-                   Sin[$CellContext`\[Theta]] + 
-                  2 $CellContext`ballRadius 
+                   Sin[$CellContext`\[Theta]] + (2 $CellContext`ballRadius) 
                    Cos[$CellContext`\[Theta]]}, {$CellContext`lengthPlane 
-                   Cos[$CellContext`\[Theta]] + 
-                  2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
-                  2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
-               Black], 
+                   Cos[$CellContext`\[Theta]] + (2 $CellContext`ballRadius) 
+                   Sin[$CellContext`\[Theta]], (2 $CellContext`ballRadius) 
+                  Cos[$CellContext`\[Theta]]}}], Black], 
               Style[
                
                Line[{$CellContext`ballCenter, $CellContext`ballCenter + \
@@ -25246,10 +25245,10 @@ $CellContext`dFall, $CellContext`yFall, $CellContext`xFall, $CellContext`\
 \[Phi], $CellContext`ballRadius, $CellContext`ballCenter}, $CellContext`\
 \[Theta] = $CellContext`angle (Pi/
               180); $CellContext`heightPlane = $CellContext`lengthPlane 
-             Sin[$CellContext`\[Theta]]; $CellContext`dFall = (1/
-              2) $CellContext`g 
-             Sin[$CellContext`\[Theta]] $CellContext`t^2; $CellContext`yFall = \
-(-$CellContext`dFall) 
+             Sin[$CellContext`\[Theta]]; $CellContext`dFall = (((1/
+                2) $CellContext`g) 
+              Sin[$CellContext`\[Theta]]) $CellContext`t^2; \
+$CellContext`yFall = (-$CellContext`dFall) 
              Sin[$CellContext`\[Theta]]; $CellContext`xFall = \
 $CellContext`dFall Cos[$CellContext`\[Theta]]; $CellContext`ballRadius = 
             5; $CellContext`\[Phi] = \
@@ -25269,21 +25268,19 @@ $CellContext`heightPlane + $CellContext`ballRadius
               Style[
                
                Line[{{$CellContext`lengthPlane Cos[$CellContext`\[Theta]], 
-                  0}, {$CellContext`lengthPlane Cos[$CellContext`\[Theta]] + 
-                  2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
-                  2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
-               Blue, Thick], 
+                  0}, {$CellContext`lengthPlane 
+                   Cos[$CellContext`\[Theta]] + (2 $CellContext`ballRadius) 
+                   Sin[$CellContext`\[Theta]], (2 $CellContext`ballRadius) 
+                  Cos[$CellContext`\[Theta]]}}], Blue, Thick], 
               Style[
                
-               Line[{{2 $CellContext`ballRadius 
+               Line[{{(2 $CellContext`ballRadius) 
                   Sin[$CellContext`\[Theta]], $CellContext`lengthPlane 
-                   Sin[$CellContext`\[Theta]] + 
-                  2 $CellContext`ballRadius 
+                   Sin[$CellContext`\[Theta]] + (2 $CellContext`ballRadius) 
                    Cos[$CellContext`\[Theta]]}, {$CellContext`lengthPlane 
-                   Cos[$CellContext`\[Theta]] + 
-                  2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
-                  2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
-               Black], 
+                   Cos[$CellContext`\[Theta]] + (2 $CellContext`ballRadius) 
+                   Sin[$CellContext`\[Theta]], (2 $CellContext`ballRadius) 
+                  Cos[$CellContext`\[Theta]]}}], Black], 
               Style[
                
                Line[{$CellContext`ballCenter, $CellContext`ballCenter + \
@@ -25320,7 +25317,7 @@ $CellContext`ballRadius {-Sin[$CellContext`\[Theta] + $CellContext`\[Phi]], -
          Module[{$CellContext`\[Theta], $CellContext`heightPlane, \
 $CellContext`dFall, $CellContext`yFall, $CellContext`xFall, $CellContext`\
 \[Phi], $CellContext`ballRadius, $CellContext`ballCenter, \
-$CellContext`linebells}, $CellContext`\[Theta] = $CellContext`angle (Pi/
+$CellContext`lineBells}, $CellContext`\[Theta] = $CellContext`angle (Pi/
               180); $CellContext`heightPlane = $CellContext`lengthPlane 
              Sin[$CellContext`\[Theta]]; $CellContext`dFall = (1/
               2) $CellContext`g 
@@ -25348,7 +25345,7 @@ $CellContext`heightPlane + $CellContext`ballRadius
                   0}, {$CellContext`lengthPlane Cos[$CellContext`\[Theta]] + 
                   2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
                   2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
-               Blue, Thick], $CellContext`linebells = 
+               Blue, Thick], $CellContext`lineBells = 
               Line[{{2 $CellContext`ballRadius 
                   Sin[$CellContext`\[Theta]], $CellContext`lengthPlane 
                    Sin[$CellContext`\[Theta]] + 
@@ -25358,17 +25355,15 @@ $CellContext`heightPlane + $CellContext`ballRadius
                   2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
                   2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
               Point[
-               $CellContext`pointLine[
-                Part[$CellContext`linebells, 1, 1], $CellContext`linebells]], 
+               $CellContext`pointLine[0, $CellContext`lineBells]], 
               Point[
                $CellContext`pointLine[$CellContext`b1, \
-$CellContext`linebells]], 
+$CellContext`lineBells]], 
               Point[
                $CellContext`pointLine[$CellContext`b2, \
-$CellContext`linebells]], 
+$CellContext`lineBells]], 
               Point[
-               $CellContext`pointLine[
-                Part[$CellContext`linebells, 1, 2], $CellContext`linebells]], 
+               $CellContext`pointLine[1, $CellContext`lineBells]], 
               Style[
                
                Line[{$CellContext`ballCenter, $CellContext`ballCenter + \
@@ -25393,7 +25388,25 @@ $CellContext`ballRadius {-Sin[$CellContext`\[Theta] + $CellContext`\[Phi]], -
          0., $CellContext`ballRadius = 
          5, $CellContext`ballCenter = {0.8682408883346516, 22.28885653175407},
           Attributes[Superscript] = {
-          NHoldRest, ReadProtected}, $CellContext`pointLine[
+          NHoldRest, ReadProtected}, $CellContext`lineBells[
+           Pattern[$CellContext`angle, 
+            Blank[]], 
+           Pattern[$CellContext`lengthPlanePlane, 
+            Blank[]]] := 
+         Module[{$CellContext`\[Theta], $CellContext`lengthPlane, \
+$CellContext`ballRadius}, $CellContext`\[Theta] = $CellContext`angle (Pi/
+              180); $CellContext`ballRadius = 5; Graphics[
+             Style[
+              
+              Line[{{2 $CellContext`ballRadius 
+                 Sin[$CellContext`\[Theta]], $CellContext`lengthPlane 
+                  Sin[$CellContext`\[Theta]] + 
+                 2 $CellContext`ballRadius 
+                  Cos[$CellContext`\[Theta]]}, {$CellContext`lengthPlane 
+                  Cos[$CellContext`\[Theta]] + 
+                 2 $CellContext`ballRadius Sin[$CellContext`\[Theta]], 
+                 2 $CellContext`ballRadius Cos[$CellContext`\[Theta]]}}], 
+              Black]]], $CellContext`pointLine[
            Pattern[$CellContext`bell, 
             Blank[]], 
            Pattern[$CellContext`lines, 
@@ -25402,9 +25415,11 @@ $CellContext`ballRadius {-Sin[$CellContext`\[Theta] + $CellContext`\[Phi]], -
 $CellContext`finalPoint, $CellContext`direction}, $CellContext`startPoint = 
             Part[$CellContext`lines, 1, 1]; $CellContext`finalPoint = 
             Part[$CellContext`lines, 1, 
+              
               2]; $CellContext`direction = $CellContext`finalPoint - \
 $CellContext`startPoint; $CellContext`pointLine = $CellContext`startPoint + \
-$CellContext`bell $CellContext`direction]}; 
+$CellContext`bell $CellContext`direction], $CellContext`lines = 
+         Line[{{-1, -1}, {1, 1}}]}; 
        Uncompress[
         "1:eJyFkLsOwjAMRQPitfIJfAvqgmhVEcGMixwRqXEqxxny9ySVWJPl6gzH9pUvk3+\
 YjVJqjXDIoZOb/KzPKwZB97565zwN4NCcirXLcbdBzPY/\
@@ -25433,9 +25448,11 @@ GRvdycsBFIuEPL7BVkQ=="]}; Typeset`initDone$$ = True),
    3.7079275588734546`*^9, 3.7079275802886734`*^9}, 3.707928489846489*^9, 
    3.70792856817414*^9, 3.707928865770237*^9, 3.7079290348189697`*^9, 
    3.707929118054792*^9, 3.7079295320998383`*^9, 3.707931363512344*^9, 
-   3.7079314109749556`*^9},
+   3.7079314109749556`*^9, 3.707931631056948*^9, 3.7079316929690495`*^9, 
+   3.707931782666094*^9, 3.707931855206548*^9, 3.7079322641865025`*^9, 
+   3.7079323592014847`*^9},
  CellLabel->
-  "Out[172]=",ExpressionUUID->"ba584aa5-f0be-4906-b919-06f7ddc2dcf9"]
+  "Out[232]=",ExpressionUUID->"ac6dd1b6-002b-40db-b340-12a331e913e8"]
 }, Open  ]]
 },
 WindowSize->{1366, 685},
@@ -25583,15 +25600,15 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 16886, 359, 1698, "Code", "ExpressionUUID" -> \
-"94e2776a-fb8b-4484-96b0-d6fc4202b314"],
-Cell[17447, 381, 81, 0, 38, "Input", "ExpressionUUID" -> \
-"75b1d2f2-960c-463b-abd5-929665809dba"],
+Cell[558, 20, 17115, 360, 1721, "Code", "ExpressionUUID" -> \
+"b06a19c1-efc6-432e-9116-2c4d82e4387e"],
+Cell[17676, 382, 81, 0, 38, "Input", "ExpressionUUID" -> \
+"3ba9100d-144a-4db0-99e6-8e37e8072da2"],
 Cell[CellGroupData[{
-Cell[17553, 385, 4385, 87, 447, "Input", "ExpressionUUID" -> \
-"a4f80d42-2d7f-4cc9-8324-a7f68deca562"],
-Cell[21941, 474, 1516867, 24963, 484, "Output", "ExpressionUUID" -> \
-"8d0b3dae-2e83-42f4-a70a-9d2e35ffe6f0"]
+Cell[17782, 386, 4385, 87, 447, "Input", "ExpressionUUID" -> \
+"b9a6782f-9702-4e19-a995-d380fd9e024a"],
+Cell[22170, 475, 1517854, 24979, 484, "Output", "ExpressionUUID" -> \
+"489d6bb8-b4b1-4833-8d31-916add835e45"]
 }, Open  ]]
 }
 ]
