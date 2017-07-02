@@ -1,0 +1,516 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21988,        508]
+NotebookOptionsPosition[     14646,        341]
+NotebookOutlinePosition[     21085,        485]
+CellTagsIndexPosition[     21042,        482]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData["ClearAll"], "Input",
+ CellChangeTimes->{{3.708010984475152*^9, 3.708010988608181*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"c18484ae-b44b-4bf6-8670-8d864e579d77"],
+
+Cell[BoxData["ClearAll"], "Output",
+ CellChangeTimes->{3.70801099371802*^9, 3.708012718977665*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"60f43dc7-0a79-4b8f-83f1-00914f126f4f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"DynamicModule", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", " ", 
+      RowBox[{
+      "lineBells", ",", " ", "bellStart", ",", " ", "bellOne", ",", " ", 
+       "bellTwo", ",", " ", "bellEnd", ",", "ballPoint"}], "}"}], ",", "\n", 
+     "\t", 
+     RowBox[{"DynamicWrapper", "[", "\[IndentingNewLine]", "\t", 
+      RowBox[{
+       RowBox[{"Graphics", "[", "\[IndentingNewLine]", "\t\t\t", 
+        RowBox[{"{", "\[IndentingNewLine]", "\t\t\t", 
+         RowBox[{
+          RowBox[{"ballPoint", "=", " ", 
+           RowBox[{"Point", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"1", "-", "t"}], ",", "0"}], "}"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", "\t\t\t", 
+          RowBox[{"lineBells", " ", "=", " ", 
+           RowBox[{"Line", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", "\t\t\t", 
+          RowBox[{"PointSize", "[", "Large", "]"}], ",", "\n", "\t\t\t\t", 
+          RowBox[{"bellStart", " ", "=", " ", 
+           RowBox[{"Point", "[", 
+            RowBox[{"pointLine", "[", 
+             RowBox[{"0", ",", "lineBells"}], "]"}], "]"}]}], ",", " ", 
+          RowBox[{"(*", 
+           RowBox[{
+           "point", " ", "location", " ", "of", " ", "the", " ", "first", " ",
+             "bell"}], "*)"}], "\n", "\t\t\t\t", 
+          RowBox[{"bellOne", " ", "=", " ", 
+           RowBox[{"Point", "[", 
+            RowBox[{"pointLine", "[", 
+             RowBox[{"b1", ",", "lineBells"}], "]"}], "]"}]}], ",", " ", 
+          RowBox[{"(*", 
+           RowBox[{
+           "point", " ", "location", " ", "of", " ", "the", " ", "second", 
+            " ", "bell"}], "*)"}], "\n", "\t\t\t\t", 
+          RowBox[{"bellTwo", " ", "=", " ", 
+           RowBox[{"Point", "[", 
+            RowBox[{"pointLine", "[", 
+             RowBox[{"b2", ",", "lineBells"}], "]"}], "]"}]}], ",", " ", 
+          RowBox[{"(*", 
+           RowBox[{
+           "point", " ", "location", " ", "of", " ", "the", " ", "third", " ",
+             "bell"}], "*)"}], "\n", "\t\t\t\t", 
+          RowBox[{"bellEnd", " ", "=", " ", 
+           RowBox[{"Point", "[", 
+            RowBox[{"pointLine", "[", 
+             RowBox[{"1", ",", "lineBells"}], "]"}], "]"}]}], ","}], " ", 
+         RowBox[{"(*", 
+          RowBox[{
+          "point", " ", "location", " ", "of", " ", "the", " ", "fourth", " ",
+            "bell"}], "*)"}], "\t\t\t\t\t\t\t", "\n", "\t\t\t\t", "}"}], 
+        "\[IndentingNewLine]", "\t\t", "]"}], ",", "\n", "\t\t", 
+       RowBox[{"(*", 
+        RowBox[{
+        "emits", " ", "sound", " ", "when", " ", "the", " ", "ball", " ", 
+         "touch", " ", "the", " ", "bells"}], "*)"}], "\n", "\t\t\t", 
+       RowBox[{"If", "[", "\[IndentingNewLine]", "\t\t\t", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"EuclideanDistance", "[", 
+            RowBox[{
+             RowBox[{"bellStart", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"ballPoint", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}], " ", "<", " ", 
+           "0.05"}], " ", "||", " ", "\n", "\t\t\t\t", 
+          RowBox[{
+           RowBox[{"EuclideanDistance", "[", 
+            RowBox[{
+             RowBox[{"bellOne", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"ballPoint", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}], " ", "<", " ", 
+           "0.05"}], " ", "||", "\n", "\t\t\t\t", 
+          RowBox[{
+           RowBox[{"EuclideanDistance", "[", 
+            RowBox[{
+             RowBox[{"bellTwo", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"ballPoint", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}], " ", "<", " ", 
+           "0.05"}], " ", "||", " ", "\n", "\t\t\t\t", 
+          RowBox[{
+           RowBox[{"EuclideanDistance", "[", 
+            RowBox[{
+             RowBox[{"bellEnd", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"ballPoint", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}], " ", "<", " ", 
+           "0.05"}]}], " ", "\n", "\t\t\t\t", ",", "\[IndentingNewLine]", 
+         "\t\t\t", 
+         RowBox[{"EmitSound", "[", 
+          RowBox[{"Sound", "[", 
+           RowBox[{"SoundNote", "[", "]"}], "]"}], "]"}]}], 
+        "\[IndentingNewLine]", "\t\t", "]"}]}], "\n", "\t\t", "]"}]}], 
+    "\[IndentingNewLine]", "\t", "]"}], "\[IndentingNewLine]", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b1", ",", "0", ",", "\"\<bell 1\>\""}], "}"}], ",", "0", ",", 
+     "1", ",", 
+     RowBox[{"ControlType", "\[Rule]", "Slider"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b2", ",", "0", ",", "\"\<bell 2\>\""}], "}"}], ",", "0", ",", 
+     "b1", ",", 
+     RowBox[{"ControlType", "\[Rule]", "Slider"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", "Trigger", ",", 
+     RowBox[{"AnimationRate", "\[Rule]", "1"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7080102924688234`*^9, 3.7080103317843266`*^9}, {
+   3.708010376678276*^9, 3.7080104822535467`*^9}, {3.7080106553159246`*^9, 
+   3.708010808191103*^9}, {3.7080109146017127`*^9, 3.7080109526420345`*^9}, {
+   3.708011001088991*^9, 3.708011084140724*^9}, {3.7080111234200435`*^9, 
+   3.7080113209240575`*^9}, {3.7080113696310067`*^9, 3.708011395563848*^9}, {
+   3.7080114420952716`*^9, 3.708011477761814*^9}, 3.70801151281522*^9, {
+   3.7080116481181*^9, 3.70801165026626*^9}, {3.708011864710596*^9, 
+   3.7080120182989063`*^9}, {3.708012095604785*^9, 3.708012179289132*^9}, {
+   3.708012328855172*^9, 3.708012355347037*^9}, {3.7080125188984623`*^9, 
+   3.7080125788362813`*^9}, {3.7080126241540794`*^9, 3.708012711002982*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"74955368-8828-4345-a694-ed691c6019db"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b1$$ = 0.719, $CellContext`b2$$ = 
+    0.318517, $CellContext`t$$ = 1., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`b1$$], 0, "bell 1"}, 0, 1}, {{
+       Hold[$CellContext`b2$$], 0, "bell 2"}, 0, 
+      Dynamic[$CellContext`b1$$]}, {{
+       Hold[$CellContext`t$$], 0, 1}, 0, 1}}, Typeset`size$$ = {
+    276., {267., 273.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`b1$19212$$ = 
+    0, $CellContext`b2$19213$$ = 0, $CellContext`t$19214$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b1$$ = 0, $CellContext`b2$$ = 
+        0, $CellContext`t$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`b1$$, $CellContext`b1$19212$$, 0], 
+        Hold[$CellContext`b2$$, $CellContext`b2$19213$$, 0], 
+        Hold[$CellContext`t$$, $CellContext`t$19214$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      DynamicModule[{$CellContext`lineBells, $CellContext`bellStart, \
+$CellContext`bellOne, $CellContext`bellTwo, $CellContext`bellEnd, \
+$CellContext`ballPoint}, 
+        DynamicWrapper[
+         Graphics[{$CellContext`ballPoint = 
+           Point[{1 - $CellContext`t$$, 0}], $CellContext`lineBells = 
+           Line[{{0, 0}, {1, 0}}], 
+           PointSize[Large], $CellContext`bellStart = Point[
+             $CellContext`pointLine[
+             0, $CellContext`lineBells]], $CellContext`bellOne = Point[
+             $CellContext`pointLine[$CellContext`b1$$, \
+$CellContext`lineBells]], $CellContext`bellTwo = Point[
+             $CellContext`pointLine[$CellContext`b2$$, \
+$CellContext`lineBells]], $CellContext`bellEnd = Point[
+             $CellContext`pointLine[1, $CellContext`lineBells]], Null}], 
+         If[
+          Or[EuclideanDistance[
+             Part[$CellContext`bellStart, 1], 
+             Part[$CellContext`ballPoint, 1]] < 0.05, EuclideanDistance[
+             Part[$CellContext`bellOne, 1], 
+             Part[$CellContext`ballPoint, 1]] < 0.05, EuclideanDistance[
+             Part[$CellContext`bellTwo, 1], 
+             Part[$CellContext`ballPoint, 1]] < 0.05, EuclideanDistance[
+             Part[$CellContext`bellEnd, 1], 
+             Part[$CellContext`ballPoint, 1]] < 0.05], 
+          EmitSound[
+           Sound[
+            SoundNote[]]]]]], 
+      "Specifications" :> {{{$CellContext`b1$$, 0, "bell 1"}, 0, 1, 
+         ControlType -> Slider}, {{$CellContext`b2$$, 0, "bell 2"}, 0, 
+         Dynamic[$CellContext`b1$$], ControlType -> 
+         Slider}, {{$CellContext`t$$, 0, 1}, 0, 1, ControlType -> Trigger, 
+         AnimationRate -> 1, Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{337., {353., 360.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`lineBells[
+         Pattern[$CellContext`angle, 
+          Blank[]], 
+         Pattern[$CellContext`lengthPlanePlane, 
+          Blank[]]] := 
+       Module[{$CellContext`\[Theta], $CellContext`lengthPlane, \
+$CellContext`ballRadius}, $CellContext`\[Theta] = $CellContext`angle (Pi/
+            180); $CellContext`ballRadius = 5; Graphics[
+           Style[
+            
+            Line[{{(2 $CellContext`ballRadius) 
+               Sin[$CellContext`\[Theta]], $CellContext`lengthPlane 
+                Sin[$CellContext`\[Theta]] + (2 $CellContext`ballRadius) 
+                Cos[$CellContext`\[Theta]]}, {$CellContext`lengthPlane 
+                Cos[$CellContext`\[Theta]] + (2 $CellContext`ballRadius) 
+                Sin[$CellContext`\[Theta]], (2 $CellContext`ballRadius) 
+               Cos[$CellContext`\[Theta]]}}], 
+            Black]]], $CellContext`ballRadius = 5, $CellContext`ballPoint = 
+       Style[
+         Point[{1, 0}], 
+         RGBColor[1, 0, 0], 
+         Thickness[Large]], $CellContext`pointLine[
+         Pattern[$CellContext`bell, 
+          Blank[]], 
+         Pattern[$CellContext`lines, 
+          Blank[]]] := 
+       Module[{$CellContext`pointLine, $CellContext`startPoint, \
+$CellContext`finalPoint, $CellContext`direction}, $CellContext`startPoint = 
+          Part[$CellContext`lines, 1, 1]; $CellContext`finalPoint = 
+          Part[$CellContext`lines, 1, 
+            2]; $CellContext`direction = $CellContext`finalPoint - \
+$CellContext`startPoint; $CellContext`pointLine = $CellContext`startPoint + \
+$CellContext`bell $CellContext`direction], $CellContext`lines = 
+       Line[{{-1, -1}, {1, 1}}]}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.708011493611411*^9, 3.708011516064774*^9}, 
+   3.708011656611147*^9, 3.7080118259381843`*^9, 3.7080118876733418`*^9, 
+   3.7080120224089713`*^9, 3.7080121572728295`*^9, 3.7080121897503967`*^9, 
+   3.7080123365059676`*^9, 3.7080125821930065`*^9, {3.7080127143882837`*^9, 
+   3.708012721853623*^9}},
+ CellLabel->"Out[22]=",ExpressionUUID->"670be555-74d5-416d-aef0-82643351697c"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",ExpressionUUID->"e068de48-ef85-457d-84d1-15c0a804e031"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ballPoint", "=", " ", 
+  RowBox[{"Style", "[", 
+   RowBox[{
+    RowBox[{"Point", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "-", "t"}], ",", "0"}], "}"}], "]"}], ",", "Red", ",", 
+    "Thick"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.708012234508419*^9, 3.7080122363182745`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"952453da-6583-48f3-8be9-3c1ae60092ed"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Point", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "-", "t"}], ",", "0"}], "}"}], "]"}],
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 0],
+  FrontFaceColor->RGBColor[1, 0, 0],
+  BackFaceColor->RGBColor[1, 0, 0],
+  GraphicsColor->RGBColor[1, 0, 0],
+  Thickness->Large,
+  FontColor->RGBColor[1, 0, 0]]], "Output",
+ CellChangeTimes->{3.7080122381225204`*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"c72bb984-9e7f-4286-bd59-1707b0adff23"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ballPoint", "[", 
+  RowBox[{"[", 
+   RowBox[{"1", ",", "1"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7080124647496758`*^9, 3.7080124706662474`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"3c310e5e-f72c-4c8b-a0df-0dc839860f17"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.708012472981558*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"2642d511-54d6-4578-8296-afceb42bf73a"]
+}, Open  ]]
+},
+WindowSize->{1350, 685},
+WindowMargins->{{-6, Automatic}, {Automatic, 0}},
+DockedCells->Cell[
+  BoxData[
+   TagBox[
+    GridBox[{{
+       ItemBox["\"\"", ItemSize -> 0.2, StripOnInput -> False], 
+       DynamicModuleBox[{}, 
+        ActionMenuBox[
+        "\"Insert\"", {
+         "\"Section\"" :> 
+          Module[{$CellContext`nb = ButtonNotebook[]}, 
+            Exploration`MoveCursorAfterCellPosition[$CellContext`nb]; 
+            NotebookWrite[$CellContext`nb, 
+              Cell[
+               CellGroupData[{
+                 Cell["XXXX", "Section"], 
+                 Cell["XXXX", "Text"], 
+                 Cell["XXXX", "Direction"], 
+                 Cell[
+                  BoxData["XXXX"], "Input"]}, Open]], All]; 
+            SelectionMove[$CellContext`nb, Before, Cell]; 
+            SelectionMove[$CellContext`nb, Next, Cell]; 
+            SelectionMove[$CellContext`nb, All, CellContents]], Delimiter, 
+          "\"Text\"" :> 
+          Module[{$CellContext`nb = ButtonNotebook[]}, 
+            Exploration`MoveCursorAfterCellPosition[$CellContext`nb]; 
+            NotebookWrite[$CellContext`nb, 
+              Cell["XXXX", "Text"], All]; 
+            SelectionMove[$CellContext`nb, All, CellContents]], 
+          "\"Direction\"" :> 
+          Module[{$CellContext`nb = ButtonNotebook[]}, 
+            Exploration`MoveCursorAfterCellPosition[$CellContext`nb]; 
+            NotebookWrite[$CellContext`nb, 
+              Cell["XXXX", "Direction"], All]; 
+            SelectionMove[$CellContext`nb, All, CellContents]], 
+          "\"Further Exploration\"" :> 
+          Module[{$CellContext`nb = ButtonNotebook[]}, 
+            Exploration`MoveCursorAfterCellPosition[$CellContext`nb]; 
+            NotebookWrite[$CellContext`nb, 
+              Cell["XXXX", "FurtherExploration"], All]; 
+            SelectionMove[$CellContext`nb, All, CellContents]]}, Method -> 
+         "Queued", Appearance -> "PopupMenu", FrameMargins -> 2.4], 
+        Initialization :> (Exploration`MoveCursorAfterCellPosition[
+           Pattern[$CellContext`nb, 
+            Blank[]]] := Which[
+           MatchQ[
+            Developer`CellInformation[$CellContext`nb], {
+             Repeated[{
+               BlankSequence[], "CursorPosition" -> "CellBracket", 
+               BlankSequence[]}]}], 
+           SelectionMove[$CellContext`nb, After, Cell], 
+           Developer`CellInformation[$CellContext`nb] =!= $Failed, 
+           Module[{$CellContext`lnkre}, 
+             While[(LinkWrite[$ParentLink, 
+                 
+                 FrontEnd`CellInformation[$CellContext`nb]]; \
+$CellContext`lnkre = LinkRead[$ParentLink]); 
+              And[$CellContext`lnkre =!= $Failed, 
+                Not[
+                 MemberQ[
+                  ReplaceAll["CursorPosition", $CellContext`lnkre], 
+                  "CellBracket"]]], 
+              FrontEndExecute[
+               
+               FrontEnd`SelectionMove[$CellContext`nb, All, Cell, AutoScroll -> 
+                False]]]]; SelectionMove[$CellContext`nb, After, Cell]]), 
+        DynamicModuleValues :> {}], 
+       ItemBox["\"\"", ItemSize -> Fit, StripOnInput -> False], 
+       ButtonBox["\"Sample\"", ButtonFunction :> NotebookOpen[
+          
+          FileNameJoin[{$UserBaseDirectory, "Applications", 
+            "SummerSchoolTemplates", "FrontEnd", "TextResources", 
+            "TopicExplorationExample.nb"}]], Appearance -> Automatic, 
+        Evaluator -> Automatic, Method -> "Queued"]}}, AutoDelete -> False, 
+     GridBoxItemSize -> {
+      "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]], 
+  "DockedCell"],
+CellLabelAutoDelete->False,
+Magnification:>1.25 Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData["Title"], FontFamily -> "Source Sans Pro", FontTracking -> -0.8,
+     FontColor -> RGBColor[0.65, 0, 0]], 
+   Cell[
+    StyleData["Abstract", StyleDefinitions -> StyleData["Text"]], FontSize -> 
+    16, FontSlant -> "Italic", FontColor -> GrayLevel[0.4]], 
+   Cell[
+    StyleData["Section"], CellFrame -> False, FontFamily -> "Source Sans Pro",
+     FontTracking -> -0.5, $CellContext`ReturnCreatesNewCell -> 
+    True, $CellContext`DefaultReturnCreatedCellStyle -> "Text"], 
+   Cell[
+    StyleData["FurtherExplorationSection"], 
+    CellMargins -> {{28, Inherited}, {6, 24}}, 
+    CellGroupingRules -> {"SectionGrouping", 30}, DefaultNewCellStyle -> 
+    "FurtherExploration", FontFamily -> "Source Sans Pro Semibold", FontSize -> 
+    22, FontColor -> GrayLevel[0.35]], 
+   Cell[
+    StyleData["FurtherExploration", StyleDefinitions -> StyleData["Text"]], 
+    CellMargins -> {{66, 10}, {5, 5}}, FontSize -> 14, FontWeight -> "Bold", 
+    FontColor -> GrayLevel[0.5], $CellContext`ReturnCreatesNewCell -> True], 
+   Cell[
+    StyleData["AuthorshipSection"], CellMargins -> {{28, Inherited}, {6, 24}},
+     CellGroupingRules -> {"SectionGrouping", 30}, DefaultNewCellStyle -> 
+    "FurtherExploration", FontFamily -> "Source Sans Pro Semibold", FontSize -> 
+    22, FontColor -> GrayLevel[0.35]], 
+   Cell[
+    StyleData["Authorship", StyleDefinitions -> StyleData["Text"]], 
+    CellMargins -> {{66, 10}, {4, 4}}, FontSize -> 14, FontColor -> 
+    GrayLevel[0.5], $CellContext`ReturnCreatesNewCell -> True], 
+   Cell[
+    StyleData["Text"], DefaultNewCellStyle -> 
+    "Direction", $CellContext`ReturnCreatesNewCell -> 
+    True, $CellContext`DefaultReturnCreatedCellStyle -> "Direction"], 
+   Cell[
+    StyleData["Direction", StyleDefinitions -> StyleData["Text"]], 
+    CellDingbat -> 
+    StyleBox["\[FilledSmallSquare]", FontColor -> GrayLevel[0.7]], 
+    CellMargins -> {{78, 10}, {6, 7}}, CellFrameLabelMargins -> 4, 
+    MenuSortingValue -> 10000, MenuCommandKey -> "8", FontSize -> 14, 
+    FontWeight -> "Plain", FontColor -> 
+    GrayLevel[0.4], $CellContext`DefaultReturnCreatedCellStyle -> "Input"], 
+   Cell[
+    StyleData["Code"], MenuCommandKey -> None], 
+   Cell[
+    StyleData["Text"]], 
+   Cell[
+    StyleData["Text"], FontColor -> GrayLevel[0]]}, Visible -> False, 
+  FrontEndVersion -> "11.1 for Microsoft Windows (64-bit) (March 13, 2017)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 179, 2, 38, "Input", "ExpressionUUID" -> \
+"c18484ae-b44b-4bf6-8670-8d864e579d77"],
+Cell[762, 26, 177, 2, 38, "Output", "ExpressionUUID" -> \
+"60f43dc7-0a79-4b8f-83f1-00914f126f4f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[976, 33, 6447, 143, 783, "Input", "ExpressionUUID" -> \
+"74955368-8828-4345-a694-ed691c6019db"],
+Cell[7426, 178, 5701, 111, 734, "Output", "ExpressionUUID" -> \
+"670be555-74d5-416d-aef0-82643351697c"]
+}, Open  ]],
+Cell[13142, 292, 81, 0, 47, "Input", "ExpressionUUID" -> \
+"e068de48-ef85-457d-84d1-15c0a804e031"],
+Cell[CellGroupData[{
+Cell[13248, 296, 401, 10, 47, "Input", "ExpressionUUID" -> \
+"952453da-6583-48f3-8be9-3c1ae60092ed"],
+Cell[13652, 308, 486, 14, 47, "Output", "ExpressionUUID" -> \
+"c72bb984-9e7f-4286-bd59-1707b0adff23"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14175, 327, 258, 5, 47, "Input", "ExpressionUUID" -> \
+"3c310e5e-f72c-4c8b-a0df-0dc839860f17"],
+Cell[14436, 334, 194, 4, 47, "Output", "ExpressionUUID" -> \
+"2642d511-54d6-4578-8296-afceb42bf73a"]
+}, Open  ]]
+}
+]
+*)
+

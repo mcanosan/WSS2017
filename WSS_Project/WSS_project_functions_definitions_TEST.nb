@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1555904,      25780]
-NotebookOptionsPosition[   1549254,      25631]
-NotebookOutlinePosition[   1555693,      25775]
-CellTagsIndexPosition[   1555650,      25772]
+NotebookDataLength[   1558566,      25821]
+NotebookOptionsPosition[   1551916,      25672]
+NotebookOutlinePosition[   1558355,      25816]
+CellTagsIndexPosition[   1558312,      25813]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -104,13 +104,13 @@ Cell[BoxData[
              RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "+", "yFall"}]}], 
           "}"}]}], ";", "\n", "\t", 
         RowBox[{"ballPoint", " ", "=", " ", 
-         RowBox[{"ballCenter", "+", 
+         RowBox[{"ballCenter", " ", "+", " ", 
           RowBox[{"{", 
            RowBox[{
             RowBox[{"ballRadius", "*", 
-             RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+             RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
             RowBox[{"ballRadius", "*", 
-             RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}]}]}], ";", "\n", 
+             RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], "}"}]}]}], ";", "\n", 
         "\t", 
         RowBox[{"DynamicWrapper", "[", "\t", "\n", "    ", 
          RowBox[{
@@ -143,8 +143,15 @@ Cell[BoxData[
                RowBox[{
                 RowBox[{"Circle", "[", 
                  RowBox[{"ballCenter", ",", "ballRadius"}], "]"}], ",", "Red",
-                 ",", "Thick"}], "]"}], " ", ",", "\[IndentingNewLine]", 
+                 ",", "Thick"}], "]"}], " ", ",", "\n", "\t\t", "\n", "\t\t", 
+              RowBox[{"(*", 
+               RowBox[{"draws", " ", "ballPoint"}], "*)"}], 
               "\[IndentingNewLine]", "\t\t", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"PointSize", "[", "Large", "]"}], ",", "Red", ",", 
+                RowBox[{"Point", "[", "ballPoint", "]"}]}], "}"}], ",", 
+              "\[IndentingNewLine]", "\t\t", "\n", "\t\t", 
               RowBox[{"(*", 
                RowBox[{
                "draws", " ", "the", " ", "final", " ", "stop", " ", "mark", 
@@ -320,21 +327,29 @@ Cell[BoxData[
             RowBox[{
              RowBox[{
               RowBox[{"EuclideanDistance", "[", 
-               RowBox[{"bellStart", ",", "ballPoint"}], "]"}], " ", "<", " ", 
-              "0.05"}], " ", "||", " ", "\n", "\t\t", 
+               RowBox[{
+                RowBox[{"bellStart", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", "ballPoint"}], "]"}], 
+              " ", "<", " ", "1"}], " ", "||", " ", "\n", "\t\t", 
              RowBox[{
               RowBox[{"EuclideanDistance", "[", 
-               RowBox[{"bellOne", ",", "ballPoint"}], "]"}], " ", "<", " ", 
-              "0.05"}], " ", "||", "\n", "\t\t", 
+               RowBox[{
+                RowBox[{"bellOne", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", "ballPoint"}], "]"}], 
+              " ", "<", " ", "1"}], " ", "||", "\n", "\t\t", 
              RowBox[{
               RowBox[{"EuclideanDistance", "[", 
-               RowBox[{"bellTwo", ",", "ballPoint"}], "]"}], " ", "<", " ", 
-              "0.05"}], " ", "||", " ", "\n", "\t\t", 
+               RowBox[{
+                RowBox[{"bellTwo", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", "ballPoint"}], "]"}], 
+              " ", "<", " ", "1"}], " ", "||", " ", "\n", "\t\t", 
              RowBox[{
               RowBox[{"EuclideanDistance", "[", 
-               RowBox[{"bellEnd", ",", "ballPoint"}], "]"}], " ", "<", " ", 
-              "0.05"}]}], " ", "\n", "\t\t", ",", "\[IndentingNewLine]", 
-            "\t\t", 
+               RowBox[{
+                RowBox[{"bellEnd", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", "ballPoint"}], "]"}], 
+              " ", "\[LessEqual]", " ", "ballRadius"}]}], " ", "\n", "\t\t", 
+            ",", "\[IndentingNewLine]", "\t\t", 
             RowBox[{"EmitSound", "[", 
              RowBox[{"Sound", "[", 
               RowBox[{"SoundNote", "[", "]"}], "]"}], "]"}]}], 
@@ -497,9 +512,25 @@ Cell[BoxData[
    3.707954961226376*^9}, {3.7079550063970275`*^9, 3.7079550103334274`*^9}, {
    3.70795504682664*^9, 3.7079550517797537`*^9}, {3.707955207131897*^9, 
    3.7079552111348906`*^9}, {3.707955464993045*^9, 3.70795562104593*^9}, {
-   3.707955725358102*^9, 3.7079557675642033`*^9}},
+   3.707955725358102*^9, 3.7079557675642033`*^9}, {3.708013368666747*^9, 
+   3.7080133893954334`*^9}, 3.7080135723401656`*^9, {3.708014181357987*^9, 
+   3.708014207094842*^9}, {3.7080142610366406`*^9, 3.708014295770795*^9}, {
+   3.708014369884266*^9, 3.708014372978363*^9}, {3.7080145228541183`*^9, 
+   3.7080145373526044`*^9}, {3.7080145688836546`*^9, 3.708014572413769*^9}, {
+   3.7080146518724113`*^9, 3.7080146566785717`*^9}, {3.708014686786577*^9, 
+   3.7080146903896914`*^9}, {3.7080147943471518`*^9, 
+   3.7080148018694043`*^9}, {3.708014834723497*^9, 3.708014845990876*^9}, {
+   3.708015291803541*^9, 3.708015295758564*^9}, {3.7080154692591505`*^9, 
+   3.7080154696323986`*^9}, {3.7080155700365114`*^9, 
+   3.7080155936312494`*^9}, {3.708015694860314*^9, 3.7080157011019506`*^9}, {
+   3.7080157442785916`*^9, 3.7080157513722863`*^9}, {3.7080193327484465`*^9, 
+   3.7080193365198555`*^9}, {3.70801958349161*^9, 3.7080195970655365`*^9}, {
+   3.7080197931212373`*^9, 3.7080197961699343`*^9}, {3.70801987296428*^9, 
+   3.708019908566934*^9}, {3.708020061714257*^9, 3.7080200900507236`*^9}, {
+   3.708020244348689*^9, 3.7080202668871293`*^9}, {3.708020306854601*^9, 
+   3.708020314102729*^9}},
  CellLabel->
-  "In[250]:=",ExpressionUUID->"c4ebe3be-b4cb-495e-90f7-a3e7cefc5a5b"],
+  "In[131]:=",ExpressionUUID->"01b4646f-511e-4527-bafd-dcc0070576e7"],
 
 Cell[CellGroupData[{
 
@@ -608,15 +639,14 @@ Cell[BoxData[
    3.707949634841363*^9, 3.707949635205493*^9}, {3.70795223132985*^9, 
    3.70795224255567*^9}, 3.70795231749905*^9, 3.707954596140732*^9, {
    3.7079552612658157`*^9, 3.7079552769278884`*^9}},
- CellLabel->
-  "In[256]:=",ExpressionUUID->"a45ff5af-3a09-4abb-89bb-1049e2ee2b41"],
+ CellLabel->"In[88]:=",ExpressionUUID->"b5f6c8d5-01f9-4110-9278-1656242d7df4"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`angle$$ = 39.7, $CellContext`b1$$ = 
-    0.579, $CellContext`b2$$ = 0.224073, $CellContext`g$$ = 
-    9.8`3., $CellContext`t$$ = 5.509247064927165, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`angle$$ = 11.8, $CellContext`b1$$ = 
+    0.483, $CellContext`b2$$ = 0.14634899999999998`, $CellContext`g$$ = 
+    9.8`3., $CellContext`t$$ = 9.73691320756084, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -12948,19 +12978,19 @@ RS960Yte9OLfCf8N0jIc1w==
              "http://www.wolframcdn.com/waimage/hset019/47f/\
 47f286170fef0d70e5c042937b38ef09_v001s.jpg"]]}]}}}, Typeset`size$$ = {
     375., {190., 197.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`angle$64426$$ = 
-    0, $CellContext`b1$64427$$ = 0, $CellContext`b2$64428$$ = 
-    0, $CellContext`t$64429$$ = 0, $CellContext`g$64430$$ = False}, 
+    Typeset`skipInitDone$$ = False, $CellContext`angle$51868$$ = 
+    0, $CellContext`b1$51869$$ = 0, $CellContext`b2$51870$$ = 
+    0, $CellContext`t$51871$$ = 0, $CellContext`g$51872$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`angle$$ = 10, $CellContext`b1$$ = 
         0, $CellContext`b2$$ = 0, $CellContext`g$$ = 9.8`3., $CellContext`t$$ = 
         0}, "ControllerVariables" :> {
-        Hold[$CellContext`angle$$, $CellContext`angle$64426$$, 0], 
-        Hold[$CellContext`b1$$, $CellContext`b1$64427$$, 0], 
-        Hold[$CellContext`b2$$, $CellContext`b2$64428$$, 0], 
-        Hold[$CellContext`t$$, $CellContext`t$64429$$, 0], 
-        Hold[$CellContext`g$$, $CellContext`g$64430$$, False]}, 
+        Hold[$CellContext`angle$$, $CellContext`angle$51868$$, 0], 
+        Hold[$CellContext`b1$$, $CellContext`b1$51869$$, 0], 
+        Hold[$CellContext`b2$$, $CellContext`b2$51870$$, 0], 
+        Hold[$CellContext`t$$, $CellContext`t$51871$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$51872$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -25478,8 +25508,8 @@ $CellContext`dFall/$CellContext`ballRadius; $CellContext`ballCenter = \
 $CellContext`heightPlane + $CellContext`ballRadius 
                Cos[$CellContext`\[Theta]] + $CellContext`yFall}; \
 $CellContext`ballPoint = $CellContext`ballCenter + {$CellContext`ballRadius 
-               Cos[$CellContext`\[Theta]], $CellContext`ballRadius 
-               Sin[$CellContext`\[Theta]]}; DynamicWrapper[
+               Sin[$CellContext`\[Theta]], $CellContext`ballRadius 
+               Cos[$CellContext`\[Theta]]}; DynamicWrapper[
              Graphics[{
                Style[
                 
@@ -25488,7 +25518,9 @@ $CellContext`ballPoint = $CellContext`ballCenter + {$CellContext`ballRadius
                    Cos[$CellContext`\[Theta]], 0}}], Blue, Thick], 
                Style[
                 Circle[$CellContext`ballCenter, $CellContext`ballRadius], Red,
-                 Thick], 
+                 Thick], {
+                PointSize[Large], Red, 
+                Point[$CellContext`ballPoint]}, 
                Style[
                 
                 Line[{{$CellContext`lengthPlane Cos[$CellContext`\[Theta]], 
@@ -25532,15 +25564,16 @@ $CellContext`ballRadius {-Sin[$CellContext`\[Theta] + $CellContext`\[Phi]], -
               PlotRange -> {{0, 100}, {0, 100}}, ImageSize -> 300, Frame -> 
               True], 
              If[
-              Or[
-              EuclideanDistance[$CellContext`bellStart, \
-$CellContext`ballPoint] < 0.05, 
-               EuclideanDistance[$CellContext`bellOne, \
-$CellContext`ballPoint] < 0.05, 
-               EuclideanDistance[$CellContext`bellTwo, \
-$CellContext`ballPoint] < 0.05, 
-               EuclideanDistance[$CellContext`bellEnd, \
-$CellContext`ballPoint] < 0.05], 
+              Or[EuclideanDistance[
+                 Part[$CellContext`bellStart, 1], $CellContext`ballPoint] < 1,
+                EuclideanDistance[
+                 Part[$CellContext`bellOne, 1], $CellContext`ballPoint] < 0.5,
+                EuclideanDistance[
+                 Part[$CellContext`bellTwo, 1], $CellContext`ballPoint] < 0.5,
+                EuclideanDistance[
+                 
+                 Part[$CellContext`bellEnd, 
+                  1], $CellContext`ballPoint] <= $CellContext`ballRadius], 
               EmitSound[
                Sound[
                 SoundNote[]]]]]], $CellContext`heightPlane = 
@@ -25574,7 +25607,10 @@ $CellContext`ballRadius}, $CellContext`\[Theta] = $CellContext`angle (Pi/
               180); $CellContext`ballRadius = 5; $CellContext`finalTime = 
             Sqrt[2 (($CellContext`lengthPlane - \
 $CellContext`ballRadius)/($CellContext`g 
-               Sin[$CellContext`\[Theta]]))]], $CellContext`lineBells[
+               Sin[$CellContext`\[Theta]]))]], $CellContext`ballPoint = Style[
+           Point[{1, 0}], 
+           RGBColor[1, 0, 0], 
+           Thickness[Large]], $CellContext`lineBells[
            Pattern[$CellContext`angle, 
             Blank[]], 
            Pattern[$CellContext`lengthPlanePlane, 
@@ -25624,9 +25660,14 @@ GRvdycsBFIuEPL7BVkQ=="]}; Typeset`initDone$$ = True),
    3.7079526537587976`*^9, 3.707952743138589*^9, 3.7079531565006924`*^9, 
    3.7079534081823206`*^9, 3.707954510341672*^9, 3.707954548075884*^9, 
    3.707954604984355*^9, 3.707954974714656*^9, 3.707955232496106*^9, 
-   3.7079556699810486`*^9, 3.7079558044068823`*^9},
- CellLabel->
-  "Out[256]=",ExpressionUUID->"79062156-f610-446a-a8d3-f97ba9b7ade3"]
+   3.7079556699810486`*^9, 3.7079558044068823`*^9, {3.708013429061386*^9, 
+   3.7080134714778004`*^9}, 3.7080136050252476`*^9, 3.7080143189655666`*^9, 
+   3.7080145499190197`*^9, 3.7080145913253975`*^9, 3.7080147030311146`*^9, 
+   3.7080148115127225`*^9, 3.7080148606323595`*^9, 3.708015312409346*^9, 
+   3.7080154835865326`*^9, 3.708015636246084*^9, 3.7080157792888746`*^9, 
+   3.7080160759778967`*^9, 3.708016203195181*^9, 3.7080192269063067`*^9, 
+   3.7080196205630665`*^9, 3.7080198253795805`*^9, 3.708019923747772*^9},
+ CellLabel->"Out[88]=",ExpressionUUID->"b5d4906c-21cc-4764-84e1-914e0889c109"]
 }, Open  ]]
 },
 WindowSize->{1350, 685},
@@ -25774,13 +25815,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 23794, 481, 2204, "Code", "ExpressionUUID" -> \
-"c4ebe3be-b4cb-495e-90f7-a3e7cefc5a5b"],
+Cell[558, 20, 25634, 512, 2273, "Code", "ExpressionUUID" -> \
+"729d0a79-09f5-427a-8d50-9278549e519a"],
 Cell[CellGroupData[{
-Cell[24377, 505, 5415, 106, 567, "Input", "ExpressionUUID" -> \
-"a45ff5af-3a09-4abb-89bb-1049e2ee2b41"],
-Cell[29795, 613, 1519443, 25015, 484, "Output", "ExpressionUUID" -> \
-"79062156-f610-446a-a8d3-f97ba9b7ade3"]
+Cell[26217, 536, 5411, 105, 567, "Input", "ExpressionUUID" -> \
+"e264c652-deb2-49bd-8a66-4c5296c7cfc4"],
+Cell[31631, 643, 1520269, 25026, 484, "Output", "ExpressionUUID" -> \
+"2499024f-7107-4d12-ba18-f5423e8f1de4"]
 }, Open  ]]
 }
 ]
