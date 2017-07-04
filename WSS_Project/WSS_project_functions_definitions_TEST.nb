@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1558443,      25816]
-NotebookOptionsPosition[   1551792,      25667]
-NotebookOutlinePosition[   1558232,      25811]
-CellTagsIndexPosition[   1558189,      25808]
+NotebookDataLength[   1565239,      25955]
+NotebookOptionsPosition[   1558588,      25806]
+NotebookOutlinePosition[   1565028,      25950]
+CellTagsIndexPosition[   1564985,      25947]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -267,7 +267,7 @@ Cell[BoxData[
                    RowBox[{
                     RowBox[{"lengthPlane", "*", 
                     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", "0"}], 
-                   "}"}], ",", "20", ",", 
+                   "}"}], ",", "30", ",", 
                   RowBox[{"{", 
                    RowBox[{
                     RowBox[{"\[Pi]", "-", "\[Theta]"}], ",", "\[Pi]"}], 
@@ -281,8 +281,9 @@ Cell[BoxData[
                RowBox[{"Row", "[", "\n", "\t\t\t\t\t\t", 
                 RowBox[{"{", 
                  RowBox[{
-                 "\"\<\[Theta] = \>\"", ",", "angle", ",", "\n", 
-                  "\t\t\t\t\t\t", "\"\<  acceleration = \>\"", ",", 
+                 "\"\<\[Theta] = \>\"", ",", "angle", ",", 
+                  "\"\<\[Degree]\>\"", ",", "\n", "\t\t\t\t\t\t", 
+                  "\"\<  acceleration = \>\"", ",", 
                   RowBox[{"Text", "@", 
                    RowBox[{"Style", "[", 
                     RowBox[{"\"\<g\>\"", ",", "Italic"}], "]"}]}], ",", 
@@ -290,7 +291,7 @@ Cell[BoxData[
                   RowBox[{"Round", "[", 
                    RowBox[{
                     RowBox[{"g", "*", " ", 
-                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", ".001"}], 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", ".01"}], 
                    "]"}], ",", "\"\< m/\>\"", ",", 
                   RowBox[{"Superscript", "[", 
                    RowBox[{"\"\<s\>\"", ",", "2"}], "]"}]}], "}"}], "\n", 
@@ -321,13 +322,23 @@ Cell[BoxData[
                RowBox[{
                 RowBox[{"bellTwo", "[", 
                  RowBox[{"[", "1", "]"}], "]"}], ",", "ballPoint"}], "]"}], 
-              " ", "<", " ", "0.5"}], " ", "||", "\n", "\t\t", 
+              " ", "<", " ", 
+              RowBox[{"radiusFall", "[", 
+               RowBox[{"angle", ",", " ", "100", ",", " ", "g", " ", ",", " ", 
+                RowBox[{"ballPoint", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], ",", " ", "0.04"}], "]"}]}], 
+             " ", "||", "\n", "\t\t", 
              RowBox[{
               RowBox[{"EuclideanDistance", "[", 
                RowBox[{
                 RowBox[{"bellOne", "[", 
                  RowBox[{"[", "1", "]"}], "]"}], ",", "ballPoint"}], "]"}], 
-              " ", "<", " ", "1"}], " ", "||", " ", "\n", "\t\t", 
+              " ", "<", " ", 
+              RowBox[{"radiusFall", "[", 
+               RowBox[{"angle", ",", " ", "100", ",", " ", "g", " ", ",", " ", 
+                RowBox[{"ballPoint", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], ",", " ", "0.04"}], "]"}]}], 
+             " ", "||", "\n", "\t\t", 
              RowBox[{
               RowBox[{"EuclideanDistance", "[", 
                RowBox[{
@@ -343,7 +354,9 @@ Cell[BoxData[
    RowBox[{"(*", 
     RowBox[{
     "This", " ", "function", " ", "locate", " ", "a", " ", "bell", " ", "on", 
-     " ", "the", " ", "line", " ", "of", " ", "bells"}], "*)"}], "\n", "\n", 
+     " ", "the", " ", "line", " ", "of", " ", "bells"}], "*)"}], "\n", 
+   RowBox[{"ClearAll", "[", 
+    RowBox[{"bell", ",", "lines"}], "]"}], "\n", 
    RowBox[{
     RowBox[{
      RowBox[{"pointLine", "[", 
@@ -374,7 +387,9 @@ Cell[BoxData[
     RowBox[{
     "This", " ", "function", " ", "compute", " ", "the", " ", "final", " ", 
      "time", " ", "of", " ", "falling", " ", "on", " ", "an", " ", "inclined",
-      " ", "Plane"}], "*)"}], "\n", "\n", 
+      " ", "Plane"}], "*)"}], "\n", 
+   RowBox[{"ClearAll", "[", 
+    RowBox[{"angle", ",", "lengthPlane", ",", "g"}], "]"}], "\n", 
    RowBox[{
     RowBox[{
      RowBox[{"timeFall", "[", 
@@ -398,7 +413,62 @@ Cell[BoxData[
             RowBox[{"(", 
              RowBox[{"g", "*", 
               RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ")"}]}]}]]}]}]}], "\n",
-       "\t", "]"}]}], ";"}], "\n", "\n", "\n", 
+       "\t", "]"}]}], ";"}], "\n", "\t", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "This", " ", "function", " ", "compute", " ", "the", " ", "radius", " ", 
+     "of", " ", "proximity", " ", "between", " ", "the", " ", "ball", " ", 
+     "and", " ", "the", " ", "bell", " ", "to", " ", "emit", " ", "sound"}], 
+    "*)"}], "\n", 
+   RowBox[{"ClearAll", "[", 
+    RowBox[{"angle", ",", "lengthPlane", ",", "\[Delta]", ",", "y"}], "]"}], 
+   "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"radiusFall", "[", 
+      RowBox[{
+      "angle_", ",", " ", "lengthPlane_", ",", " ", "g_", " ", ",", " ", "y_",
+        ",", " ", "\[Delta]_"}], "]"}], ":=", "\n", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\[Theta]", ",", "ballRadius", ",", "v", ",", "h", ",", "R"}],
+         "}"}], ",", "\n", "\t", 
+       RowBox[{
+        RowBox[{"\[Theta]", " ", "=", " ", 
+         RowBox[{"angle", " ", "*", " ", 
+          RowBox[{"\[Pi]", "/", "180"}]}]}], ";", "\n", "    ", 
+        RowBox[{"ballRadius", "=", "5"}], ";", "\n", "\t", 
+        RowBox[{"h", " ", "=", " ", 
+         RowBox[{
+          RowBox[{"lengthPlane", " ", "*", " ", 
+           RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "+", 
+          RowBox[{"2", "*", "ballRadius", "*", 
+           RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}]}], ";", " ", 
+        RowBox[{"(*", 
+         RowBox[{
+         "height", " ", "of", " ", "the", " ", "line", " ", "of", " ", 
+          "bells"}], "*)"}], "\n", "\t", 
+        RowBox[{"v", " ", "=", " ", 
+         SqrtBox[
+          RowBox[{"2", "*", "g", "*", 
+           RowBox[{"(", 
+            RowBox[{"h", "-", "y"}], ")"}]}]]}], ";", " ", 
+        RowBox[{"(*", 
+         RowBox[{
+         "speed", " ", "of", " ", "falling", " ", "on", " ", "the", " ", 
+          "plane"}], "*)"}], "\n", "\t", 
+        RowBox[{"R", " ", "=", " ", 
+         RowBox[{"Round", "[", 
+          RowBox[{
+           RowBox[{"v", " ", "*", " ", "\[Delta]"}], ",", "0.01"}], 
+          "]"}]}]}]}], 
+      RowBox[{"(*", 
+       RowBox[{
+       "radius", " ", "of", " ", "detection", " ", "between", " ", "the", " ",
+         "ball", " ", "and", " ", "the", " ", "bells", " ", "for", " ", 
+        "emit", " ", "sound"}], "*)"}], "\n", "\t", "]"}]}], ";"}], "\n", 
+   "\n", "\n", 
    RowBox[{"(*", 
     RowBox[{
     "This", " ", "function", " ", "map", " ", "a", " ", "list", " ", "of", 
@@ -522,9 +592,25 @@ Cell[BoxData[
    3.7080387107136173`*^9, 3.708038710814761*^9}, {3.708038759351632*^9, 
    3.7080387866417065`*^9}, {3.70803889274853*^9, 3.708038893140988*^9}, {
    3.7080389459745445`*^9, 3.708038949500276*^9}, {3.7080390085840464`*^9, 
-   3.7080390278879356`*^9}},
- CellLabel->
-  "In[248]:=",ExpressionUUID->"75924da2-0476-450a-81ce-884124beb824"],
+   3.7080390278879356`*^9}, {3.708099535202104*^9, 3.7080995697136087`*^9}, {
+   3.708099693950817*^9, 3.7080996981962414`*^9}, {3.708099766306513*^9, 
+   3.7080997903122983`*^9}, {3.7080998272871103`*^9, 
+   3.7080998451122675`*^9}, {3.708099916522413*^9, 3.708099920415208*^9}, {
+   3.7080999606497755`*^9, 3.708099990336051*^9}, {3.708100305181902*^9, 
+   3.7081003687322197`*^9}, {3.7081004039989443`*^9, 3.708100407676823*^9}, {
+   3.7081188927382574`*^9, 3.7081190414531717`*^9}, {3.7081190812150836`*^9, 
+   3.7081192697939014`*^9}, {3.708119328173763*^9, 3.7081193643610992`*^9}, {
+   3.708119451734524*^9, 3.708119463857665*^9}, {3.7081195036548615`*^9, 
+   3.70811953312282*^9}, {3.708119784856295*^9, 3.7081197966132402`*^9}, {
+   3.7081198450040197`*^9, 3.7081198662176433`*^9}, {3.708119933228342*^9, 
+   3.708119939260516*^9}, {3.7081201375612926`*^9, 3.708120142584081*^9}, {
+   3.708120179718238*^9, 3.7081202161698627`*^9}, {3.708120262930049*^9, 
+   3.708120282097278*^9}, {3.708120440101513*^9, 3.7081204547414403`*^9}, {
+   3.708120592796404*^9, 3.708120621365094*^9}, {3.708120729591956*^9, 
+   3.7081207311349335`*^9}, {3.708120790572129*^9, 3.708120792593507*^9}, {
+   3.7081208421835575`*^9, 3.7081208433257284`*^9}, {3.7081211652641077`*^9, 
+   3.708121168828379*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"c923a694-7f81-482c-9605-1c61c62df2ef"],
 
 Cell[CellGroupData[{
 
@@ -547,7 +633,7 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"{", 
       RowBox[{"angle", ",", "10", ",", "\"\<slope \[Theta]\>\""}], "}"}], ",",
-      "0", ",", "90", ",", 
+      "10", ",", "70", ",", "1", ",", 
      RowBox[{"ControlType", "\[Rule]", "Slider"}]}], "}"}], " ", ",", 
    "\[IndentingNewLine]", "\t", "\[IndentingNewLine]", "\t", 
    RowBox[{"(*", 
@@ -632,20 +718,21 @@ Cell[BoxData[
    3.7079492533705792`*^9, {3.707949459516962*^9, 3.7079495876878653`*^9}, {
    3.707949634841363*^9, 3.707949635205493*^9}, {3.70795223132985*^9, 
    3.70795224255567*^9}, 3.70795231749905*^9, 3.707954596140732*^9, {
-   3.7079552612658157`*^9, 3.7079552769278884`*^9}},
- CellLabel->
-  "In[247]:=",ExpressionUUID->"e60f2938-f1ba-49e8-94d0-8be2620e0365"],
+   3.7079552612658157`*^9, 3.7079552769278884`*^9}, {3.708119736396318*^9, 
+   3.7081197373812194`*^9}, {3.7081206549631653`*^9, 
+   3.7081206554166636`*^9}, {3.7081207986113586`*^9, 3.70812079912856*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"cfa6da99-7170-4620-a617-886ce599b5b3"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`angle$$ = 90., $CellContext`b1$$ = 
-    0.663, $CellContext`b2$$ = 0.28111200000000003`, $CellContext`g$$ = 
-    24.79`4., $CellContext`t$$ = 2.768461810953721, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`angle$$ = 19, $CellContext`b1$$ = 
+    0.583, $CellContext`b2$$ = 0.132924, $CellContext`g$$ = 
+    24.79`4., $CellContext`t$$ = 4.851964093654277, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`angle$$], 10, "slope \[Theta]"}, 0, 90}, {{
+       Hold[$CellContext`angle$$], 10, "slope \[Theta]"}, 10, 70, 1}, {{
        Hold[$CellContext`b1$$], 0, "bell 1"}, 0, 1}, {{
        Hold[$CellContext`b2$$], 0, "bell 2"}, 0, 
       Dynamic[$CellContext`b1$$]}, {{
@@ -12973,19 +13060,19 @@ RS960Yte9OLfCf8N0jIc1w==
              "http://www.wolframcdn.com/waimage/hset019/47f/\
 47f286170fef0d70e5c042937b38ef09_v001s.jpg"]]}]}}}, Typeset`size$$ = {
     375., {190., 197.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`angle$90830$$ = 
-    0, $CellContext`b1$90831$$ = 0, $CellContext`b2$90832$$ = 
-    0, $CellContext`t$90833$$ = 0, $CellContext`g$90834$$ = False}, 
+    Typeset`skipInitDone$$ = False, $CellContext`angle$3480$$ = 
+    0, $CellContext`b1$3485$$ = 0, $CellContext`b2$3486$$ = 
+    0, $CellContext`t$3487$$ = 0, $CellContext`g$3488$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`angle$$ = 10, $CellContext`b1$$ = 
         0, $CellContext`b2$$ = 0, $CellContext`g$$ = 9.8`3., $CellContext`t$$ = 
         0}, "ControllerVariables" :> {
-        Hold[$CellContext`angle$$, $CellContext`angle$90830$$, 0], 
-        Hold[$CellContext`b1$$, $CellContext`b1$90831$$, 0], 
-        Hold[$CellContext`b2$$, $CellContext`b2$90832$$, 0], 
-        Hold[$CellContext`t$$, $CellContext`t$90833$$, 0], 
-        Hold[$CellContext`g$$, $CellContext`g$90834$$, False]}, 
+        Hold[$CellContext`angle$$, $CellContext`angle$3480$$, 0], 
+        Hold[$CellContext`b1$$, $CellContext`b1$3485$$, 0], 
+        Hold[$CellContext`b2$$, $CellContext`b2$3486$$, 0], 
+        Hold[$CellContext`t$$, $CellContext`t$3487$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$3488$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -12994,9 +13081,9 @@ RS960Yte9OLfCf8N0jIc1w==
       "Body" :> $CellContext`inclinedPlane[$CellContext`angle$$, 
         100, $CellContext`t$$, $CellContext`g$$, $CellContext`b1$$, \
 $CellContext`b2$$], 
-      "Specifications" :> {{{$CellContext`angle$$, 10, "slope \[Theta]"}, 0, 
-         90, ControlType -> Slider}, {{$CellContext`b1$$, 0, "bell 1"}, 0, 1, 
-         ControlType -> Slider}, {{$CellContext`b2$$, 0, "bell 2"}, 0, 
+      "Specifications" :> {{{$CellContext`angle$$, 10, "slope \[Theta]"}, 10, 
+         70, 1, ControlType -> Slider}, {{$CellContext`b1$$, 0, "bell 1"}, 0, 
+         1, ControlType -> Slider}, {{$CellContext`b2$$, 0, "bell 2"}, 0, 
          Dynamic[$CellContext`b1$$], ControlType -> 
          Slider}, {{$CellContext`t$$, 0, "release ball"}, 0, 
          Dynamic[
@@ -25546,23 +25633,31 @@ $CellContext`ballRadius {-Sin[$CellContext`\[Theta] + $CellContext`\[Phi]], -
                Style[
                 
                 Circle[{$CellContext`lengthPlane Cos[$CellContext`\[Theta]], 
-                  0}, 20, {Pi - $CellContext`\[Theta], Pi}], Black]}, 
+                  0}, 30, {Pi - $CellContext`\[Theta], Pi}], Black]}, 
               PlotLabel -> Style[
-                Row[{"\[Theta] = ", $CellContext`angle, "  acceleration = ", 
+                
+                Row[{"\[Theta] = ", $CellContext`angle, "\[Degree]", 
+                  "  acceleration = ", 
                   Text[
                    Style["g", Italic]], 
                   Text[" sin(\[Theta]) = "], 
-                  Round[$CellContext`g Sin[$CellContext`\[Theta]], 0.001], 
+                  Round[$CellContext`g Sin[$CellContext`\[Theta]], 0.01], 
                   " m/", 
                   Superscript["s", 2]}], Black, "Label", 10], 
               PlotRange -> {{0, 100}, {0, 100}}, ImageSize -> 300, Frame -> 
               True], 
              If[
               Or[EuclideanDistance[
-                 Part[$CellContext`bellOne, 1], $CellContext`ballPoint] < 1, 
-               EuclideanDistance[
-                 Part[$CellContext`bellTwo, 1], $CellContext`ballPoint] < 1, 
-               EuclideanDistance[
+                 
+                 Part[$CellContext`bellTwo, 
+                  1], $CellContext`ballPoint] < \
+$CellContext`radiusFall[$CellContext`angle, 100, $CellContext`g, 
+                 Part[$CellContext`ballPoint, 2], 0.03], EuclideanDistance[
+                 
+                 Part[$CellContext`bellOne, 
+                  1], $CellContext`ballPoint] < \
+$CellContext`radiusFall[$CellContext`angle, 100, $CellContext`g, 
+                 Part[$CellContext`ballPoint, 2], 0.05], EuclideanDistance[
                  
                  Part[$CellContext`bellEnd, 
                   1], $CellContext`ballPoint] <= $CellContext`ballRadius], 
@@ -25630,8 +25725,50 @@ $CellContext`finalPoint, $CellContext`direction}, $CellContext`startPoint =
             Part[$CellContext`lines, 1, 
               2]; $CellContext`direction = $CellContext`finalPoint - \
 $CellContext`startPoint; $CellContext`pointLine = $CellContext`startPoint + \
-$CellContext`bell $CellContext`direction], $CellContext`lines = 
-         Line[{{-1, -1}, {1, 1}}]}; 
+$CellContext`bell $CellContext`direction], $CellContext`radiusFall[
+           Pattern[$CellContext`angle, 
+            Blank[]], 
+           Pattern[$CellContext`g, 
+            Blank[]], 
+           Pattern[$CellContext`y, 
+            Blank[]], 
+           Pattern[$CellContext`\[Delta], 
+            Blank[]]] := 
+         Module[{$CellContext`\[Theta], $CellContext`a, $CellContext`v, \
+$CellContext`R}, $CellContext`\[Theta] = $CellContext`angle (Pi/
+              180); $CellContext`a = $CellContext`g 
+             Sin[$CellContext`\[Theta]]; $CellContext`v = $CellContext`a 
+             Sqrt[2 ($CellContext`y/($CellContext`g 
+                Sin[$CellContext`\[Theta]]^2))]; $CellContext`R = \
+$CellContext`v $CellContext`\[Delta]], $CellContext`radiusFall[
+           Pattern[$CellContext`g, 
+            Blank[]], 
+           Pattern[$CellContext`y, 
+            Blank[]], 
+           Pattern[$CellContext`\[Delta], 
+            Blank[]]] := 
+         Module[{$CellContext`v, $CellContext`R}, $CellContext`v = 
+            Sqrt[(2 $CellContext`g) $CellContext`y]; $CellContext`R = \
+$CellContext`v $CellContext`\[Delta]], $CellContext`radiusFall[
+           Pattern[$CellContext`angle, 
+            Blank[]], 
+           Pattern[$CellContext`lengthPlane, 
+            Blank[]], 
+           Pattern[$CellContext`g, 
+            Blank[]], 
+           Pattern[$CellContext`y, 
+            Blank[]], 
+           Pattern[$CellContext`\[Delta], 
+            Blank[]]] := 
+         Module[{$CellContext`\[Theta], $CellContext`ballRadius, \
+$CellContext`v, $CellContext`h, $CellContext`R}, $CellContext`\[Theta] = \
+$CellContext`angle (Pi/180); $CellContext`ballRadius = 
+            5; $CellContext`h = $CellContext`lengthPlane 
+              Sin[$CellContext`\[Theta]] + 
+             2 $CellContext`ballRadius 
+              Cos[$CellContext`\[Theta]]; $CellContext`v = 
+            Sqrt[2 $CellContext`g ($CellContext`h - $CellContext`y)]; \
+$CellContext`R = Round[$CellContext`v $CellContext`\[Delta], 0.01]]}; 
        Uncompress[
         "1:eJyFkLsOwjAMRQPitfIJfAvqgmhVEcGMixwRqXEqxxny9ySVWJPl6gzH9pUvk3+\
 YjVJqjXDIoZOb/KzPKwZB97565zwN4NCcirXLcbdBzPY/\
@@ -25660,9 +25797,11 @@ GRvdycsBFIuEPL7BVkQ=="]}; Typeset`initDone$$ = True),
    3.7080160759778967`*^9, 3.708016203195181*^9, 3.7080192269063067`*^9, 
    3.7080196205630665`*^9, 3.7080198253795805`*^9, 3.708019923747772*^9, 
    3.708036109145604*^9, 3.7080384449526367`*^9, 3.7080386225594444`*^9, 
-   3.708038819194976*^9, 3.708038973783152*^9},
- CellLabel->
-  "Out[247]=",ExpressionUUID->"e3c7816f-73cc-431e-9597-e2fee3921a09"]
+   3.708038819194976*^9, 3.708038973783152*^9, 3.708100483754481*^9, 
+   3.708119402685397*^9, 3.7081195623997297`*^9, 3.7081197448384714`*^9, 
+   3.7081200660336394`*^9, 3.7081206655565867`*^9, 3.7081208086720943`*^9, 
+   3.7081210933432603`*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"1af521b4-eb0e-403a-84b8-9694dabf9333"]
 }, Open  ]]
 },
 WindowSize->{1366, 685},
@@ -25810,13 +25949,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 25625, 506, 2250, "Code", "ExpressionUUID" -> \
-"a02f513a-c7f7-491f-a1a6-2ef0ab9bb97e"],
+Cell[558, 20, 29826, 592, 2526, "Code", "ExpressionUUID" -> \
+"9f944ac0-d000-480b-9c03-9165a003e53b"],
 Cell[CellGroupData[{
-Cell[26208, 530, 5415, 106, 543, "Input", "ExpressionUUID" -> \
-"e98f6fb5-a217-402b-9166-8ea2b67b48cc"],
-Cell[31626, 638, 1520150, 25026, 484, "Output", "ExpressionUUID" -> \
-"e3c7816f-73cc-431e-9597-e2fee3921a09"]
+Cell[30409, 616, 5575, 107, 543, "Input", "ExpressionUUID" -> \
+"8a0005db-dcbd-456f-ba84-02c69802550e"],
+Cell[35987, 725, 1522585, 25078, 484, "Output", "ExpressionUUID" -> \
+"fb7d07c8-580c-455d-9979-f6a2b2c3b557"]
 }, Open  ]]
 }
 ]
